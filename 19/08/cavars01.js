@@ -6,7 +6,7 @@
  */
 
 ! function () {
-    window.easterEgg = function () {
+    window.easterEgg = function (dom) {
         function o(w, v, i) {
             return w.getAttribute(v) || i
         }
@@ -29,8 +29,8 @@
         }
 
         function k() {
-            r = u.width = layoutPlayerAside.offsetWidth,
-                n = u.height = layoutPlayerAside.offsetHeight
+            r = u.width = dom.offsetWidth,
+                n = u.height = dom.offsetHeight
         }
 
         function RecursiveDistance(dom, direction) {
@@ -58,7 +58,6 @@
             }), m(b)
         }
         var u = document.createElement("canvas"),
-            layoutPlayerAside = document.getElementsByClassName('layout-Player-aside')[0],
             s = l(),
             c = "easterEgg",
             e = u.getContext("2d"),
@@ -73,11 +72,11 @@
             };
         u.id = c;
         u.style.cssText = "display:none;position:relative;pointer-events:none;z-index:1;opacity:" + s.o;
-        layoutPlayerAside.appendChild(u);
+        dom.appendChild(u);
         k(), window.onresize = k;
-        layoutPlayerAside.onmousemove = function (i) {
-            i = i || window.event, f.x = i.clientX - RecursiveDistance(layoutPlayerAside, 'Left'), f.y = i.clientY - RecursiveDistance(layoutPlayerAside, 'Top')
-        }, layoutPlayerAside.onmouseout = function () {
+        dom.onmousemove = function (i) {
+            i = i || window.event, f.x = i.clientX - RecursiveDistance(dom, 'Left'), f.y = i.clientY - RecursiveDistance(dom, 'Top')
+        }, dom.onmouseout = function () {
             f.x = null, f.y = null
         };
         for (var t = [], p = 0; s.n > p; p++) {
