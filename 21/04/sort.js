@@ -1,4 +1,4 @@
-let input = `9 3
+let input = `5 3
 1 0 1
 5 2 6
 1 2 2
