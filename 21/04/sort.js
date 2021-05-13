@@ -5,7 +5,7 @@ let input = `5 3
 5 2 4
 1 3 3
 2 4 1`
-// 第一行为 4组 3次
+// 第一行为 5组 3次
 // 第二行为 升序为1 降序为0
 let inputArray = input.split('\n')
 let [n, length] = inputArray[0].split(' ')
