@@ -33,18 +33,24 @@ store = {
         }
     }
 }
-//
+
 /* <p>{{getEvent(1)}}</p> */
-// computed: {
-//     getEvent() {
-//         return this.$store.getters.getEventById
+// export default {
+//     computed: {
+//         getEvent() {
+//             return this.$store.getters.getEventById
+//         }
 //     }
 // }
+
+/* <p>{{getEventById(2)}}</p> */
 // import {
 //     mapGetters
 // } from 'vuex'
-// computed: {
-//     ...mapGetters(['getEventById'])
+// export default {
+//     computed: {
+//         ...mapGetters(['getEventById'])
+//     }
 // }
 
 // getters
@@ -53,7 +59,8 @@ store = {
 // }
 
 // rootState
-// export const namespaced=true
-// dispatch('moduleName/actionToCall', null // payload, {
-// root: true
-// })
+// export const namespaced = true
+// dispatch('moduleName/actionToCall', null, // payload
+//     {
+//         root: true
+//     })
