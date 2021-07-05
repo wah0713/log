@@ -1,29 +1,8 @@
-### 1、 [] 用法
-```js
- Object.keys(abc).reduce((arr, index) => [...arr, {
-     [item]: abc[item]
- }],[])
-```
-### 2、 iframe 中获取document
-```js
- document.querySelector('#topFrame').contentWindow.document
-```
-### 3、动态组件
-```js
-<component :is='componentName' v-bind='props' v-on="event">
-    props:{
-        data1:''
-    }
-    event:{
-        click:(){}
-    }
-```
-
-### 4、正则取反
+### 正则取反
 ```js
 [^\d]
 ```
-### 5、[正则补充](https://deerchao.cn/tutorials/regex/regex.htm)
+### [正则补充](https://deerchao.cn/tutorials/regex/regex.htm)
 <table>
 <tr>
     <th scope="col">分类</th>
@@ -73,9 +52,4 @@
 例如 :
 [a-z]*(?=ing) 可以匹配cooking singing 中的cook与sing
 (?<=abc).* 可以匹配abcdefgabc中的defgabc 而不是abcdefg
-
-### 6、[insertAdjacentElement 插入位置](https://blog.csdn.net/stanleyhsl/article/details/104632640)
-### 7、axios 拦截器
-```js
-axios.create().interceptors.request.use()
-```
+### a+?正则惰性
