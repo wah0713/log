@@ -44,3 +44,14 @@ beforeCreate:function(){
     this.#options.compontens.TreeFolderContens=require('./tree-folder-contents.vue').default
 }
 ```
+### [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+### [【vue】使用vue-cli4.0快速搭建一个项目](https://blog.csdn.net/liyunkun888/article/details/102738377)
+### [从 0 开始手把手带你搭建一套规范的 Vue3.x 项目工程环境](https://juejin.cn/post/6951649464637636622)
+### [Vue项目接入Eslint与+Prettier+Husky自动格式化代码](https://blog.csdn.net/weixin_42826294/article/details/107374982)
+### [vue-cli 迁移 vite2 实践小结](https://segmentfault.com/a/1190000039371430)
+### [vue Mastery 视频](https://www.vuemastery.com/)
+### [vuex官方购物车案例](https://github.com/vuejs/vuex/tree/dev/examples/shopping-cart)
+### [使用 NuxtJS 充满信心地构建您的下一个 Vue.js 应用程序。 一个 开源 框架，让 Web 开发变得简单而强大。](https://zh.nuxtjs.org/)
+### [VUE中的过滤器filters用法](https://blog.csdn.net/xjtarzan/article/details/80265294/)
+### vue genesiss
+### 可以在$options.filters里面拿到方法
