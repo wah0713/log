@@ -53,3 +53,9 @@
 [a-z]*(?=ing) 可以匹配cooking singing 中的cook与sing
 (?<=abc).* 可以匹配abcdefgabc中的defgabc 而不是abcdefg
 ### a+?正则惰性
+
+### 数字每三位加,
+
+```js
+ `2322222222222123`.replace(/(\d)(?=(\d{3})+$)/g, '$1, ')
+```

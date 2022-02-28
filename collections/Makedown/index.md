@@ -1,4 +1,5 @@
 ### .md文件
+
  > [基本使用](https://www.cnblogs.com/liugang-vip/p/6337580.html)
  ### markdown代码块支持的语言
 |名称|关键字|调用的js|说明|
@@ -11,7 +12,7 @@
 |C#|c# , c-sharp , csharp|shBrushCSharp.js|
 |CSS|css|shBrushCss.js|
 |Delphi|delphi , pascal , pas|shBrushDelphi.js|
-|diff&patch|diff patch|shBrushDiff.js|用代码版本库时,遇到代码冲突,其语法就是这个.
+|diff&patch|diff patch|shBrushDiff.js|用代码版本库时, 遇到代码冲突, 其语法就是这个.
 |Erlang|erl , erlang|shBrushErlang.js|
 |Groovy|groovy|shBrushGroovy.js|
 |Java|java|shBrushJava.js|
@@ -34,3 +35,12 @@
 |matlab|matlab|shBrushMatlab.js|
 |swift|swift|shBrushSwift.js|
 |GO|go , golang|shBrushGo.js|
+
+### Markdown中如何实现内容折叠操作
+
+<details>
+<summary>展开查看</summary>
+<pre><code>
+System.out.println("Hello to see U!");
+</code></pre>
+</details>
