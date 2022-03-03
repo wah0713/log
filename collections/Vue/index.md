@@ -200,8 +200,6 @@ function mkdir(dirpath, dirname) {
 
 ### [node实现防盗链](https://www.cnblogs.com/sqh17/p/12713858.html)
 
-### [全面总结 Vue 3.0 的新特性](https://blog.csdn.net/qq_27318177/article/details/119170748)
-
 ### vue中fullPath和path的区别
 
 字面意思，即带有参数的完整路径和不带有参数的路径的区别
