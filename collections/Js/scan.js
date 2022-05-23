@@ -45,26 +45,19 @@ function getPath(fileName) {
   logger.log(`开始`)
   const str = fs.readFileSync(fileName).toString().replace(/\/\/.*/g, '')
 
-  const res1 = str.match(/(?<=['|"])\.\/.*?(?=['|"])/g)
-  logger.log('./')
+  const res1 = str.match(/(?<=['|"])\.(\.)?\/.*?(?=['|"])/g)
+  logger.log('../|./')
   if (res1) {
     res1.forEach(item => splicePath(path.join(fileName, `../${item}`)))
   } else {
     logger.log('null')
   }
 
-  const res2 = str.match(/(?<=['|"])\.\.\/.*?(?=['|"])/g)
-  logger.log('../')
-  if (res2) {
-    res2.forEach(item => splicePath(path.join(fileName, `../${item}`)))
-  } else {
-    logger.log('null')
-  }
 
-  const res3 = str.match(/(?<=['|"])@\/.*?(?=['|"])/g)
+  const res2 = str.match(/(?<=['|"])@\/.*?(?=['|"])/g)
   logger.log('@')
-  if (res3) {
-    res3.forEach(item => splicePath(path.join(srcPath, item.replace('@', './'))))
+  if (res2) {
+    res2.forEach(item => splicePath(path.join(srcPath, item.replace('@', './'))))
   } else {
     logger.log('null')
   }
