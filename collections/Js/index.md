@@ -930,7 +930,7 @@ document.fonts.ready.then(function() {
 ### [JavaScript之contains()方法](https://www.jianshu.com/p/df6cb20436c5)
 
 ```js
-event.target.contasins(el)
+event.target.contains(el)
 ```
 
 ### [Vue使用NProgress npm](https://blog.csdn.net/wn1245343496/article/details/82151273)
