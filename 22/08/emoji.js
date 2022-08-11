@@ -1,0 +1,6 @@
+const codePoint = '✔️'.codePointAt()
+console.log(`codePoint`, codePoint)
+const num16 = codePoint.toString(16)
+console.log(`num16`, num16)
+const emoji= String.fromCodePoint(`0x${num16}`)
+console.log(`emoji`, emoji)
