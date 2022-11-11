@@ -30,9 +30,8 @@ function main(fileName) {
     logger.log(`开始`)
     const str = fs.readFileSync(fileName).toString()
     const res = str.match(/^#{2,3}\s/gm)
-    console.log(`res`, res)
     if (res) {
-        const naemList = fileName.replace(/[\D]/g, '').replace(/(\d)(?=(\d{2})+$)/g, '$1,').split(',')
+        const naemList = fileName.replace(/[\D]/g, '').match(/\d{6}$/)[0].replace(/(\d)(?=(\d{2})+$)/g, '$1,').split(',')
         if (!obj[naemList[0]]) {
             obj[naemList[0]] = {
                 total: 0
@@ -60,15 +59,14 @@ function main(fileName) {
 
 console.log('开始扫描')
 console.time('耗时')
-walk('../');
-console.log(`obj`, JSON.stringify(obj))
+walk(path.resolve(__dirname, '../'));
 const arr = []
 Object.keys(obj).forEach(item => {
     const o = {
         name: item,
         type: 'line',
         data: Array(12).fill(null).map((i, index) => {
-            const num = obj[item][String(index).padStart(2, '0')]
+            const num = obj[item][String(index + 1).padStart(2, '0')]
             if (!num) {
                 return 0
             }

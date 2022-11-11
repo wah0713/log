@@ -48,7 +48,7 @@ function getPath(fileName) {
 
 console.log('开始扫描')
 console.time('耗时')
-walk('../');
+walk(path.resolve(__dirname, '../'));
 console.timeEnd('耗时')
 console.log('结束扫描')
 
