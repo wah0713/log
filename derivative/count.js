@@ -91,7 +91,6 @@ var option = {
         trigger: 'axis',
         hideDelay: '999999',
         formatter(arr) {
-            console.log(`arr`, arr)
             return `${arr[0].name}<br/>` + arr.filter(item => item.data).sort((a, b) => (b.data -
                 a.data)).map(item => (
                 `${item.marker}${item.seriesName}                                 ${item.data}`)).join(
@@ -120,7 +119,41 @@ var option = {
     },
 };
 option.series = arr
-htmlLog.log(`var option=${JSON.stringify(option)}`)
+
+function obj2Str(obj, key) {
+    switch (typeof (obj)) {
+        case 'object':
+            var ret = [];
+            if (obj instanceof Array) {
+                for (var i = 0, len = obj.length; i < len; i++) {
+                    ret.push(obj2Str(obj[i]));
+                }
+                return '[' + ret.join(',') + ']';
+            } else if (obj instanceof RegExp) {
+                return obj.toString();
+            } else {
+                for (var a in obj) {
+                    ret.push(a + ':' + obj2Str(obj[a], a));
+                }
+                return '{' + ret.join(',') + '}';
+            }
+            case 'function':
+                var str = String(obj)
+                str = str.replace(/.*\(([\s\S]*?)\)(\s*)({[\s\S]*})/g, 'function($1)$3')
+                return str;
+            case 'number':
+                return obj.toString();
+            case 'string':
+                return "\"" + obj.replace(/(\\|\")/g, "\\$1").replace(/\n|\r|\t/g, function (a) {
+                    return ("\n" == a) ? "\\n" : ("\r" == a) ? "\\r" : ("\t" == a) ? "\\t" : "";
+                }) + "\"";
+            case 'boolean':
+                return obj.toString();
+            default:
+                return obj.toString();
+    }
+}
+htmlLog.log(`var option=${obj2Str(option)}`)
 htmlLog.log(`myChart.setOption(option);</script></body></html>`)
 
 const exec = require("child_process").exec;
