@@ -2,14 +2,13 @@ const fs = require('fs')
 const path = require('path')
 const Console = console.Console
 
-if (!fs.existsSync('./temp')) {
-  fs.mkdirSync('./temp')
+if (!fs.existsSync(path.resolve(__dirname, './repeatTemp'))) {
+  fs.mkdirSync(path.resolve(__dirname, './repeatTemp'))
 }
-
-const index = fs.createWriteStream('./temp/index.log')
-const repeat = fs.createWriteStream('./temp/repeat.log')
-const fullNameList = fs.createWriteStream('./temp/fullNameList.log')
-const fileNameUsed = fs.createWriteStream('./temp/fileNameUsed.log')
+const index = fs.createWriteStream(path.resolve(__dirname, './repeatTemp/index.log'))
+const repeat = fs.createWriteStream(path.resolve(__dirname, './repeatTemp/repeat.log'))
+const fullNameList = fs.createWriteStream(path.resolve(__dirname, './repeatTemp/fullNameList.log'))
+const fileNameUsed = fs.createWriteStream(path.resolve(__dirname, './repeatTemp/fileNameUsed.log'))
 const logger = new Console(index, repeat)
 const fileNameListLog = new Console(fullNameList, fileNameUsed)
 const set = new Set()
@@ -19,11 +18,9 @@ function walk(fileName) {
   if (stat.isDirectory()) {
     fs.readdirSync(fileName).forEach(item => walk(path.resolve(fileName, item)))
   } else if (fileName.search(/\\\d+\.md$/) > 0) {
-    fileNameListLog.log(fileName)
     getPath(fileName)
   }
 }
-
 
 function getPath(fileName) {
   fileNameListLog.log(fileName)
@@ -51,8 +48,6 @@ console.time('耗时')
 walk(path.resolve(__dirname, '../'));
 console.timeEnd('耗时')
 console.log('结束扫描')
-
-
 
 // /^#{2, }\s/gm
 // /http(s)?.+?(?=[\)|\(|\?|#|'|"|\s])/g

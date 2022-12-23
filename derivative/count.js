@@ -2,16 +2,19 @@ const fs = require('fs')
 const path = require('path')
 const Console = console.Console
 
-if (!fs.existsSync('./temp')) {
-    fs.mkdirSync('./temp')
+
+if (!fs.existsSync(path.resolve(__dirname, './countTemp'))) {
+    fs.mkdirSync(path.resolve(__dirname, './countTemp'))
 }
 
-const index = fs.createWriteStream('./temp/index.log')
-const repeat = fs.createWriteStream('./temp/repeat.log')
-const fullNameList = fs.createWriteStream('./temp/fullNameList.log')
-const fileNameUsed = fs.createWriteStream('./temp/fileNameUsed.log')
+const index = fs.createWriteStream(path.resolve(__dirname, './countTemp/index.log'))
+const repeat = fs.createWriteStream(path.resolve(__dirname, './countTemp/repeat.log'))
+const fullNameList = fs.createWriteStream(path.resolve(__dirname, './countTemp/fullNameList.log'))
+const fileNameUsed = fs.createWriteStream(path.resolve(__dirname, './countTemp/fileNameUsed.log'))
+const html = fs.createWriteStream(path.resolve(__dirname, './countTemp/index.html'))
 const logger = new Console(index, repeat)
 const fileNameListLog = new Console(fullNameList, fileNameUsed)
+const htmlLog = new Console(html, html)
 
 function walk(fileName) {
     const stat = fs.statSync(fileName)
@@ -79,5 +82,46 @@ console.log(JSON.stringify(arr))
 console.timeEnd('耗时')
 console.log('结束扫描')
 
-// /[\D]/g,
-//
+htmlLog.log(`<!DOCTYPE html><html><head><meta charset="utf-8"/><title>这才不是统计图</title><!--引入刚刚下载的ECharts文件--><script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.2/echarts.common.min.js"></script></head><body><div id="main"style="width: 1200px;height:800px;"></div><script type="text/javascript">var myChart=echarts.init(document.getElementById('main'));`)
+var option = {
+    title: {
+        text: '这才不是统计图'
+    },
+    tooltip: {
+        trigger: 'axis',
+        hideDelay: '999999',
+        formatter(arr) {
+            console.log(`arr`, arr)
+            return `${arr[0].name}<br/>` + arr.filter(item => item.data).sort((a, b) => (b.data -
+                a.data)).map(item => (
+                `${item.marker}${item.seriesName}                                 ${item.data}`)).join(
+                '<br />')
+        }
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+        ]
+    },
+    yAxis: {
+        type: 'value'
+    },
+};
+option.series = arr
+htmlLog.log(`var option=${JSON.stringify(option)}`)
+htmlLog.log(`myChart.setOption(option);</script></body></html>`)
+
+const exec = require("child_process").exec;
+exec(`explorer.exe ${path.resolve(__dirname, './countTemp/index.html')}`)
