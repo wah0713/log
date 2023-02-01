@@ -68,6 +68,7 @@ Object.keys(obj).forEach(item => {
     const o = {
         name: item,
         type: 'line',
+        smooth: true,
         data: Array(12).fill(null).map((i, index) => {
             const num = obj[item][String(index + 1).padStart(2, '0')]
             if (!num) {
@@ -117,8 +118,12 @@ var option = {
     yAxis: {
         type: 'value'
     },
+    legend: {
+        data: []
+    }
 };
 option.series = arr
+option.legend.data = Object.keys(obj)
 
 function obj2Str(obj, key) {
     switch (typeof (obj)) {
