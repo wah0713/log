@@ -1,4 +1,4 @@
-function round(X = 8, Y = 8) {
+function round(X = 3, Y = 3) {
     let add = Y
     let acc = 0
     let round = 0
@@ -47,4 +47,4 @@ function round(X = 8, Y = 8) {
     }
     console.table(arr)
 }
-round(3, 3)
+round(4, 4)
