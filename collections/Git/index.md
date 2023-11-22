@@ -4,8 +4,6 @@
 
 ### [git fetch 和git pull 的差别](https://www.cnblogs.com/windok/p/13291414.html)
 
-### cherry-pick 多个空格隔开
-
 ### [Git 如何优雅地回退代码](https://www.cnblogs.com/zhenbianshu/p/12018714.html)
 
 ### [怎么保存退出vi编辑](https://www.cnblogs.com/love-feng/p/12340629.html)
@@ -42,4 +40,5 @@
 ### [CI/CD](https://blog.csdn.net/QbitAI/article/details/99366085)
 
 ### [快速删除node_modules目录的方法](https://blog.csdn.net/WU5229485/article/details/82985205)
+
 ### [微软悄悄发布了 Web 版的 VsCode](https://baijiahao.baidu.com/s?id=1710385227950028059&wfr=spider&for=pc)
