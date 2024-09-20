@@ -135,7 +135,7 @@ fs.createWriteStream(
 a = new Array(5).fill(null).map(item => [])
 or
 Array.from({
-    lengthL: 5
+    length: 5
 }, () => ({}))
 ```
 
@@ -1013,7 +1013,7 @@ r = arr.filter(function(element, index, self) {
 
 ### [webpack devtool](https://doc.codingdict.com/webpack-cn-doc/configuration/devtool/)
 
-### [mobile-detect.js 中文网](hhttps://www.mobile-detect.cn/)
+### [mobile-detect.js 中文网](https://www.mobile-detect.cn/)
 
 > 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备。您可以找到有关渲染网页的设备的信息：
 
