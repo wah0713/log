@@ -25,7 +25,7 @@
 
 > 0o八进制 0x十六进制 0b二进制
 
-###
+### 事件 带入的参数
 
 ```js
 const evt = $.Event('keydown', {
