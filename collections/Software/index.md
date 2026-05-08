@@ -313,3 +313,18 @@ npm i autocannon -g
 > 纯 JS 实现的 GUI agent。使用自然语言操作你的 Web 应用。无须后端、客户端、浏览器插件。
 
 ### [World Monitor](https://www.worldmonitor.app/)
+
+### [配置专属的Vercel 实例与github-readme-stats](https://kwanwaipang.github.io/%E9%85%8D%E7%BD%AEgithub-readme-stats/)
+
+### [停止在 2026 年使用 MySQL，它不是真正的开源](https://optimizedbyotto.com/post/reasons-to-stop-using-mysql/)
+
+> MySQL
+> MariaDB
+
+### [windows 上网重新刷新IP](https://blog.csdn.net/u013288190/article/details/108766313)
+
+1、win+R，输入"cmd"并按回车键。
+2、在命令提示符窗口中，输入：ipconfig ，并按回车，该命令将返回你当前的IP地址。
+3、在命令提示符窗口中，输入：ipconfig /release，并按回车。
+4、在命令提示符窗口中，输入：ipconfig /renew，并按回车。你现在应该会得到一个新的IP地址了。要查看你的IP地址，再次输入"ipconfig"并按回车即可。
+5、输入"exit"并按回车退出命令提示符。

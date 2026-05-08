@@ -863,3 +863,47 @@ progress(50px, 0px, 100px)的返回值就是0.5；
 ```
 
 ### [基础CSS即可满足需求](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need/)
+
+### [点击图片放大查看交互效果的最佳实现](https://www.zhangxinxu.com/wordpress/2026/02/image-preview-best-practice/)
+
+> viewTransitionName
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        ::view-transition-group(root) {
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 class="fill">使用View Transitions</h4>
+    <button id="b2">添加图片</button>
+    <script>
+        const src = "../../static/1.jpg";
+
+        b2.onclick = function() {
+            const img = new Image();
+            img.src = src;
+
+            img.onclick = (e) => {
+                document.startViewTransition(() => {
+                    img.remove();
+                });
+            };
+            document.startViewTransition(() => {
+                this.after(img);
+            });
+        };
+    </script>
+</body>
+
+</html>
+```
