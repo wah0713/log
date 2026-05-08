@@ -47,3 +47,45 @@ schtasks /delete /tn poweroff
 ### [colorspace](https://mycolor.space/?hex=%23415FFF&sub=1)
 
 > 配色
+
+### [Visual Studio Code 提高效率的快捷方式](https://juejin.cn/post/7066978065326276644)
+
+### [NES.css](https://nostalgic-css.github.io/NES.css/)
+
+> 像素风
+
+### [figma](https://baike.baidu.com/item/figma/60281951)
+
+### [HTML inputmode与iOS Android软键盘类型测试](https://www.zhangxinxu.com/wordpress/2022/02/html-inputmode-keyboard/)
+
+> 呼出键盘
+
+### [HTML slot 插槽元素深入](https://www.zhangxinxu.com/wordpress/2021/09/html-slot-dom/)
+
+### [不使用file类型input也能触发文件上传](https://www.zhangxinxu.com/wordpress/2021/08/file-system-access-api/)
+
+### [利用废弃的html rel import实现页面include功能](https://www.zhangxinxu.com/wordpress/2021/07/html-rel-import-include/)
+
+### [polyfill、ponyfill、prollyfill傻傻分不清楚](https://www.zhangxinxu.com/wordpress/2021/08/polyfill-ponyfill-prollyfill/)
+
+> polyfill ponyfill prollyfill
+
+### [JS判断图像背景颜色单一还是丰富](https://www.zhangxinxu.com/wordpress/2021/06/js-image-colorful-or-pure/)
+
+### [color thief](https://github.com/lokesh/color-thief)
+
+> 取多个颜色
+
+### [样式还原](https://www.zhangxinxu.com/wordpress/2021/02/css-revert-display/)
+
+> all : revert
+
+### [巧用两个type=range input实现区域范围选择](https://www.zhangxinxu.com/wordpress/2021/02/range-input/)
+
+### [斗鱼开放平台 接口文档](https://open.douyu.com/)
+
+### [开源项目 CDN 加速服务站合集](https://blog.csdn.net/Yi2008yi/article/details/122882237)
+
+### [explorer.exe命令行](https://www.cnblogs.com/zzr-stdio/articles/13140775.html)
+
+> explorer.exe

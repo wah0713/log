@@ -209,3 +209,43 @@ function mkdir(dirpath, dirname) {
 
 path 是：/console/orderManage/editOrder
 fullPath 是：/console/orderManage/editOrder?id=111xxx
+
+### [element-ui的el-table和el-form表单校验嵌套使用](https://blog.csdn.net/xing_zlear/article/details/91127520)
+
+### [Vue调试技巧：在Devtool中一键打开组件源码](https://zhuanlan.zhihu.com/p/359927285)
+
+> https://devtools.vuejs.org/guide/open-in-editor.html
+
+### [vue-cli3.0 使用postcss-plugin-px2rem和postcss-pxtorem自动转换px为rem的配置方法](https://www.cnblogs.com/taohuaya/p/10274993.html)
+
+> px rem
+
+### [avue-cli](https://gitee.com/smallweigit/avue-cli)
+
+### [2022前端应该掌握的10个 JS 小技巧](https://juejin.cn/post/7072274726940311588)
+
+### [What's New With Forms in 2022?](https://css-tricks.com/whats-new-with-forms-in-2022/)
+
+### [用头👴解决！前端必知必会的几个实用响应头](https://juejin.cn/post/7124847588070653983)
+
+### elementui Cascader 和 Select 当页面滚动时，下拉框不一起跟着滚动的问题
+
+Select加上
+
+```css
+:popper-append-to-body='false'
+```
+
+Cascader加上
+
+```css
+:append-to-body='false'
+```
+
+### [vue.config.js-moment去除多余语言环境](https://www.jianshu.com/p/df9c145d4d71)
+
+### [vue-cli中默认webpack配置详解](https://blog.csdn.net/S3328047358/article/details/107021484/)
+
+### [vue中如何将按钮设置为间隔一段时间只能点击一次](https://my.oschina.net/iioschina/blog/4669555)
+
+> 指令

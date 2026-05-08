@@ -42,3 +42,25 @@
 ### [快速删除node_modules目录的方法](https://blog.csdn.net/WU5229485/article/details/82985205)
 
 ### [微软悄悄发布了 Web 版的 VsCode](https://baijiahao.baidu.com/s?id=1710385227950028059&wfr=spider&for=pc)
+
+### git log --name-only
+
+> 查询某次提交的文件列表
+
+### git log --stat
+
+> 显示每个log的commit标题，并且显示哪几个文件被修改了，各个文件增加和删除了多少行。
+
+### [git 删除远程分支文件](https://blog.csdn.net/z2536083458/article/details/86622365)
+
+### [修改.gitignore文件不生效](https://www.cnblogs.com/az4215/p/15597942.html)
+
+> git ignore 文件改名
+
+```bash
+git rm -r --cached .
+```
+
+### [(Git)合并多个commit](https://segmentfault.com/a/1190000007748862)
+
+### [如何退出git rebase命令行](https://segmentfault.com/q/1010000023739076)

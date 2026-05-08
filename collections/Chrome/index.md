@@ -48,3 +48,21 @@
 ```bash
 Capture node screenshot
 ```
+
+### [chrome 动画标签](https://blog.csdn.net/weixin_49012647/article/details/116424935)
+
+> chrome animations
+
+### [HTML5 file API加canvas实现图片前端JS压缩并上传](https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/)
+
+> base64 canvas canvas.getContext
+
+### [怎么判断获取到的url是否能访问](https://segmentfault.com/q/1010000011062244)
+
+> get太重，改用HEAD请求吧
+
+### [使用HEAD请求判断文件是否存在](https://juejin.cn/post/7098233182843043848)
+
+### [tampermonkey官网文档](https://www.tampermonkey.net/documentation.php)
+
+### [Tampermonkey中文文档](https://www.cnblogs.com/grubber/p/12560522.html)

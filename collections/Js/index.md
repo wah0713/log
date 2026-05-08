@@ -1024,3 +1024,368 @@ r = arr.filter(function(element, index, self) {
 > node-crawler：一个轻量级爬虫工具 文档
 
 ### [五十种最好的开源爬虫](https://www.cnblogs.com/jscs/p/13672785.html)
+
+### [type=file上传文件时accept限制文件类型](https://blog.csdn.net/guoqiankunmiss/article/details/102629209)
+
+### [FormData 原生对象](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData)
+
+### [浅谈js的数字格式](https://www.cnblogs.com/amiezhang/p/7940067.html)
+
+```js
+// 二进制
+0b10; // 2
+// 八进制
+010; // 8
+// 十六进制
+0x10; // 16
+```
+
+### [Base64笔记](http://www.ruanyifeng.com/blog/2008/06/base64.html)
+
+### [HTML DOM cloneNode() 方法](https://www.w3school.com.cn/jsref/met_node_clonenode.asp)
+
+### [前端监控体系搭建](https://juejin.cn/post/7078512301665419295)
+
+### [使用 CodeMirror 打造在线代码编辑器](https://blog.csdn.net/qq_37193537/article/details/88426196)
+
+### [Vue Json Pretty](https://github.com/leezng/vue-json-pretty)
+
+### [vue-json-viewer](https://github.com/chenfengjw163/vue-json-viewer#readme)
+
+### [无障碍开发](https://www.cnblogs.com/kunmomo/category/1552789.html)
+
+### [i18n与a11y与l10n](https://www.jianshu.com/p/a1dbc0f2d7de)
+
+### [WAI-ARIA无障碍网页应用属性完全展示](https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/#ariaAttr)
+
+### [:focus-visible](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-visible)
+
+### [tabindex](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/tabindex)
+
+### [键盘导航的 JavaScript 组件](https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+
+### [浏览器兼容](https://caniuse.com/)
+
+### [深入JS getRandomValues和Math.random方法](https://www.zhangxinxu.com/wordpress/2021/12/js-getrandomvalue-math-random/)
+
+### [ES标准中的相等比较算法 SameValue SameValueZero](https://blog.csdn.net/QDY5945/article/details/102638372)
+
+### [了解页面的生命周期](https://www.zhangxinxu.com/wordpress/2021/11/js-visibilitychange-pagehide-lifecycle/)
+
+### [这几个高级前端常用的API，你用到了吗？](https://juejin.cn/post/7028744289890861063)
+
+> MutationObserver IntersectionObserver getComputedStyle requestAnimationFrame
+
+### [CanvasRenderingContext2D.drawImage()](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage)
+
+### [输入框value属性赋值触发js change事件的实现](https://www.zhangxinxu.com/wordpress/2021/05/js-value-change/)
+
+### [Promise.all、race和any方法都是什么意思？](https://www.zhangxinxu.com/wordpress/2021/05/promise-all-race-any/)
+
+### [在有滚动条的容器中指定（显示）滚动到某一子元素位置](https://blog.csdn.net/weixin_44807526/article/details/118576067)
+
+> scrollIntoView
+
+### [2020的今天，[\u4e00-\u9fa5]还能匹配到所有中文吗？](https://juejin.cn/post/6844904116842430471)
+
+### [读取字体属性](https://wakamaifondue.com/)
+
+### [div模拟textarea文本域轻松实现高度自适应](https://www.zhangxinxu.com/wordpress/2010/12/div-textarea-height-auto/)
+
+> contenteditable
+
+### [深入理解Shadow DOM v1](https://segmentfault.com/a/1190000019115050)
+
+> shadow 虚拟dom
+
+### [vue生产环境报错 ChunkLoadError](https://www.impl.fun/2022/03/27/cue-load-chunk-failed/)
+
+```js
+window.addEventListener('error', (event) => {
+    if (!(event instanceof ErrorEvent)) {
+        window.hasScriptJs = event.target.src
+    }
+}, true);
+
+router.onError((error) => {
+    const pattern = /Loading chunk (\d)+ failed/g;
+    const isChunkLoadFailed = error.message.match(pattern);
+    if (isChunkLoadFailed && window.hasScriptJs) {
+        let setScript = document.createElement("script");
+        setScript.setAttribute("src", window.hasScriptJs);
+        head.appendChild(setScript);
+        setScript.onload = () => {
+            const targetPath = $router.history.pending.fullPath;
+            $router.replace(targetPath);
+        }
+        setScript.onerror = () => {
+            location.reload();
+        }
+    }
+});
+```
+
+### [盘点HTML字符串转DOM的各种方法及细节](https://www.zhangxinxu.com/wordpress/2021/02/html-string-dom/)
+
+> innerHTML insertAdjacentHTML DOMParser Range
+
+### [DOMPurify 简单使用](https://www.jianshu.com/p/d88cd47a124d)
+
+### [判断DOM元素是否出现再浏览器窗口中](https://segmentfault.com/a/1190000017303509)
+
+### [聊一聊前端图片懒加载背后的故事](https://qinyuanpei.blog.csdn.net/article/details/126170750)
+
+### [如何使用JS检测用户是否缩放了页面？](https://www.zhangxinxu.com/wordpress/2021/02/js-if-page-zoom/)
+
+### [巧用DOM API实现HTML字符的转义和反转义](https://www.zhangxinxu.com/wordpress/2021/01/dom-api-html-encode-decode/)
+
+### [告别JS keyCode](https://www.zhangxinxu.com/wordpress/2021/01/js-keycode-deprecated/)
+
+> event.key event.code
+
+### [前端JS获取字符串字节大小](https://tydev.blog.csdn.net/article/details/107357640)
+
+### [JS 计算字符串所占字节数](http://www.alloyteam.com/2013/12/js-calculate-the-number-of-bytes-occupied-by-a-string/)
+
+### [window.parent、window.top、window.self](https://www.cnblogs.com/zxf100/articles/14182831.html)
+
+> iframe
+
+### [前端监控之接口统计](https://juejin.cn/post/6958700362660315149)
+
+### [为什么通常在发送数据埋点请求的时候使用的是 1x1 像素的透明 gif 图片？](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/87)
+
+### [深入Node.compareDocumentPosition API](https://www.zhangxinxu.com/wordpress/2019/03/node-comparedocumentposition-api/)
+
+### [navigator.sendBeacon](https://zhuanlan.zhihu.com/p/381796039)
+
+> 关闭页面时，发送请求
+
+```js
+const sendBeacon = (url, data = {}) => {
+    const blob = new Blob([JSON.stringify(data)], {
+        type: 'application/json; charset=UTF-8',
+    });
+    return navigator.sendBeacon(url, blob);
+};
+```
+
+### [Vue 使用 lodash Debounce 进行防抖，控制高耗任务的频率](https://juejin.cn/post/7041067567422636063)
+
+### [揭秘 Vue.js 九个性能优化技巧](https://juejin.cn/post/6922641008106668045)
+
+> Local variables
+
+### [25个 Vue 技巧, 学了这么久才知道还能这么用](https://juejin.cn/post/7098688018663342111)
+
+> v-for 中的解构
+
+### [解决canvas图片getImageData, toDataURL跨域问题](https://www.zhangxinxu.com/wordpress/2018/02/crossorigin-canvas-getimagedata-cors/)
+
+### [面试官为啥总是让我们手撕call、apply、bind?](https://juejin.cn/post/7128233572380442660)
+
+### [请问：怎么实现大文件快速上传？](https://juejin.cn/post/7074534222748188685)
+
+### [告别pointer-events:none使用HTML inert属性真正禁用](https://www.zhangxinxu.com/wordpress/2022/10/html-inert-disabled-attribute/)
+
+### [面向对象七大设计原则](https://blog.csdn.net/nanyupeng/article/category/125680185)
+
+> 开放封闭原则、单一职责原则、依赖倒置原则、里氏替换原则、接口隔离原则、组合复用原则、迪米特原则
+
+### [Element-UI使用及遇到的问题](https://www.jianshu.com/p/52ca9a00851a)
+
+### [聊聊JS DOM变化的监听检测与应用](https://www.zhangxinxu.com/wordpress/2019/08/js-dom-mutation-observer/)
+
+> MutationObserver Mutation events Object.defineProperty
+
+### [JS URL()和URLSearchParams() API接口详细介绍](https://www.zhangxinxu.com/wordpress/2019/08/js-url-urlsearchparams/)
+
+### [前端面试常见的浏览器缓存（强缓存、协商缓存），代码实操](https://juejin.cn/post/7083178636852854792)
+
+### [Moment.js](https://www.momentjs.com.cn/docs.html#/manipulating/add/)
+
+```js
+moment().add(Number, String);
+moment().add(Duration);
+moment().add(Object);
+
+moment().startOf('year');
+moment().startOf('month');
+moment().startOf('day');
+```
+
+### [实战技巧，Vue原来还可以这样写](https://juejin.cn/post/6844904196626448391)
+
+```js
+window.addEventListener('resize', this.$_handleResizeChart)
+this.$once('hook:beforeDestroy', () => {
+    window.removeEventListener('resize', this.$_handleResizeChart)
+})
+```
+
+### [js 模拟鼠标双击](https://blog.csdn.net/nongcunqq/article/details/115358202)
+
+```js
+var targLink = document.getElementById("something");
+var clickEvent = document.createEvent('MouseEvents');
+clickEvent.initEvent('dblclick', true, true);
+targLink.dispatchEvent(clickEvent);
+```
+
+### [纯前端JS zip打包文件并下载](https://www.zhangxinxu.com/wordpress/2019/08/js-zip-download/)
+
+> jszip FileSaver js-xlsx
+
+### [小tips: 元素focus页面不滚动不定位的JS处理](https://www.zhangxinxu.com/wordpress/2019/09/js-focus-preventscroll/)
+
+> preventScroll
+
+### [JS Intl对象完整简介及在中文中的应用](https://www.zhangxinxu.com/wordpress/2019/09/js-intl-zh/)
+
+> 数字格式化
+
+### [小tips: JS DOM innerText和textContent的区别](https://www.zhangxinxu.com/wordpress/2019/09/js-dom-innertext-textcontent/)
+
+> innerText textContent
+
+### [RegExp.$1-$9](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)
+
+### [JS检测CSS属性浏览器是否支持的多种方法](https://www.zhangxinxu.com/wordpress/2019/11/js-css-supports-detect/)
+
+### [js模拟键盘点击esc键](https://blog.csdn.net/qq_41228055/article/details/124712858)
+
+### [JavaScript 中几个优雅的运算符使用技巧](https://mp.weixin.qq.com/s/M6BnuFVku0sYoug016un8g)
+
+```js
+object?.property
+undefined ?? 'codercao'
+expr1 ??= expr2
+x ||= y
+x &&= y
+```
+
+### [webpack-bundle-analyzer 优化实战](https://juejin.cn/post/7035951233907032077)
+
+### [从今天开始，请叫我Node文本节点处理大师](https://www.zhangxinxu.com/wordpress/2022/11/js-text-node-master/)
+
+### [nodejs之支持async func的并行forEach](https://blog.csdn.net/windroid/article/details/105942653)
+
+### 位运算
+
+```js
+// 四舍五入
+num + 0.5 | 0
+// 取整
+num | 0
+```
+
+### [Vue 强制刷新(重新渲染)的方式](https://blog.csdn.net/LonewoIf/article/details/126176039)
+
+### [小tips: 使用JS检测用户是否安装某font-family字体](https://www.zhangxinxu.com/wordpress/2018/02/js-detect-suppot-font-family/)
+
+### [小tips: 纯前端JS读取与解析本地文本类文件](https://www.zhangxinxu.com/wordpress/2018/03/js-parse-text-file/)
+
+```js
+var reader = new FileReader();
+reader.onload = function(event) {
+    // event.target.result就是文件文本内容
+};
+reader.readAsText(file);
+```
+
+### [JavaScript 正则表达式匹配汉字](https://zhuanlan.zhihu.com/p/33335629)
+
+> /\p{Unified_Ideograph}/u 匹配所有汉字
+
+### [Service Worker实现浏览器端页面渲染或CSS, JS编译](https://www.zhangxinxu.com/wordpress/2018/04/service-worker-client-online-html-css-complie/)
+
+### [node使用exec方法开启子进程](https://blog.csdn.net/xuelian3015/article/details/125923099)
+
+> exec(command, [options], [callback])
+
+### [Object转字符串可以包含function](https://blog.csdn.net/LanChongQiChuang/article/details/103683642)
+
+### [React Hook 系列(一)：彻底搞懂react-hooks 用法（万字慎点）](https://segmentfault.com/a/1190000021261588)
+
+### [Webpack Bundle Analyzer插件的使用](https://segmentfault.com/a/1190000017716736)
+
+### [webpack配置中的ExtractTextPlugin插件认识](https://www.jianshu.com/p/ed3c98ba5474)
+
+### [webpack配置别名alias](https://www.cnblogs.com/Jimc/p/10282969.html)
+
+### [nodejs路径处理方法和绝对路径 path](https://www.cnblogs.com/mengff/p/9753867.html)
+
+### [巧用.filter去重](https://blog.csdn.net/weixin_44198018/article/details/87856385)
+
+```js
+r = arr.filter(function(element, index, self) {
+    return self.indexOf(element) === index;
+});
+```
+
+### [如何优雅监听容器高度变化](https://segmentfault.com/a/1190000019877595?utm_source=tag-newest)
+
+### [ResizeObserver API](https://zhuanlan.zhihu.com/p/41418813)
+
+### [介绍nodejs中的path模块的几个方法](https://www.cnblogs.com/wulinzi/p/8034047.html)
+
+> Windows 与 POSIX
+
+### [webpack基础](https://www.jianshu.com/p/13bdbefd6189)
+
+### [webpack-module配置详解](https://blog.csdn.net/qq_44708990/article/details/116758235)
+
+### [前端小白入门webpack中对于css、less、图片的处理](https://blog.csdn.net/weixin_43916611/article/details/111708384)
+
+### [webpack：hash、chunkhash、contenthash三者区别](https://www.cnblogs.com/gaoht/p/14005850.html)
+
+### [基于 webpack 的持久化缓存方案](https://github.com/pigcan/blog/issues/9)
+
+### 数字每三位加逗号
+
+```js
+`2322222222222123`.replace(/(\d)(?=(\d{3})+$)/g, '$1, ')
+```
+
+### [webpack devtool](https://doc.codingdict.com/webpack-cn-doc/configuration/devtool/)
+
+### [一些提高前端代码健壮性的方法](https://juejin.cn/post/6896118234391511053)
+
+### [webpack的chunkFilename详细说明](https://blog.csdn.net/wu_xianqiang/article/details/113121793)
+
+### base64编码实现
+
+```js
+function _btoa(str) {
+    const base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    const a = [...str].map(item => item.charCodeAt().toString(2).padStart(8, '0')).join('')
+    let list = []
+    for (let i = 0; i < Math.ceil(a.length / 6); i++) {
+        list.push(base64[parseInt(`00${a.slice(i * 6, (i + 1) * 6)}`.padEnd(8, '0'), 2)])
+    }
+    const res = list.join('')
+    console.log(res.padEnd(Math.ceil(res.length / 4) * 4, '='))
+}
+_btoa('http://www.ruanyifeng.com/blog/2008/06/base64.html')
+_btoa('Man')
+_btoa('Ma')
+_btoa('M')
+```
+
+### emoji编码转换
+
+```js
+const codePoint = '✔️'.codePointAt()
+const num16 = codePoint.toString(16)
+const emoji = String.fromCodePoint(`0x${num16}`)
+```
+
+### [web前端入门到实战：CSS3中width值为max/min-content及fit-content的理解](https://blog.csdn.net/wewfdf/article/details/101228278)
+
+### [浏览器是根据什么决定「from disk cache」与「from memory cache」？](https://www.zhihu.com/question/64201378?sort=created)
+
+### [聊一聊缓存 [from memory cache 和 from disk cache]](https://blog.csdn.net/weixin_42038290/article/details/110135296)
+
+### [mobile-detect.js 中文网](https://www.mobile-detect.cn/)
+
+> 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备
