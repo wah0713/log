@@ -124,4 +124,83 @@ npm i autocannon -g
 
 ### [ImageDecoder API让GIF图片暂停播放](https://www.zhangxinxu.com/wordpress/2023/05/js-imagedecoder-api-gif/)
 
-> ImageDecoder
+&gt; ImageDecoder
+
+### [手机电脑互传](https://localsend.org/zh-CN/)
+
+### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown/)
+
+&gt; markdown的一些进阶用法
+
+### [Nostalgist](https://github.com/arianrhodsandlot/nostalgist/)
+
+&gt; Nostalgist.js 是一个 JavaScript 库，允许您在 Web 浏览器中运行复古游戏机的模拟器，例如 NES 和 Sega Genesis。
+
+### [科学 PDF 文档翻译及双语对照工具](https://github.com/Byaidu/PDFMathTranslate/blob/main/README_zh-CN.md/)
+
+&gt; python 实现的科学文档翻译及双语对照工具
+
+### [免费共享的GPT4镜像](https://www.opkfc.com/list/)
+
+### [以图搜图](https://picfind.top/)
+
+### [DOOM Captcha](https://github.com/vivirenremoto/doomcaptcha/)
+
+&gt; DOOM 风格的验证码
+
+### [github收藏展示图](https://star-history.com/)
+
+### [中国古代历史人物可视化](https://tools.buyixiao.xyz/historical-figure-query/)
+
+&gt; 可以生成 52 万位中国古代历史名人的的社会关系、亲戚关系和生平足迹图，数据来源：CBDB
+
+### [代码对比库](https://github.com/MrWangJustToDo/git-diff-view/)
+
+&gt; Git Diff Component vue react
+
+### [汇聚多个GPT](https://github.com/lencx/Noi/)
+
+### [前端模糊搜索](https://github.com/m31coding/fuzzy-search/)
+
+### [BabelDuck](https://github.com/Orenoid/BabelDuck/)
+
+&gt; BabelDuck 是一个面向各水平层次语言学习者的高度可定制化 AI 口语对话练习应用，并对初学者更友好，旨在将口语表达练习的门槛与心智负担降至最低。
+&gt; 口语练习
+
+### [YouTube中文配音](https://chromewebstore.google.com/detail/youtube%E4%B8%8F%E6%96%87%E9%85%8D%E9%9F%B3/oglffgiaiekgeicdgkdlnlkhliajdlja/)
+
+### [30 天学 Python](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/Chinese/04_strings.md/)
+
+### [卸载软件](https://uninstalr.com/ )
+
+### [监控chrome扩展是否被自己调接口](https://github.com/dnakov/little-rat/)
+
+&gt; 🐀 小型 chrome 扩展，用于监控（并选择性地阻止）其他扩展的网络调用
+
+### [磁力](https://anybt.eth.limo/)
+
+### [本项目旨在打造一本开源免费、新手友好的数据结构与算法入门教程。](https://github.com/krahets/hello-algo/)
+
+### [字幕工具箱](https://zm.i8k.tv/)
+
+### [混合图片](https://styleof.com/s/remix-yourself/)
+
+### [𦮙](https://www.hanyuguoxue.com/zidian/zi-158617/)
+
+### [GPT生成图关键词](https://artiversehub.ai/prompt-marketplace/1783666543199424513/)
+
+### [CSS 可以制作动画的令人惊讶的事情](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
+
+### [Web 终极拦截技巧（全是骚操作）](https://hughfenghen.github.io/posts/2023/12/23/web-spy/)
+
+### [VS Code配置使用 Python，超详细配置指南，看这一篇就够了](https://blog.csdn.net/weixin_49895216/article/details/131696960/)
+
+&gt; python环境配置
+
+### [Python 的许多命令行实用程序](https://www.pythonmorsels.com/cli-tools/)
+
+&gt; python 命令行工具
+
+### [DashPlayer](https://github.com/solidSpoon/DashPlayer/)
+
+&gt; 一款专为英语学习打造的视频播放器

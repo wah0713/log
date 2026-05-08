@@ -1740,8 +1740,737 @@ const emoji = String.fromCodePoint(`0x${num16}`)
 
 ### [浏览器是根据什么决定「from disk cache」与「from memory cache」？](https://www.zhihu.com/question/64201378?sort=created)
 
-### [聊一聊缓存 [from memory cache 和 from disk cache]](https://blog.csdn.net/weixin_42038290/article/details/110135296)
+### [聊一聊缓存 [from memory cache 和 from disk cache]](https://blog.csdn.net/weixin_42038290/article/details/110135296/)
 
 ### [mobile-detect.js 中文网](https://www.mobile-detect.cn/)
 
-> 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备
+&gt; 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备
+
+### [纯JS实现图像的人脸识别功能](https://www.zhangxinxu.com/wordpress/2023/12/js-image-video-face-detect/)
+
+### [Face-Detection-JavaScript](https://github.com/WebDevSimplified/Face-Detection-JavaScript)
+
+### [JS实现图片相似度的判断](https://www.zhangxinxu.com/wordpress/2023/12/js-img-image-similarity/)
+
+### [SSIM.js](https://github.com/obartra/ssim)
+
+### [使用JS提取视频中的音频资源](https://www.zhangxinxu.com/wordpress/2023/12/js-fetch-video-audio-mp3-mp4-wav/)
+
+### [本地MP3封面图、时长等信息的JS读取](https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/)
+
+### [mp4box.js加WebCodecs 解码MP4视频帧并渲染](https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/)
+
+### [js中 ||=、&amp;&amp;=、??=、?.、?? 运算符的使用](https://blog.csdn.net/tiven_/article/details/134289431/)
+
+```js
+let x = 10;
+let y = 0;
+x || = 5; // x仍为10，因为10被视为真值
+y || = 5; // y现在为5，因为0被视为假值
+
+let a = null;
+let b = 15;
+a &amp;&amp; = 10; // a仍为null
+b &amp;&amp; = 20; // b现在为20
+
+let c = null;
+let d;
+c ?? = 5; // c现在为5
+d ?? = 10; // d现在为10
+```
+
+### 1e5
+
+```js
+1e5 // 100000
+```
+
+### [Chrome-查看DOM元素绑定的事件【工具篇】](https://blog.csdn.net/weixin_38080573/article/details/105200212/)
+
+&gt; getEventListeners
+
+### [Fetch GitHub Hosts](https://hosts.gitcdn.top/)
+
+&gt; hosts
+
+### [告别轮询，SSE 流式传输可太香了！](https://juejin.cn/post/7359347999308644390/)
+
+```js
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.use(express.static('public'));
+
+app.use((req, res, next) =&gt; {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
+app.get('/events', function(req, res) {
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+
+    let startTime = Date.now();
+
+    const sendEvent = () =&gt; {
+        if (Date.now() - startTime &gt;= 10000) {
+            res.write('event: close\ndata: {}\n\n');
+            res.end();
+            return;
+        }
+
+        const data = {
+            message: 'Hello World',
+            timestamp: new Date()
+        };
+        res.write(`data: ${JSON.stringify(data)}\n\n`);
+
+        setTimeout(sendEvent, 2000);
+    };
+
+    sendEvent();
+});
+
+app.listen(PORT, () =&gt; {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+```
+
+```html
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;SSE Example&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Server-Sent Events Example&lt;/h1&gt;
+    &lt;div id="messages"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        const evtSource = new EventSource('/events');
+        const messages = document.getElementById('messages');
+
+        evtSource.onmessage = function(event) {
+            const newElement = document.createElement("p");
+            const eventObject = JSON.parse(event.data);
+            newElement.textContent = "Message: " + eventObject.message + " at " + eventObject.timestamp;
+            messages.appendChild(newElement);
+        };
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+```
+
+### [npm view node](https://docs.npmjs.com/cli/v8/commands/npm-view)
+
+### [input type](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/button)
+
+### [语义化版本号管理](https://vue3.chengpeiquan.com/guide.html#%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F%E4%B8%8A%E5%8D%87%E7%BA%A7%E8%A7%84%E5%88%99/)
+
+&gt; 版本号
+
+英文|中文|含义
+:-:|:-:|:-
+Major|主版本号|当项目作了大量的变更，与旧版本存在一定的不兼容问题
+Minor|次版本号|做了向下兼容的功能改动或少量功能更新
+Patch|修订号|修复上一个版本的少量 BUG
+
+### [MPA 与 SPA](https://vue3.chengpeiquan.com/engineering.html#mpa-%E4%B8%8F-spa)
+
+### [CSR 与 SSR](https://vue3.chengpeiquan.com/engineering.html#csr-%E4%B8%8F-ssr)
+
+### [了解模块导入限制](https://vue3.chengpeiquan.com/guide.html#%E4%BA%86%E8%A7%A3%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E9%99%90%E5%88%B6/)
+
+```html
+  &lt;script type="importmap"&gt;
+      {
+        "imports": {
+          "md5": "https://esm.run/md5"
+        }
+      }
+  &lt;/script&gt;
+```
+
+### [不使用font-weight等CSS实现文字变瘦或变胖效果](https://www.zhangxinxu.com/wordpress/2024/05/svg-femorphology-font-weight-thin-stretch/)
+
+```html
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"&gt;
+    &lt;filter id="erode"&gt;
+        &lt;feMorphology operator="erode" radius="1" /&gt;
+    &lt;/filter&gt;
+    &lt;filter id="dilate"&gt;
+        &lt;feMorphology operator="dilate" radius="1" /&gt;
+    &lt;/filter&gt;
+&lt;/svg&gt;
+
+&lt;h4&gt;苗条&lt;/h4&gt;
+&lt;data class="erode"&gt;《CSS新世界》&lt;/data&gt;
+&lt;h4&gt;体胖&lt;/h4&gt;
+&lt;data class="dilate"&gt;《CSS新世界》&lt;/data&gt;
+```
+
+```css
+data {
+    font-size: 2.5rem;
+}
+
+.erode {
+    filter: url(#erode);
+}
+
+.dilate {
+    filter: url(#dilate);
+}
+```
+
+### [Timeline 是以时间线的方式追踪不同类型的数据](https://vue3.chengpeiquan.com/upgrade.html#vue-devtools/)
+
+&gt; Timeline
+
+### [前端跨页面通信：Broadcast Channel](https://www.jianshu.com/p/12bb9acd9165/)
+
+```js
+const setChannel = new BroadcastChannel('demos');
+setChannel.postMessage('要发送消息啦啦啦啦啦啦啦');
+setChannel.onmessage = function(e) {
+    console.log('接收到消息:', e.data);
+};
+setChannel.close();
+```
+
+### [JavaScript 判断是否为数字的几种方式](https://segmentfault.com/a/1190000044729061/)
+
+```js
+!isNaN(parseFloat(value)) &amp;&amp; isFinite(value);
+```
+
+### [聊聊Top Layer顶层特性的隐患与实践](https://www.zhangxinxu.com/wordpress/2024/06/web-top-layer/)
+
+```html
+&lt;button onclick="dialog.showModal();"&gt;点击我显示模态对话框&lt;/button&gt;
+
+&lt;dialog id="dialog"&gt;
+    &lt;blockquote&gt;
+        &lt;button onclick="toast.showPopover();"&gt;显示toast提示&lt;/button&gt;
+        &lt;button onclick="dialog.close();"&gt;关闭&lt;/button&gt;
+    &lt;/blockquote&gt;
+&lt;/dialog&gt;
+
+&lt;div id="toast" class="toast" popover&gt;我是提示内容&lt;/div&gt;
+```
+
+### [今天才知道，Web网页也能阻止息屏了](https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/)
+
+&gt; wakeLock
+
+### [不改变音调情况下Audio音频的倍速合成JS实现](https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/)
+
+### [使用JS快速获取video视频任意位置的缩略图](https://www.zhangxinxu.com/wordpress/2024/01/js-get-video-thumb-poster/)
+
+### [时代变了，该使用原生popover属性模拟下拉了](https://www.zhangxinxu.com/wordpress/2024/01/js-html-popover-dropdown/)
+
+```html
+&lt;button popovertarget="imgBook"&gt;点击显示图片&lt;/button&gt;
+&lt;img id="imgBook" popover src="/study/202312/book1.jpg" /&gt;
+```
+
+### [来了来了，scrollend滚动停止事件也支持了](https://www.zhangxinxu.com/wordpress/2024/09/js-scrollend-event/)
+
+```js
+window.addEventListener("scrollend", (event) =&gt; {
+    // 滚动结束
+});
+
+element.addEventListener("scrollend", (event) =&gt; {
+    // 滚动结束
+});
+```
+
+### [实用的JS对象分组静态方法Object.groupBy()](https://www.zhangxinxu.com/wordpress/2024/09/js-object-groupby/)
+
+```js
+const data = [{
+    id: 1,
+    name: '张三'
+}, {
+    id: 3,
+    name: '李四'
+}, {
+    id: 4,
+    name: '王二'
+}, {
+    id: 2,
+    name: '张三'
+}];
+
+const result = Object.groupBy(data, ({
+    name
+}) =&gt; name);
+
+console.log(result);
+```
+
+### [Server-Sent Events 教程](https://www.ruanyifeng.com/blog/2017/05/server-sent_events.html)
+
+### [还在用轮询、websocket查询大屏数据？sse用起来](https://juejin.cn/post/7424908830902042658/)
+
+### [app.runWithContext()](https://cn.vuejs.org/api/application.html#app-runwithcontext)
+
+### [2024 最新最全 VS Code 插件推荐！](https://juejin.cn/post/7384765023343394827/)
+
+### [用纯 CSS 实现网格背景](https://spacexcode.com/blog/pure-css-grid-line/)
+
+```css
+{
+    background-size: 20px 20px;
+    background-position: center center;
+    background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent), linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);
+    mask-image: linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent), linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in, xor;
+}
+```
+
+### [好的重构与坏的重构](https://www.builder.io/blog/good-vs-bad-refactoring)
+
+### [useTemplateRef()](https://cn.vuejs.org/api/composition-api-helpers.html#usetemplateref)
+
+### [useId()](https://cn.vuejs.org/api/composition-api-helpers.html#useid)
+
+&gt; 用于为无障碍属性或表单元素生成每个应用内唯一的 ID。
+
+### [优化 Javascript 以获得乐趣和利润](https://romgrk.com/posts/optimizing-javascript)
+
+### [这13个前端库，帮我在工作中赢得了不少摸鱼时间](https://juejin.cn/post/7373136303180136459#heading-5/)
+
+```js
+import xss from "xss";
+const userInput = '&lt;script&gt;alert("恶意代码");&lt;/script&gt;&lt;p&gt;这是用户输入的文本内容&lt;/p&gt;';
+const output = xss(userInput);
+console.log(output); // &amp;lt;script&amp;gt;alert("恶意代码");&amp;lt;/script&amp;gt;&lt;p&gt;这是用户输入的文本内容&lt;/p&gt;
+
+import copy from 'copy-text-to-clipboard';
+
+button.addEventListener('click', () =&gt; {
+    copy('复制一些东西');
+});
+```
+
+```
+localforage
+支持自动数据类型转换，可以将对象、数组等复杂数据结构转换成适合存储的格式，并在取出数据时自动转换回原始格式。
+```
+
+```
+vconsole
+可以在手机浏览器中实时查看日志、错误信息、网络请求等调试信息，帮助我们快速定位和解决问题。
+```
+
+### [watch](https://cn.vuejs.org/api/options-state.html#watch)
+
+&gt; 这种用法不支持复杂表达式——仅支持由点分隔的路径。如果你需要侦听复杂的数据源，可以使用命令式的 $watch() API。
+
+### [v-bind](https://cn.vuejs.org/api/built-in-directives.html#v-bind)
+
+### [手机电脑互传](https://localsend.org/zh-CN/)
+
+### [v-pre](https://cn.vuejs.org/api/built-in-directives.html#v-pre)
+
+&gt; 跳过该元素及其所有子元素的编译。
+
+### [命名空间组件](https://cn.vuejs.org/api/sfc-script-setup.html#%E5%91%BD%E5%90%8D%E7%A9%BA%E7%BB%84%E4%BB%B6/)
+
+```vue
+&lt;script setup&gt;
+import * as Form from './form-components'
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;Form.Input&gt;
+    &lt;Form.Label&gt;label&lt;/Form.Label&gt;
+  &lt;/Form.Input&gt;
+&lt;/template&gt;
+```
+
+### [chatgpt在线](http://chatgpt.com/)
+
+### [qs.js库的使用](https://juejin.cn/post/7431999633071030283/)
+
+&gt; 用于url参数转化：parse和stringify的js库
+
+### [检测用户是否打开了键盘的大写锁定](https://davidwalsh.name/detect-caps-lock)
+
+```js
+document.querySelector('input[type=password]').addEventListener('keyup', function(keyboardEvent) {
+    const capsLockOn = keyboardEvent.getModifierState('CapsLock');
+    if (capsLockOn) {
+        // Warn the user that their caps lock is on?
+    }
+});
+```
+
+### [w3c的getModifierState](https://w3c.github.io/uievents/#event-modifier-initializers/)
+
+```js
+dictionary EventModifierInit: UIEventInit {
+    boolean ctrlKey = false;
+    boolean shiftKey = false;
+    boolean altKey = false;
+    boolean metaKey = false;
+
+    boolean modifierAltGraph = false;
+    boolean modifierCapsLock = false;
+    boolean modifierFn = false;
+    boolean modifierFnLock = false;
+    boolean modifierHyper = false;
+    boolean modifierNumLock = false;
+    boolean modifierScrollLock = false;
+    boolean modifierSuper = false;
+    boolean modifierSymbol = false;
+    boolean modifierSymbolLock = false;
+};
+```
+
+### [科学 PDF 文档翻译及双语对照工具](https://github.com/Byaidu/PDFMathTranslate/blob/main/README_zh-CN.md/)
+
+&gt; python 实现的科学文档翻译及双语对照工具
+
+### [免费共享的GPT4镜像](https://www.opkfc.com/list/)
+
+### [以图搜图](https://picfind.top/)
+
+### [插槽选择器](https://cn.vuejs.org/api/sfc-css-features.html#%E6%8F%92%E6%A7%BD%E9%80%89%E5%99%A8%E5%99%A8/)
+
+```vue
+&lt;style scoped&gt;
+:slotted(div) {
+    color: red;
+}
+
+&lt;/style&gt;
+```
+
+### [全局选择器](https://cn.vuejs.org/api/sfc-css-features.html#%E5%85%A8%E5%B1%80%E9%80%89%E5%99%A8%E5%99%A8/)
+
+```vue
+&lt;style scoped&gt;
+:global(.red) {
+  color: red;
+}
+&lt;/style&gt;
+```
+
+### [CSS 中的 v-bind()](https://cn.vuejs.org/api/sfc-css-features.html#v-bind-%E5%9C%A8-css/)
+
+```vue
+&lt;template&gt;
+  &lt;div class="text"&gt;hello&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return {
+      color: 'red'
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.text {
+  color: v-bind(color);
+}
+&lt;/style&gt;
+
+&lt;script setup&gt;
+import { ref } from 'vue'
+const theme = ref({
+    color: 'red',
+})
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;p&gt;hello&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+p {
+  color: v-bind('theme.color');
+}
+&lt;/style&gt;
+```
+
+### [VS Code配置使用 Python，超详细配置指南，看这一篇就够了](https://blog.csdn.net/weixin_49895216/article/details/131696960/)
+
+&gt; python环境配置
+
+### [Python 的许多命令行实用程序](https://www.pythonmorsels.com/cli-tools/)
+
+&gt; python 命令行工具
+
+### [DashPlayer](https://github.com/solidSpoon/DashPlayer/)
+
+&gt; 一款专为英语学习打造的视频播放器
+
+### [字幕工具箱](https://zm.i8k.tv/)
+
+### [混合图片](https://styleof.com/s/remix-yourself/)
+
+### [𦮙](https://www.hanyuguoxue.com/zidian/zi-158617/)
+
+### [GPT生成图关键词](https://artiversehub.ai/prompt-marketplace/1783666543199424513/)
+
+### [DOOM Captcha](https://github.com/vivirenremoto/doomcaptcha/)
+
+&gt; DOOM 风格的验证码
+
+### [github收藏展示图](https://star-history.com/)
+
+### [中国古代历史人物可视化，可以生成 52 万位中国古代历史名人的的社会关系、亲戚关系和生平足迹图，数据来源：CBDB](https://tools.buyixiao.xyz/historical-figure-query/)
+
+### [代码对比库](https://github.com/MrWangJustToDo/git-diff-view/)
+
+&gt; Git Diff Component vue react
+
+### [Web 终极拦截技巧（全是骚操作）](https://hughfenghen.github.io/posts/2023/12/23/web-spy/)
+
+### [汇聚多个GPT](https://github.com/lencx/Noi/)
+
+### [CSS 可以制作动画的令人惊讶的事情](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
+
+### [Date.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString/)
+
+&gt; 以特定于地区的格式显示日期字符串。
+&gt; 转化时间的第二种方法
+
+### [Nostalgist](https://github.com/arianrhodsandlot/nostalgist/)
+
+&gt; Nostalgist.js 是一个 JavaScript 库，允许您在 Web 浏览器中运行复古游戏机的模拟器，例如 NES 和 Sega Genesis。
+
+### [哇哦，font-palette支持动画和palette-mix()混合函数了](https://www.zhangxinxu.com/wordpress/2024/12/font-palette-animation-palette-mix/)
+
+&gt; 字体调色板是一个 CSS 函数，用于在文本上应用调色板效果。它可以将文本的颜色转换为调色板中的颜色，从而使文本更加生动和吸引人。
+
+### [超酷！CSS font-palette与彩色字体显示](https://www.zhangxinxu.com/wordpress/2022/07/css-font-palette/)
+
+&gt; 同上
+
+### [cloudflare-ai-web](https://github.com/Jazee6/cloudflare-ai-web/)
+
+&gt; 基于 Cloudflare Workers 的 AI 聊天机器人，支持上下文对话
+
+### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown/)
+
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
+
+```css
+Some text in green! 123
+```
+
+```P4
+Some text in blue! 123
+```
+
+```Mint
+Some text in blue with additional keyword highlighting! 123
+```
+
+```robots.txt
+some text in light blue! 123
+
+```
+```EBNF
+Some text in purple! 123
+```
+
+```mupad
+Some text in purple with additional keyword highlighting! 123
+```
+
+```Mathematica
+Some text in orange! 123
+```
+
+```REXX
+Some text in orange with additional keyword highlighting! 123
+```
+
+```Nix
+Some text in orange with additional keyword highlighting! 123
+```
+
+```POV-Ray SDL
+some text in red!
+
+```
+```RobotFramework
+Some text in light red! 123
+```
+
+```JSON
+Some text highlighted in red! 123
+```
+
+&lt;samp&gt;Monospaced text&lt;/samp&gt;
+&lt;ins&gt;Underlined text&lt;/ins&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;Boxed text&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;details&gt;
+
+&lt;summary&gt;Item summary with dropdown&lt;/summary&gt;
+
+Dropdown content (supports **markdown** ~~yay!~~)
+
+```json
+{
+  awesome: "true"
+}
+```
+
+&lt;/details&gt;
+
+__*Italic-bold*__
+
+Superscript&lt;sup&gt;TM&lt;/sup&gt;
+
+Superscript-italic&lt;sup&gt;*tm*&lt;/sup&gt;
+
+Subscript&lt;sub&gt;x&lt;/sub&gt;
+
+Subscript-bold&lt;sub&gt;**min**&lt;/sub&gt;
+
+~~__*Italic-bold-strikethrough*__~~
+
+&gt; markdown的一些进阶用法
+
+### [英文单词朗读基于音素预估时长的JS算法](https://www.zhangxinxu.com/wordpress/2024/12/js-word-speech-split-time-calc/)
+
+### [CSS文字和背景color自动配色技术简介](https://www.zhangxinxu.com/wordpress/2018/11/css-background-color-font-auto-match/)
+
+```css
+:root {
+    --red: 44;
+    --green: 135;
+    --blue: 255;
+    --threshold: 0.5;
+    --border-threshold: 0.8;
+}
+
+.btn {
+    background: rgb(var(--red), var(--green), var(--blue));
+    --r: calc(var(--red) * 0.2126);
+    --g: calc(var(--green) * 0.7152);
+    --b: calc(var(--blue) * 0.0722);
+    --sum: calc(var(--r) + var(--g) + var(--b));
+    --lightness: calc(var(--sum) / 255);
+    color: hsl(0, 0%, calc((var(--lightness) - var(--threshold)) * -999999%));
+    --border-alpha: calc((var(--lightness) - var(--border-threshold)) * 100);
+    border: .2em solid;
+    border-color: rgba(calc(var(--red) - 50), calc(var(--green) - 50), calc(var(--blue) - 50), var(--border-alpha));
+}
+```
+
+### [全新的CSS相对颜色语法-使用from和calc()](https://www.zhangxinxu.com/wordpress/2024/12/css-relative-color-from-calc/)
+
+&gt; 相对颜色语法是一种新的CSS颜色语法，它允许您使用from关键字来指定一个颜色作为基准，然后使用calc()函数来计算相对于基准颜色的新颜色。
+&gt; 颜色相对
+
+### [跳转链接时，关键字颜色改变](https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html)
+
+```
+https://example.com/page.html#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
+```
+
+### [现代 CSS 重置](https://www.joshwcomeau.com/css/custom-css-reset/)
+
+```css
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+```
+
+### [前端模糊搜索](https://github.com/m31coding/fuzzy-search/)
+
+### [BabelDuck](https://github.com/Orenoid/BabelDuck/)
+
+&gt; BabelDuck 是一个面向各水平层次语言学习者的高度可定制化 AI 口语对话练习应用，并对初学者更友好，旨在将口语表达练习的门槛与心智负担降至最低。
+&gt; 口语练习
+
+### [YouTube中文配音](https://chromewebstore.google.com/detail/youtube%E4%B8%8F%E6%96%87%E9%85%8D%E9%9F%B3/oglffgiaiekgeicdgkdlnlkhliajdlja/)
+
+### [30 天学 Python](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/Chinese/04_strings.md/)
+
+### [卸载软件](https://uninstalr.com/ )
+
+### [监控chrome扩展是否被自己调接口](https://github.com/dnakov/little-rat/)
+
+&gt; 🐀 小型 chrome 扩展，用于监控（并选择性地阻止）其他扩展的网络调用
+
+### [磁力](https://anybt.eth.limo/)
+
+### [本项目旨在打造一本开源免费、新手友好的数据结构与算法入门教程。](https://github.com/krahets/hello-algo/)
