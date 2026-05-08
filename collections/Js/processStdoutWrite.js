@@ -1,0 +1,11 @@
+process.stdout.write("000\n");
+process.stdout.write("111\n");
+process.stdout.write("222\n");
+process.stdout.write("\x1b[F\x1b[K")
+process.stdout.write("333\n");
+/*
+输出
+000
+111
+333
+*/

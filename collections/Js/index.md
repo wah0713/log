@@ -1015,7 +1015,363 @@ r = arr.filter(function(element, index, self) {
 
 ### [mobile-detect.js 中文网](https://www.mobile-detect.cn/)
 
-> 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备。您可以找到有关渲染网页的设备的信息：
+> 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备
+
+### [JavaScript 数组去重的方法（12 种方法，史上最全）](https://segmentfault.com/a/1190000016418021)
+
+### [前端原生API实现条形码二维码的JS解析识别](https://www.zhangxinxu.com/wordpress/2023/01/js-parse-barcode-qrcode-barcodedetector/)
+
+> BarcodeDetector
+
+### [使用AbortController abort中断原生fetch或axios请求](https://www.zhangxinxu.com/wordpress/2023/01/fetch-abortcontroller-abort-fetch-axios/)
+
+### [万岁，浏览器原生支持ES6 export和import模块啦！](https://www.zhangxinxu.com/wordpress/2018/08/browser-native-es6-export-import-module/)
+
+### [前端重新部署如何通知用户刷新网页？](https://juejin.cn/post/7185451392994115645)
+
+### [近万字新手 chrome 扩展开发简单入门](https://juejin.cn/post/6844904127932137485)
+
+### [拖拽献祭中的黑山羊-DataTransfer对象](https://www.zhangxinxu.com/wordpress/2018/09/drag-drop-datatransfer-js/)
+
+> DataTransfer
+
+### [直接剪切板粘贴上传图片的前端JS实现](https://www.zhangxinxu.com/wordpress/2018/09/ajax-upload-image-from-clipboard/)
+
+### [使用JS在客户端判断当前网络状态](http://t.zoukankan.com/libin-1-p-6822746.html)
+
+> navigator.onLine
+
+### [数学标记语言MathML简介、工具及兼容](https://www.zhangxinxu.com/wordpress/2018/10/mathml-%e5%85%bc%e5%ae%b9-%e5%b7%a5%e5%85%b7/)
+
+### [git stash 命令实用指南](https://zhuanlan.zhihu.com/p/364339115)
+
+```bash
+git stash list
+git stash pop stash@{1}
+git stash clear
+git stash drop <stash_id>
+```
+
+### [什么是跨域，后端工程师如何处理跨域](https://www.cnblogs.com/ricklz/p/16217937.html)
+
+> 简单请求（simple request） 非简单请求（not-so-simple request）
+
+### [Chrome浏览器原生支持的7种后台服务简介](https://www.zhangxinxu.com/wordpress/2023/01/js-background-services/)
+
+```
+Background Fetch
+Background Sync
+Notifications
+Payment Handler
+Periodic Background Sync
+Push Messaging
+Reporting API
+```
+
+### [HTML5 video视频播放Picture-in-Picture画中画技术](https://www.zhangxinxu.com/wordpress/2018/12/html5-video-play-picture-in-picture/)
+
+```js
+video.requestPictureInPicture();
+document.exitPictureInPicture();
+```
+
+### [奇了怪了，输入法和JS Enter回车提交冲突](https://www.zhangxinxu.com/wordpress/2023/02/js-enter-submit-compositionupdate/)
+
+> key keyCode isComposing
+
+### [数组遍历注意Empty Item的影响](https://segmentfault.com/a/1190000020192631)
+
+```js
+const arr = new Array(3)
+arr.map((item) => item.prop)  // [empty × 3]
+arr.forEach((item) => console.log(item.prop))  // nothing
+arr.reduce((res) => res += 'ha', '')  // ''
+```
+
+### [leetcode 鸡蛋掉落](https://leetcode.cn/problems/egg-drop/)
+
+### [CSS和JS判断深色模式](https://www.jianshu.com/p/06561bbb6118/)
+
+```js
+window.matchMedia('(prefers-color-scheme: dark)')
+```
+
+### [去掉html标签](https://blog.csdn.net/qq_37860634/article/details/124616991)
+
+### [判断文本是否溢出](https://juejin.cn/post/6844903939440115725)
+
+### [原生js获取dom元素css样式的四种方法及对比](https://blog.csdn.net/zwkkkk1/article/details/103188153)
+
+> HTMLElement.style Element.currentStyle Window.getComputedStyle() Element.getBoundingClientRect()
+
+### [HTML5 indexedDB前端本地存储数据库实例教程](https://www.zhangxinxu.com/wordpress/2017/07/html5-indexeddb-js-example/)
+
+> indexedDB
+
+### [借助Service Worker和cacheStorage缓存及离线开发](https://www.zhangxinxu.com/wordpress/2017/07/service-worker-cachestorage-offline-develop/)
+
+### [iframe和HTML5 blob实现JS, CSS, HTML直接当前页预览](https://www.zhangxinxu.com/wordpress/2017/08/iframe-html5-blob-code-view/)
+
+> iframe blob
+
+### [JavaScript将首字母转换为大写或小写的简单方法](https://blog.csdn.net/csdn_meng/article/details/85935593)
+
+```js
+var str = 'test string';
+str = str.replace(str[0], str[0].toUpperCase());
+```
+
+### [博闻强识：了解CSS中的@ AT规则](https://www.zhangxinxu.com/wordpress/2015/08/know-css-at-rules/)
+
+### [怎么使用js下载m3u8视频](https://www.ljhmp.com/article-detail.html?id=25)
+
+### [m3u8-downloader](https://gitee.com/jin2014/m3u8-downloader)
+
+### [设计任务队列，控制请求最大并发数](https://juejin.cn/post/7099344493010223134)
+
+```js
+class TaskQueue {
+    constructor() {
+        this.max = 10;
+        this.taskList = [];
+    }
+    addTask(task) { this.taskList.push(task); }
+    run() {
+        const min = Math.min(this.taskList.length, this.max);
+        for (let i = 0; i < min; i++) {
+            const task = this.taskList.shift();
+            task().finally(() => { this.max++; this.run(); });
+        }
+    }
+}
+```
+
+### [Promise.all的并发控制](https://blog.csdn.net/weixin_46133178/article/details/127142418)
+
+### 【JavaScript】更改数组中某一个元素在数组中的位置
+
+```js
+function Move(arr, a, b) {
+    let arr_temp = [].concat(arr);
+    arr_temp.splice(b, 0, arr_temp.splice(a, 1)[0]);
+    return arr_temp;
+}
+```
+
+### [ES2023 来了，赶紧学起来](https://juejin.cn/post/7206302271079989308)
+
+### [正则表达式标志](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+标志|描述
+:-:|:-|
+g|全局搜索
+i|不区分大小写搜索
+m|多行搜索
+s|允许 . 匹配换行符
+u|使用 unicode 码的模式进行匹配
+y|执行"粘性"搜索
+
+### [文件系统标志](https://nodejs.cn/api/fs.html#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%A0%87%E5%BF%97)
+
+> flags
+
+### [JavaScript 性能利器 —— Web Worker](https://juejin.cn/post/6844903736238669837)
+
+> Web Worker
+
+### [new Date() 我忍你很久了！](https://juejin.cn/post/7221884988492382267)
+
+### [狙杀页面卡顿 —— Performance 指北](https://juejin.cn/post/6844903651262070791)
+
+> Performance chrome 控制台
+
+### [Node卸载超详细步骤](https://blog.csdn.net/m0_51945510/article/details/127710792)
+
+### [nvm安装、node安装及node版本切换管理](https://juejin.cn/post/7249585135800336444)
+
+> nvm node
+
+### [bpmn-js](https://bpmn.io/toolkit/bpmn-js/)
+
+> bpmn
+
+### [jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%e5%8e%9f%e7%90%86-%e6%9c%ba%e5%88%b6/)
+
+> 原型链 prototype
+
+### [node.js有没有办法删除最后一行输出？](https://www.coder.work/article/1372167)
+
+```js
+process.stdout.write("\r\x1b[K")
+```
+
+### [ANSI转义序列详解](https://juejin.cn/post/7086720921158811662)
+
+### [关于async / await的异常捕获](https://blog.csdn.net/qq_42543244/article/details/123423894)
+
+```js
+async getList1() {
+    let resp = await this.httpTest().catch(err => console.log(err));
+}
+async getList2() {
+    try {
+        let resp = await this.httpTest();
+    } catch (err) { console.log(err); }
+}
+```
+
+### [强大的JS位运算](https://juejin.cn/post/7176635614777851941)
+
+> 位运算
+
+### [理解DOMString、Document、FormData、Blob、File、ArrayBuffer数据类型](https://www.zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/)
+
+### [XMLHttpRequest实现HTTP协议下文件上传断点续传](https://www.zhangxinxu.com/wordpress/2013/11/xmlhttprequest-ajax-localstorage-%e6%96%87%e4%bb%b6%e6%96%ad%e7%82%b9%e7%bb%ad%e4%bc%a0/)
+
+> slice断点续传
+
+### [JavaScript实现监听路由变化](https://blog.csdn.net/qq_42367749/article/details/119653295)
+
+### [怎样监听history.pushState、history.replaceState事件](https://blog.csdn.net/swc1997/article/details/118242920)
+
+```js
+function wrapState(action) {
+    let raw = history[action];
+    return function() {
+        let wrapper = raw.apply(this, arguments);
+        let e = new Event(action);
+        e.stateInfo = { ...arguments };
+        window.dispatchEvent(e);
+        return wrapper;
+    }
+}
+history.pushState = wrapState("pushState");
+history.replaceState = wrapState("replaceState");
+```
+
+### [json stringify 排序问题](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+
+> JSON.stringify 的排序，不是按字母顺序
+
+### [JS复制图片到剪切板](https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/)
+
+> b64toBlob ClipboardItem
+
+### [Base64、Blob、File 三种类型的相互转换](https://blog.csdn.net/BaymaxCSDN/article/details/108077233)
+
+### [Tips：form元素reset后input不触发change事件处理](https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/)
+
+```js
+document.addEventListener('reset', function(event) {
+    inputs.forEach(function(input) {
+        input.tempValue = input.value;
+    });
+    setTimeout(function() {
+        inputs.forEach(function(input) {
+            if (input.tempValue !== input.value) {
+                input.dispatchEvent(new Event('change'));
+            }
+        });
+    }, 1);
+}, false);
+```
+
+### [Popover](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using)
+
+```js
+popover.showPopover();
+popover.hidePopover();
+```
+
+### [alova.js](https://alova.js.org/zh-CN/)
+
+> 以声明的方式完成各种复杂场景的网络请求
+
+### [js的.map()里使用异步方法](https://blog.csdn.net/hannah1116/article/details/86541680)
+
+```js
+let results = await Promise.all(arr.map(async (item) => {
+    return await asyncWorker(item);
+}));
+```
+
+### [cookie转换成对象](https://www.kancloud.cn/hanxuming/codesnippet/3204012)
+
+```js
+const getCookie = () => document.cookie
+    .split(';')
+    .map((item) => item.split('='))
+    .reduce((acc, [k, v]) => (acc[k.trim()] = v) && acc, {})
+```
+
+### [Web：从给定文本中剥离html](https://www.kancloud.cn/hanxuming/codesnippet/3204018)
+
+```js
+const stripHtml = (html) => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
+```
+
+### [数组：找到最接近的数值](https://www.kancloud.cn/hanxuming/codesnippet/3203983)
+
+```js
+const closest = (arr, n) => arr.reduce((prev, curr) =>
+    (Math.abs(curr - n) < Math.abs(prev - n) ? curr : prev))
+```
+
+### [数组：生成数组](https://www.kancloud.cn/hanxuming/codesnippet/3203976)
+
+```js
+const createArr = (n) => Array.from(new Array(n), (v, i) => i)
+const createArr = (n) => new Array(n).fill(0).map((v, i) => i)
+```
+
+### [进制转换](https://www.kancloud.cn/hanxuming/codesnippet/3203985)
+
+```js
+const toDecimal = (num, n = 10) => num.toString(n)
+const toDecimalism = (num, n = 10) => parseInt(num, n)
+```
+
+### [随机颜色](https://www.kancloud.cn/hanxuming/codesnippet/3204008)
+
+```js
+const getRandomColor = () => `#${Math.floor(Math.random() * 0xffffff).toString(16)}`
+```
+
+### [前端工程化：基于 Vue.js 3.0 的设计与实践](https://vue3.chengpeiquan.com/)
+
+### [randomuuid](https://developer.mozilla.org/zh-CN/)
+
+```js
+btoa(crypto.randomUUID())
+```
+
+### [聊聊Web网页中资源加载的优先级](https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/)
+
+> prefetch preload fetchPriority
+
+### [纯JS实现多个音频的拼接或者合并](https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/)
+
+> new AudioContext()
+
+### [JS改变AudioBuffer音量并下载为新audio音频](https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/)
+
+### [HTML elementtiming属性初体验记录](https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/)
+
+```html
+<p elementtiming="text">我是一段内容。</p>
+```
+
+### [squoosh](https://github.com/googlechromelabs/squoosh)
+
+> Squoosh是一款图像压缩网络应用程序
+
+### [Web referrer策略详解与防盗链图片的显示](https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/)
+
+### [逻辑空赋值（??=）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+
+### [空值合并运算符（??）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+
+### [可选链运算符（?.）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)。您可以找到有关渲染网页的设备的信息：
 
 浏览器提供了 5 种 Observer 来监听这些变动：MutationObserver、IntersectionObserver、PerformanceObserver、ResizeObserver、ReportingObserver。
 

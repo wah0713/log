@@ -89,3 +89,39 @@ schtasks /delete /tn poweroff
 ### [explorer.exe命令行](https://www.cnblogs.com/zzr-stdio/articles/13140775.html)
 
 > explorer.exe
+
+### [查漏补缺，我仍未知道的HTML nonce和popover属性](https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/)
+
+### [压力测试node](https://juejin.cn/post/7224341322612621369)
+
+```bash
+npm i autocannon -g
+```
+
+### [查漏补缺，我仍未知道的HTML nonce和popover属性](https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/)
+
+### [2.5d的地图](https://juejin.cn/pin/7251483543074357307)
+
+> https://map.seu.edu.cn/#/home
+
+### [找找](https://searchplayground.google/)
+
+> 儿童
+
+### [Emmet语法 和 lorem](https://juejin.cn/post/7083155683515826183)
+
+> lorem
+
+### [HTML kbd、var、samp元素你使用过没？](https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/)
+
+### [图片主色获取脚本rgbaster.js小介绍小使用](https://www.zhangxinxu.com/wordpress/2014/08/image-dominant-color-get-rgbaster-js/)
+
+### [SVG-Morpheus实现SVG图标图形间的补形动画](https://www.zhangxinxu.com/wordpress/2014/12/github-svg-morpheus-shape-path-free-transform/)
+
+### [clean-css](https://github.com/clean-css/clean-css)
+
+> clean-css是Node.js平台和任何现代浏览器的快速高效的css优化器
+
+### [ImageDecoder API让GIF图片暂停播放](https://www.zhangxinxu.com/wordpress/2023/05/js-imagedecoder-api-gif/)
+
+> ImageDecoder

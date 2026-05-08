@@ -64,3 +64,23 @@ git rm -r --cached .
 ### [(Git)合并多个commit](https://segmentfault.com/a/1190000007748862)
 
 ### [如何退出git rebase命令行](https://segmentfault.com/q/1010000023739076)
+
+### [xargs 命令教程](https://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
+
+### [linux下find命令的使用和总结](https://www.cnblogs.com/lixuwu/p/7816390.html)
+
+### [Linux 命令](https://github.com/jaywcjlove/linux-command)
+
+> linux-command
+
+### 当前分支改名
+
+```bash
+git branch -m newName
+```
+
+### [git 重命名远程分支名](https://segmentfault.com/a/1190000019539669)
+
+### [GitHub CI/CD 基础，前端项目云服务器自动化部署](https://juejin.cn/post/7057776355450028045)
+
+> cicd

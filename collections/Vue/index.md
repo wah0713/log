@@ -169,6 +169,20 @@ Cascader加上
 
 > 指令
 
+### [el-table固定列el-popover出现多个](https://juejin.cn/post/7028092685172867080)
+
+### [el-select关于@blur失去焦点的坑](https://blog.csdn.net/weixin_58528200/article/details/121671550)
+
+```js
+focusSelectValue() {
+    this.$refs.fuzzySearch.$refs.input.blur = () => {
+        console.log(this.$refs.fuzzySearch.$refs.input.value);
+    };
+}
+```
+
+### [ElementUI disabled禁用整个form表单，设置单个不禁用](https://blog.csdn.net/weixin_43953518/article/details/124731351)
+
 ### [vue-cli中默认webpack配置详解](https://blog.csdn.net/S3328047358/article/details/107021484/)
 
 ### [element-UI ，Table组件实现拖拽效果](https://www.cnblogs.com/jin-zhe/p/10181852.html)

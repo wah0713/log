@@ -66,3 +66,21 @@ Capture node screenshot
 ### [tampermonkey官网文档](https://www.tampermonkey.net/documentation.php)
 
 ### [Tampermonkey中文文档](https://www.cnblogs.com/grubber/p/12560522.html)
+
+### [二次元live2d看板娘效果中的web前端技术](https://www.zhangxinxu.com/wordpress/2018/05/live2d-web-webgl-js/)
+
+### [炫酷H5中序列图片视频化播放的高性能实现](https://www.zhangxinxu.com/wordpress/2018/05/image-sequence-html5-video-play/)
+
+> img 替换
+
+### [JS检测PNG图片是否有透明背景、抠图等相关处理](https://www.zhangxinxu.com/wordpress/2018/05/canvas-png-transparent-background-detect/)
+
+### [通过调试技术，我理清了 b 站视频播放很快的原理](https://juejin.cn/post/7255110638154072120)
+
+> SourceBuffer
+
+### [Puppeteer](https://puppeteer.bootcss.com/)
+
+> 无头浏览器
+
+### [通过chrome浏览器调试手机页面(IOS和Android)](https://blog.csdn.net/sd19871122/article/details/100243909)
