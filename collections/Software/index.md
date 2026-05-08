@@ -260,3 +260,56 @@ npm i autocannon -g
 ### [cron-parser](https://github.com/harrisiirak/cron-parser)
 
 > 一个用于解析 cron 表达式的 JavaScript 库。
+
+### [size-of-life](https://neal.fun/size-of-life/)
+
+### [AirScan-QR](https://github.com/topcss/AirScan-QR)
+
+> AirScan-QR 是一款专为物理隔离环境 (Air-gapped) 及跨端受限网络设计的高效文件传输方案。它通过动态二维码序列流，利用"屏幕+摄像头"的视觉链路，彻底打破物理与协议的边界。
+
+### [GPT翻译](https://chatgpt.com/zh-Hans-CN/translate/)
+
+### [AI和你玩狼人杀](https://github.com/oil-oil/wolfcha)
+
+### [检查不同站点的 HTTP 响应头](https://httpcolon.dev/)
+
+### [一个为 AI 代理构建的社交网络](https://www.moltbook.com/)
+
+### [机器人需要](https://rentahuman.ai/)
+
+> 机器人需要帮助吗？
+> 为ai干活
+
+### [如何将系统从 0 扩展到 1000 万+](https://blog.algomaster.io/p/scaling-a-system-from-0-to-10-million-users)
+
+### [Townscaper](https://oskarstalberg.com/Townscaper/#GSB0RARu2_TQX6krngu0J3)
+
+> 儿童
+> 游戏
+
+### [学习英语发音](https://youglish.com/)
+
+> 自然地掌握英语发音！学习如何像本地人一样发出棘手的音，使用 YouGlish 的真实世界片段。不再有字典困惑，只有真实语境的英语。
+
+### [行业标准备案](https://hbba.sacinfo.org.cn/)
+
+### [Git In The Trenches](https://cbx33.github.io/gitt/intro.html)
+
+> 学习git
+> 故事
+
+### [flash数据库](https://flashpointproject.github.io/flashpoint-database/)
+
+### [Magic Resume](https://github.com/JOYCEQL/magic-resume?tab=readme-ov-file)
+
+> Magic Resume 是一个现代化的在线简历编辑器，让创建专业简历变得简单有趣。基于 TanStack Start 和 Motion 构建，支持实时预览和自定义主题。
+
+### [2026年全国樱花花期预测](https://rogerzhu.github.io/yinghua-map/)
+
+### [VS Code Playground](https://pawelcislo.com/posts/my-vs-code-playground/#vscodedev)
+
+### [Page Agent](https://github.com/alibaba/page-agent)
+
+> 纯 JS 实现的 GUI agent。使用自然语言操作你的 Web 应用。无须后端、客户端、浏览器插件。
+
+### [World Monitor](https://www.worldmonitor.app/)

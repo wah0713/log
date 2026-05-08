@@ -759,3 +759,107 @@ html {
 
 > details summary
 > 鼠标样式 和 箭头和文字错行
+
+### [CSS progress()函数简介](https://www.zhangxinxu.com/wordpress/2025/12/css-progress-function/)
+
+```css
+progress(300, 0, 1000)的返回值就是0.3；
+progress(50px, 0px, 100px)的返回值就是0.5；
+```
+
+### [2025 Chrome DevRel CSS](https://chrome.dev/css-wrapped-2025/)
+
+### [anchor](https://mdn.org.cn/en-US/docs/Web/CSS/anchor)
+
+> anchor() CSS 函数可用于锚点定位元素的内边距属性值中，返回一个相对于其关联锚点元素边缘位置的长度值。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            width: 250vw;
+            height: 200vh;
+        }
+
+        div {
+            anchor-name: --aa;
+            display: inline-block;
+            position: relative;
+            top: 100vh;
+            left: 100vw;
+        }
+
+        span {
+            position-anchor: --aa;
+            display: inline-block;
+            position: absolute;
+            margin-right: 1rem;
+            position-area: left center;
+            position-try-fallbacks: flip-inline flip-block;
+            container-type: anchored;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Hello World!</div>
+    <span>你好</span>
+</body>
+
+</html>
+```
+
+### [scroll-snap-type](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Properties/scroll-snap-type)
+
+### [瀑布流布局](https://webkit.org/blog/17660/introducing-css-grid-lanes/)
+
+```css
+.container {
+    display: grid-lanes;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+```
+
+### [:nth-child](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-child#of_selector_%E8%AF%AD%E6%B3%95)
+
+```css
+:nth-child(-n + 3 of li.important) {}
+```
+
+### [CSS子元素撑满父元素（height: 100%无效）](https://blog.csdn.net/weixin_43260489/article/details/123383866/)
+
+```css
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+### [CSS 动画数字计数器](https://css-tricks.com/animating-number-counters/)
+
+### [HTML interestfor属性与悬停popover交互效果](https://www.zhangxinxu.com/wordpress/2026/03/css-interestfor-invoker-target-source/)
+
+```html
+<a href interestfor="markTarget">Hover Me！</a>
+<p id="markTarget">鼠标经过链接后我高亮</p>
+<style>
+    p:interest-target {
+        background-color: yellow;
+    }
+</style>
+```
+
+### [基础CSS即可满足需求](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need/)

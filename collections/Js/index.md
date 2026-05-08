@@ -2994,3 +2994,82 @@ declare module '*.json' {
 ### [ChatGPT for Chrome](https://chatgpt4google.com/)
 
 ### [Web 终极拦截技巧（全是骚操作）](https://hughfenghen.github.io/posts/2023/12/23/web-spy/)
+
+### SoA (Structure of Arrays)
+
+> SoA（Structure of Arrays）是一种数据结构优化技术，将数据数组化，而非数组结构化。在 Web 开发中，常被用于性能优化场景（如动画、Canvas/WebGL 渲染等）。
+
+### Promise.withResolvers()
+
+> Promise.withResolvers() 是 ES2024 新特性，用于创建 Promise 对象并同时获取 resolve 和 reject 函数。它的优势是简化 Promise 的外部控制，避免闭包或类成员变量的额外声明。
+
+```js
+// 传统写法
+let resolve, reject;
+const promise = new Promise((res, rej) => {
+  resolve = res;
+  reject = rej;
+});
+
+// 新写法
+const { promise, resolve, reject } = Promise.withResolvers();
+
+// 外部直接控制
+resolve('成功');
+```
+
+### Element.moveBefore()
+
+> Element.moveBefore() 是一个便捷的 DOM 操作方法，用于将元素移动到某个参照元素之前。类似的方法还有 moveAfter()。它的优势是比 insertBefore() 和 appendChild() 更语义化、更简洁。
+
+```js
+const el = document.getElementById('item');
+const target = document.getElementById('target');
+
+// 将 el 移动到 target 之前
+el.moveBefore(target);
+```
+
+### RegExp y 修饰符
+
+> 正则表达式的 y 修饰符（sticky）可以让匹配从 lastIndex 位置开始，且必须从该位置开始匹配。它与 g 修饰符的区别是：g 会在字符串中继续查找下一个匹配，而 y 只从 lastIndex 开始匹配，且必须在该位置匹配成功才算。
+
+```js
+const re = /foo/y;
+re.lastIndex = 3;
+const str = 'aafoo';
+console.log(re.exec(str)); // null（必须从索引 3 开始匹配，但索引 3 是 'o'，不是 'f'）
+re.lastIndex = 2;
+console.log(re.exec(str)); // ["foo", index: 2, input: "aafoo"]
+```
+
+### WebTransport API
+
+> WebTransport 是一个新的 Web API，提供了低延迟、双向、多路复用的通信能力。它的优势是比 WebSocket 更轻量、更灵活，且支持不可靠传输（类似于 UDP）。
+
+```js
+async function connect() {
+  const transport = new WebTransport('https://example.com');
+  await transport.ready;
+  console.log('连接成功');
+  return transport;
+}
+```
+
+### Temporal API
+
+> Temporal 是一个新的日期和时间 API，旨在解决 Date 对象的各种问题。它的优势是不可变性、易用性、时区支持等。
+
+```js
+// 获取当前日期和时间
+const now = Temporal.Now.zonedDateTimeISO();
+console.log(now.toString()); // 2024-05-20T14:30:00+08:00[Asia/Shanghai]
+
+// 创建日期
+const date = Temporal.PlainDate.from('2024-05-20');
+console.log(date.toString()); // 2024-05-20
+
+// 日期计算
+const nextWeek = date.add({ days: 7 });
+console.log(nextWeek.toString()); // 2024-05-27
+```

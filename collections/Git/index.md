@@ -116,3 +116,74 @@ git branch -m newName
 ```
 
 ### [git 推荐默认配置](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
+
+### git add -p
+
+> git add -p（patch）是一个强大的 git 命令，用于交互式地选择要添加到暂存区的内容。它允许你查看每个修改，并决定是否将其添加到暂存区。
+
+```bash
+git add -p
+```
+
+### git worktree
+
+> git worktree 允许你在同一个仓库中同时检出多个分支。这对于同时处理多个功能或 bug 修复非常有用。
+
+```bash
+# 创建一个新的工作树
+git worktree add ../my-feature-branch feature-branch
+
+# 列出所有工作树
+git worktree list
+
+# 删除工作树
+git worktree remove ../my-feature-branch
+```
+
+### git sparse-checkout
+
+> git sparse-checkout 允许你只检出仓库的一部分，而不是整个仓库。这对于大型仓库非常有用。
+
+```bash
+# 启用稀疏检出
+git sparse-checkout init --cone
+
+# 设置要检出的目录
+git sparse-checkout set src/ docs/
+
+# 禁用稀疏检出
+git sparse-checkout disable
+```
+
+### git bisect
+
+> git bisect 是一个强大的调试工具，用于快速找到引入 bug 的提交。它使用二分查找算法来定位问题。
+
+```bash
+# 开始二分查找
+git bisect start
+
+# 标记当前提交为 bad
+git bisect bad
+
+# 标记一个已知的好提交
+git bisect good <commit-hash>
+
+# 自动测试并继续
+git bisect run npm test
+
+# 重置二分查找
+git bisect reset
+```
+
+### git reflog
+
+> git reflog 记录了本地仓库中所有 HEAD 的移动历史。它可以帮助你找回误删除的提交或分支。
+
+```bash
+# 查看 reflog
+git reflog
+
+# 恢复到某个状态
+git reset --hard HEAD@{5}
+```
