@@ -84,3 +84,35 @@ git branch -m newName
 ### [GitHub CI/CD 基础，前端项目云服务器自动化部署](https://juejin.cn/post/7057776355450028045)
 
 > cicd
+
+### [git 工作树](https://opensource.com/article/21/4/git-worktree)
+
+### [文件的黑名单（.gitignore）转变为白名单](https://rgbcu.be/blog/gitignore/)
+
+```
+*
+
+!.gitignore
+
+# whitelist `src` directories and their children, regardless of place
+!src/
+!src/**/
+!src/**/*.rs
+!Cargo.{toml,lock}
+
+# whitelist root `pysrc` directory
+!/pysrc/
+!/pysrc/*.py
+!pyproject.toml
+!poetry.lock
+
+!/cmd/
+!/cmd/*.go
+!main.go
+!go.{mod,sum}
+
+!/docs/
+!/docs/*.md
+```
+
+### [git 推荐默认配置](https://blog.gitbutler.com/how-git-core-devs-configure-git/)

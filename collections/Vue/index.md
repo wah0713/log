@@ -833,3 +833,28 @@ p {
 }
 </style>
 ```
+
+### [v-for 中的模板引用](https://cn.vuejs.org/guide/essentials/template-refs#refs-inside-v-for)
+
+### [关于 ref 为 DOM 元素或子组件实例动态创建引用的总结](https://www.cnblogs.com/smile-fanyin/p/18780695)
+
+### [require.context() ——实现 vue 模块的自动导入](https://blog.csdn.net/weixin_44869002/article/details/109702090)
+
+> require.context
+
+### [vue-js-cron](https://github.com/abichinger/vue-js-cron)
+
+> 一个基于 Vue.js 的 cron 表达式编辑器。
+> 支持手动输入 cron 表达式，也支持通过可视化的方式来编辑 cron 表达式。
+> 支持多种语言，包括中文、英文、日语、法语、德语、意大利语、西班牙语、葡萄牙语、俄语、韩语、日语、荷兰语、波兰语、瑞典语、土耳其语、乌克兰语等。
+
+### [cron-parser](https://github.com/harrisiirak/cron-parser)
+
+> 一个用于解析 cron 表达式的 JavaScript 库。
+> 支持解析 cron 表达式，并返回一个可迭代的对象，用于遍历所有符合 cron 表达式的日期。
+
+### [vue2中使用自定义指令实现el-table虚拟列表](https://juejin.cn/post/7459039610396803110)
+
+### [umy-ui 一套为开发者准备的基于 Vue 2.0 的桌面端组件库](https://github.com/popo-fishes/umy-ui)
+
+> 完美解决表格万级数据渲染卡顿，编辑表格卡顿问题

@@ -124,21 +124,21 @@ npm i autocannon -g
 
 ### [ImageDecoder API让GIF图片暂停播放](https://www.zhangxinxu.com/wordpress/2023/05/js-imagedecoder-api-gif/)
 
-&gt; ImageDecoder
+> ImageDecoder
 
 ### [手机电脑互传](https://localsend.org/zh-CN/)
 
 ### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown/)
 
-&gt; markdown的一些进阶用法
+> markdown的一些进阶用法
 
 ### [Nostalgist](https://github.com/arianrhodsandlot/nostalgist/)
 
-&gt; Nostalgist.js 是一个 JavaScript 库，允许您在 Web 浏览器中运行复古游戏机的模拟器，例如 NES 和 Sega Genesis。
+> Nostalgist.js 是一个 JavaScript 库，允许您在 Web 浏览器中运行复古游戏机的模拟器，例如 NES 和 Sega Genesis。
 
 ### [科学 PDF 文档翻译及双语对照工具](https://github.com/Byaidu/PDFMathTranslate/blob/main/README_zh-CN.md/)
 
-&gt; python 实现的科学文档翻译及双语对照工具
+> python 实现的科学文档翻译及双语对照工具
 
 ### [免费共享的GPT4镜像](https://www.opkfc.com/list/)
 
@@ -146,17 +146,17 @@ npm i autocannon -g
 
 ### [DOOM Captcha](https://github.com/vivirenremoto/doomcaptcha/)
 
-&gt; DOOM 风格的验证码
+> DOOM 风格的验证码
 
 ### [github收藏展示图](https://star-history.com/)
 
 ### [中国古代历史人物可视化](https://tools.buyixiao.xyz/historical-figure-query/)
 
-&gt; 可以生成 52 万位中国古代历史名人的的社会关系、亲戚关系和生平足迹图，数据来源：CBDB
+> 可以生成 52 万位中国古代历史名人的的社会关系、亲戚关系和生平足迹图，数据来源：CBDB
 
 ### [代码对比库](https://github.com/MrWangJustToDo/git-diff-view/)
 
-&gt; Git Diff Component vue react
+> Git Diff Component vue react
 
 ### [汇聚多个GPT](https://github.com/lencx/Noi/)
 
@@ -164,8 +164,8 @@ npm i autocannon -g
 
 ### [BabelDuck](https://github.com/Orenoid/BabelDuck/)
 
-&gt; BabelDuck 是一个面向各水平层次语言学习者的高度可定制化 AI 口语对话练习应用，并对初学者更友好，旨在将口语表达练习的门槛与心智负担降至最低。
-&gt; 口语练习
+> BabelDuck 是一个面向各水平层次语言学习者的高度可定制化 AI 口语对话练习应用，并对初学者更友好，旨在将口语表达练习的门槛与心智负担降至最低。
+> 口语练习
 
 ### [YouTube中文配音](https://chromewebstore.google.com/detail/youtube%E4%B8%8F%E6%96%87%E9%85%8D%E9%9F%B3/oglffgiaiekgeicdgkdlnlkhliajdlja/)
 
@@ -175,7 +175,7 @@ npm i autocannon -g
 
 ### [监控chrome扩展是否被自己调接口](https://github.com/dnakov/little-rat/)
 
-&gt; 🐀 小型 chrome 扩展，用于监控（并选择性地阻止）其他扩展的网络调用
+> 🐀 小型 chrome 扩展，用于监控（并选择性地阻止）其他扩展的网络调用
 
 ### [磁力](https://anybt.eth.limo/)
 
@@ -195,12 +195,68 @@ npm i autocannon -g
 
 ### [VS Code配置使用 Python，超详细配置指南，看这一篇就够了](https://blog.csdn.net/weixin_49895216/article/details/131696960/)
 
-&gt; python环境配置
+> python环境配置
 
 ### [Python 的许多命令行实用程序](https://www.pythonmorsels.com/cli-tools/)
 
-&gt; python 命令行工具
+> python 命令行工具
 
 ### [DashPlayer](https://github.com/solidSpoon/DashPlayer/)
 
-&gt; 一款专为英语学习打造的视频播放器
+> 一款专为英语学习打造的视频播放器
+
+### [iframe-resizer](https://github.com/davidjbradshaw/iframe-resizer)
+
+> iframe-resizer 用于使 iframe 元素自动适应其内容的高度和宽度
+
+### [x-crawl](https://github.com/coder-hxl/x-crawl)
+
+> x-crawl 是一个灵活、可扩展的爬虫库。
+
+### [react1s](https://github.com/huo1995/react1s)
+
+> 一个帮助 react 开发者在一秒内看到页面效果的工具
+
+### [正则表达式可视化工具](https://regex-vis.com/)
+
+### [浏览器指纹检测器](https://fingerprint.goldenowl.ai/)
+
+> 该工具旨在揭示您在浏览互联网时共享的数据，并通过自定义您授予的权限来帮助您加强隐私保护。
+
+### [ChatGPT for Chrome](https://chatgpt4google.com/)
+
+### [pkg](https://github.com/vercel/pkg)
+
+> 这个命令行界面使您能够将您的 Node.js 项目打包成一个可执行文件，即使在没有安装 Node.js 的设备上也能运行。
+
+### [SingleFile](https://github.com/gildas-lormeau/SingleFile)
+
+> SingleFile 是一个兼容 Chrome、Firefox（桌面版和移动版）、Microsoft Edge、Safari、Vivaldi、Brave、Waterfox、Yandex 浏览器和 Opera 的网络扩展（以及一个命令行工具）。
+
+### [Volta](https://volta.jikun.dev/guide/understanding.html)
+
+> Volta 的工作是管理 JavaScript 命令行工具，如 node、npm、yarn 或作为 JavaScript 包的一部分发布的可执行文件。
+
+### [Tesseract-OCR Windows 64-bit 5.5.0 安装与使用指南](https://blog.csdn.net/gs80140/article/details/145138997)
+
+### [paddleOCR理解及识别手写体，手写公式，表格](https://blog.csdn.net/m0_68926749/article/details/134843387)
+
+> paddleocr
+
+### [通用OCR产线使用教程](https://www.paddleocr.ai/latest/version3.x/pipeline_usage/OCR.html#422)
+
+### [playwright](https://playwright.dev/)
+
+> Playwright 是一个用于自动化浏览器操作的强大工具，支持多种浏览器（如 Chrome、Firefox、Safari）和平台（如 Windows、macOS、Linux）。
+
+### [json转ts](https://xietiansheng.github.io/json-to-any-web/)
+
+> json-to-any-web 是一个在线工具，可以将 JSON 数据转换为 TypeScript 类型定义。
+
+### [vue-js-cron](https://github.com/abichinger/vue-js-cron)
+
+> 一个基于 Vue.js 的 cron 表达式编辑器。
+
+### [cron-parser](https://github.com/harrisiirak/cron-parser)
+
+> 一个用于解析 cron 表达式的 JavaScript 库。

@@ -2474,3 +2474,523 @@ h6 {
 ### [磁力](https://anybt.eth.limo/)
 
 ### [本项目旨在打造一本开源免费、新手友好的数据结构与算法入门教程。](https://github.com/krahets/hello-algo/)
+
+### [Map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+> new Map做遍历
+
+### [JS Array数组新的with方法，你知道作用吗？](https://www.zhangxinxu.com/wordpress/2025/02/js-array-with/)
+
+```js
+const arr = [, '唐探1900', '侠之大者', '蛟龙行动'];
+// 结果是 ['哪吒魔童闹海', '唐探1900', '侠之大者', '蛟龙行动']
+console.log(arr.with(0, '哪吒魔童闹海'));
+```
+
+### [JS Set新支持了intersection, union, difference等方法](https://www.zhangxinxu.com/wordpress/2025/02/js-set-intersection-union-difference/)
+
+### [Document：caretPositionFromPoint() 方法](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/caretPositionFromPoint)
+
+```js
+function insertBreakAtPoint(e) {
+    let range;
+    let textNode;
+    let offset;
+
+    if (document.caretPositionFromPoint) {
+        range = document.caretPositionFromPoint(e.clientX, e.clientY);
+        textNode = range.offsetNode;
+        offset = range.offset;
+    } else if (document.caretRangeFromPoint) {
+        // 使用 WebKit 专有回退方法
+        range = document.caretRangeFromPoint(e.clientX, e.clientY);
+        textNode = range.startContainer;
+        offset = range.startOffset;
+    } else {
+        // 两个方法都不支持，什么都不做
+        return;
+    }
+    // 只分割 TEXT_NODE
+    if (textNode?.nodeType === 3) {
+        let replacement = textNode.splitText(offset);
+        let br = document.createElement("br");
+        textNode.parentNode.insertBefore(br, replacement);
+    }
+}
+
+let paragraphs = document.getElementsByTagName("p");
+for (const paragraph of paragraphs) {
+    paragraph.addEventListener("click", insertBreakAtPoint, false);
+}
+```
+
+### [检查用户输入是否为有效数字](https://www.jimengity.com)
+
+```js
+// 检查用户输入是否为有效数字
+function isValidNumber(input) {
+    return Number.isFinite(Number(input));
+}
+
+// 示例
+console.log(isValidNumber('123')); // true
+console.log(isValidNumber('abc')); // false（转换为NaN）
+console.log(isValidNumber('Infinity')); // false
+```
+
+### [JavaScript Set有新功能啦，子、交、并、补轻松搞定](https://juejin.cn/post/7411416025729957928)
+
+```
+子，isSubsetOf/isSupersetOf/isDisjointFrom
+交，intersection
+并，union
+补，difference/symmetricDifference
+```
+
+### [使用Intl.Segmenter返回更准确的字符长度](https://www.zhangxinxu.com/wordpress/2025/09/js-intl-segmenter-string-length/)
+
+```js
+Object.defineProperty(String.prototype, 'realLength', {
+    get: function() {
+        return Array.from(
+            new Intl.Segmenter("en", {
+                // 颗粒度：字位，默认值，可省略
+                granularity: "grapheme"
+            }).segment(this)
+        ).length;
+    }
+});
+
+"鑫空间".realLength // 3
+
+    "🌝".realLength // 1
+
+"🇮🇳".realLength // 1
+
+    "👨‍👩‍👧‍👦".realLength // 1
+
+"दरबार".realLength // 4
+```
+
+### [Canvas也支持锥形渐变了createConicGradient方法](https://www.zhangxinxu.com/wordpress/2025/10/js-canvas-createconicgradient/?shrink=1)
+
+```js
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+// 尺寸
+const size = 300;
+canvas.width = size;
+canvas.height = size;
+
+// 创建锥形渐变
+const gradient = ctx.createConicGradient(-0.5 * Math.PI, size / 2, size / 2);
+
+// 色带颜色
+const arrColor = ['#10239E', '#2F54EB', '#597EF7', '#85A5FF', '#D6E4FF'];
+// 各自占据的百分比
+const arrPercent = [0.07, 0.13, 0.2, 0.27, 0.33];
+
+// 添加中断点
+let sumPercent = 0;
+arrPercent.forEach((percent, index) => {
+    gradient.addColorStop(sumPercent, arrColor[index]);
+    sumPercent += percent;
+    gradient.addColorStop(sumPercent, arrColor[index]);
+});
+
+// 设置渐变为填充样式
+ctx.fillStyle = gradient;
+// 绘制圆形
+ctx.ellipse(size / 2, size / 2, size / 2 - 30, size / 2 - 30, 0, 0, 2 * Math.PI);
+// 填充
+ctx.fill();
+```
+
+### [CanvasRenderingContext2D：ellipse() 方法](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/ellipse)
+
+```js
+ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
+```
+
+### [醒醒，该使用CookieStore新建和管理cookie了](https://www.zhangxinxu.com/wordpress/2025/11/js-cookiestore-cookie/)
+
+> CookieStore 是一个用于管理浏览器 Cookie 的 API。它提供了一种简单的方式来设置、获取和删除 Cookie。
+
+```js
+// 删除cookie
+cookieStore.delete()
+
+// 获取cookie
+cookieStore.get()
+
+// 获取所有cookie
+cookieStore.getAll()
+
+// 设置cookie
+cookieStore.set()
+```
+
+### [10 个被严重低估的 JS 特性，直接少写 500 行代码](https://juejin.cn/post/7568153532014559267)
+
+> element.closest () 方法返回调用它的元素或其最近的祖先元素（也可以是相同的元素），该元素匹配指定的选择器字符串。如果没有匹配的元素，则返回 null。
+> URL + URLSearchParams 可以用于构建 URL 字符串，同时添加查询参数。
+
+### [mjs 引入json](https://v8.dev/features/import-attributes)
+
+```js
+// main.mjs
+//
+// New 'with' syntax.
+import json from './foo.json'
+with {
+    type: 'json'
+};
+console.log(json.answer); // 42
+```
+
+### ElementUI校验[Violation] Added non-passive event listener to a scroll-blocking 'touchmove' event. 问题解决
+
+```js
+// 修复 ElementUI 的 passive 警告
+const originalAddEventListener = EventTarget.prototype.addEventListener;
+EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (type === 'touchmove' && typeof options === 'object') {
+        options.passive = false; // ElementUI 需要阻止默认行为
+    }
+    return originalAddEventListener.call(this, type, listener, options);
+};
+
+//去除谷歌浏览器的scroll、wheel等事件警告
+;(function () {
+if (typeof EventTarget !== 'undefined') {
+let func = EventTarget.prototype.addEventListener
+EventTarget.prototype.addEventListener = function (type, fn, capture) {
+this.func = func
+if (typeof capture !== 'boolean') {
+capture = capture || {}
+capture.passive = false
+}
+this.func(type, fn, capture)
+}
+}
+})()
+```
+
+### [typescr中常规的dom元素和event事件类型声明](https://juejin.cn/post/7274626136327110708)
+
+### [页面关闭时请求](https://www.zhangxinxu.com/wordpress/2025/07/html-popover-hint/)
+
+>sendBeacon	fetch + keepalive
+
+### [找出哪些 JavaScript 变量正在泄露到全局作用域](https://mmazzarolo.com/blog/2022-02-14-find-what-javascript-variables-are-leaking-into-the-global-scope/)
+
+```
+创建一个可丢弃的 iframe，将其指向 about:blank （以确保 window 对象处于干净状态）。
+检查 iframe window 对象并存储其全局变量名。
+移除 iframe。
+```
+
+```js
+(function() {
+    // Grab browser's default global variables.
+    const iframe = window.document.createElement("iframe");
+    iframe.src = "about:blank";
+    window.document.body.appendChild(iframe);
+    const browserGlobals = Object.keys(iframe.contentWindow);
+    window.document.body.removeChild(iframe);
+
+    // Get the global variables added at runtime by filtering out the browser's
+    // default global variables from the current window object.
+    const runtimeGlobals = Object.keys(window).filter((key) => {
+        const isFromBrowser = browserGlobals.includes(key);
+        return !isFromBrowser;
+    });
+
+    console.log("Runtime globals", runtimeGlobals);
+})();
+```
+
+### [JavaScript → Python](https://langshift.dev/)
+
+### [我刚刚学会的三个 Markdown 技巧](https://www.stefanjudis.com/blog/three-markdown-tricks-i-just-learned/)
+This text is ***cursive and bold***. Here are escaped backticks: `` `foo` ``.
+
+### [正则表达式可视化工具](https://regex-vis.com/)
+
+### [指数退避算法](https://www.practicalnetworking.net/practical-tcp-ip/exponential-backoff/)
+
+### [使用 HTTP OPTIONS 发现功能](https://evertpot.com/discovering-features-with-http-options/)
+
+```
+OPTIONS 就是用于此目的的方法。你可能从 CORS 中知道这个 HTTP 方法，但它的通用目的是让客户端被动地发现"这里我能做什么？"
+```
+
+```js
+const response = await fetch(
+    'https://example.org', {
+        method: 'OPTIONS'
+    }
+);
+```
+
+```http
+HTTP/1.1 204 No Content
+Date: Mon, 23 Sep 2024 02:57:38 GMT
+Server: KKachel/1.2
+Allow: GET, PUT, POST, DELETE, OPTIONS
+```
+
+### [模块的特殊变量](https://langshift.dev/zh-cn/docs/js2py/module-02-module-system#23-%E6%A8%A1%E5%9D%97%E7%9A%84%E7%89%B9%E6%AE%8A%E5%8F%98%E9%87%8F)
+
+### [动态导入](https://langshift.dev/zh-cn/docs/js2py/module-02-module-system#62-%E5%8A%A8%E6%80%81%E5%AF%BC%E5%85%A5)
+
+### [特殊方法魔术方法](https://langshift.dev/zh-cn/docs/js2py/module-03-oop-functional#24-%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95)
+
+### [列表推导式](https://langshift.dev/zh-cn/docs/js2py/module-03-oop-functional#33-%E5%88%97%E8%A1%A8%E6%8E%A8%E5%AF%BC%E5%BC%8F)
+
+### [Dijkstra 算法](https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/graph/dijkstra/README.zh-CN.md)
+
+### [马尔可夫链](https://setosa.io/blog/2014/07/26/markov-chains/)
+
+> 马尔可夫链是一种随机过程，用于描述一个系统在不同状态之间转换的概率。它由一个状态集合和一个转移矩阵组成。每个状态都有一个概率分布，描述了从该状态转换到其他状态的概率。马尔可夫链可以用于模拟随机过程，例如股票价格、天气模式或交通流量。
+> canvas
+
+### [高级动画](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
+
+### [Canvas 变换](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations#%E5%8F%98%E5%BD%A2)
+
+### [Document.elementFromPoint()](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/elementFromPoint)
+
+> 这个方法返回文档中指定坐标位置的元素。它可以用于确定用户点击的元素，或者在需要知道元素位置的情况下使用。
+> elementFromPoint
+
+### [浏览器指纹检测器](https://fingerprint.goldenowl.ai/)
+
+> 该工具旨在揭示您在浏览互联网时共享的数据，并通过自定义您授予的权限来帮助您加强隐私保护。它不使用 cookies，也不收集、存储或传输任何个人信息。它的唯一目的是让您意识到潜在隐私风险，展示网站可以访问哪些数据，并指导您如何防范不受欢迎的追踪。
+
+### [JS正则新特性：安全过滤RegExp.escape方法](https://www.zhangxinxu.com/wordpress/2025/07/js-regexp-escape/)
+
+> RegExp escape
+
+### [你编程 20 年的指导原则](https://www.jitao.tech/posts/my-guiding-principles-after-20-years-of-programming)
+
+### [那些你从不使用的 HTML 属性](https://www.smashingmagazine.com/2022/03/html-attributes-you-never-use/)
+
+```html
+<input type="text" enterkeyhint="done">
+enter,  输入，
+done,  完成，
+go,  去，
+next,  接下来，
+previous,  上一篇，
+search,  搜索，
+send.  发送。
+```
+
+### [用新的 HTML 对话框元素替换 JavaScript 对话框](https://css-tricks.com/replace-javascript-dialogs-html-dialog-element/)
+
+### [一个 16.67 毫秒的帧](https://koolcodez.com/blog/inside-the-frame/)
+
+> Performance monitor 控制台
+
+### [使用文件系统访问 API 入门](https://css-tricks.com/getting-started-with-the-file-system-access-api/)
+
+```js
+let fileHandle;
+
+document.querySelector(".pick-file").onclick = async () => {
+    [fileHandle] = await window.showOpenFilePicker();
+
+    const file = await fileHandle.getFile();
+    const content = await file.text();
+
+    return content;
+};
+```
+
+### [pkg](https://github.com/vercel/pkg)
+
+> 这个命令行界面使您能够将您的 Node.js 项目打包成一个可执行文件，即使在没有安装 Node.js 的设备上也能运行。
+
+### [蒙特卡洛模拟](https://towardsdev.com/good-beginner-exercise-for-improving-programming-monte-carlo-simulation-of-the-approximation-of-838dc17eb6bc)
+
+> 计算圆周率 Π
+
+```py
+import random
+import sys
+import time
+import matplotlib.pyplot as plt
+
+def get_pi(n, isShow=True):
+    start = time.monotonic()
+    o_x, o_y = [], []
+    i_x, i_y = [], []
+    for _ in range(n):
+        x, y = random.random(), random.random()
+        if (x**2 + y**2) <= 1:
+            i_x.append(x)
+            i_y.append(y)
+        else:
+            o_x.append(x)
+            o_y.append(y)
+    pi = len(i_x) * 4 / len(o_x + i_x)
+    print("pi=", pi)
+    end = time.monotonic()
+    print(f"${end - start:.4f}秒")
+
+    if isShow:
+        plt.figure(figsize=(8, 8))
+        plt.scatter(o_x, o_y, color="blue", label="Outside circle")
+        plt.scatter(i_x, i_y, color="red", label="Inside circle")
+        plt.legend()
+        plt.title(f"pi={pi}, n={n}")
+        plt.show()
+
+if __name__ == "__main__":
+    get_pi(int(sys.argv[1]))
+```
+
+### [在 Markdown 中渲染数学表达式](https://github.blog/changelog/2022-05-19-render-mathematical-expressions-in-markdown/)
+
+### [大道至简，繁在人心：在浏览器控制台安装npm包是什么操作？](https://segmentfault.com/a/1190000040875211)
+
+> $i('npm包名称')
+
+### [You-Get](https://github.com/soimort/you-get)
+
+> pthon3 -m pip install you-get
+> 一个命令行工具，用于下载视频、音频、图片、直播等互联网资源。
+> 支持的网站包括 YouTube、Twitter、Facebook、Instagram、Bilibili、Vimeo、Twitch、Youku、AcFun 等。
+
+### [Volta](https://volta.jikun.dev/guide/understanding.html)
+
+```
+Volta 的工作是管理 JavaScript 命令行工具，如 node、npm、yarn 或作为 JavaScript 包的一部分发布的可执行文件。
+
+与包管理器类似，Volta 会根据当前目录跟踪您正在处理的项目(如果有的话)。Volta 工具链中的工具会自动检测您所处的项目是否使用特定版本的工具，并为您路由到正确的工具版本。
+```
+
+### [Python中使用uv创建环境及原理详解](https://blog.csdn.net/xinjichenlibing/article/details/148056383)
+
+### [Python项目管理神器 PDM，用它管理项目爽到飞起！](https://juejin.cn/post/7503596255122161690)
+
+### [node执行的内存快照](https://nodejs.cn/api/cli/heapsnapshot_signal_signal.html)
+
+```
+$ node --heappsnapshot-signal=SIGUSR2 index.js &
+$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+node         1  5.5  6.1 787252 247004 ?       Ssl  16:43   0:02 node --heapsnapshot-signal=SIGUSR2 index.js
+$ kill -USR2 1
+$ ls
+Heap.20190718.133405.15554.0.001.heapsnapshot
+```
+
+### [Tesseract-OCR Windows 64-bit 5.5.0 安装与使用指南](https://blog.csdn.net/gs80140/article/details/145138997)
+
+### [paddleOCR理解及识别手写体，手写公式，表格](https://blog.csdn.net/m0_68926749/article/details/134843387)
+
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddlepaddle
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
+```
+
+### [通用OCR产线使用教程](https://www.paddleocr.ai/latest/version3.x/pipeline_usage/OCR.html#422)
+
+### [playwright](https://playwright.dev/)
+
+> Playwright 是一个用于自动化浏览器操作的强大工具，支持多种浏览器（如 Chrome、Firefox、Safari）和平台（如 Windows、macOS、Linux）。它提供了丰富的 API 来模拟用户交互、导航网页、提取数据等。Playwright 以其稳定性、跨平台兼容性和强大的功能而闻名，成为了自动化测试和浏览器操作的首选工具。
+
+### [SingleFile](https://github.com/gildas-lormeau/SingleFile)
+
+> SingleFile 是一个兼容 Chrome、Firefox（桌面版和移动版）、Microsoft Edge、Safari、Vivaldi、Brave、Waterfox、Yandex 浏览器和 Opera 的网络扩展（以及一个命令行工具）。
+
+### [7 分钟了解 flatMap 的使用及实现原理，并实现一个简易版的 flatMap](https://juejin.cn/post/7365698962531745830)
+
+> flatMap= map+filter
+
+### [Vite - 解决TypeScript中的 `import.meta.glob` 问题](https://juejin.cn/post/7176270537436430397)
+
+```js
+const modules: Record < string, {
+        [key: string]: any
+    } > =
+    import.meta.glob('./modules/*.ts', {
+        eager: true
+    });
+// 大伙可以这样写试试，我这里是用的是ts，其他语言的写法可能会有所不同。
+```
+
+### [文件的黑名单（.gitignore）转变为白名单](https://rgbcu.be/blog/gitignore/)
+
+```
+*
+
+!.gitignore
+
+# whitelist `src` directories and their children, regardless of place
+!src/
+!src/**/
+!src/**/*.rs
+!Cargo.{toml,lock}
+
+# whitelist root `pysrc` directory
+!/pysrc/
+!/pysrc/*.py
+!pyproject.toml
+!poetry.lock
+
+!/cmd/
+!/cmd/*.go
+!main.go
+!go.{mod,sum}
+
+!/docs/
+!/docs/*.md
+```
+
+### [git 推荐默认配置](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
+
+### [git 工作树](https://opensource.com/article/21/4/git-worktree)
+
+### [Record<Keys, Type>](https://typescript.p6p.net/typescript-tutorial/utility.html#record-keys-type)
+
+> Record<Keys, Type> 是一个内置的 TypeScript 类型，用于创建一个对象类型，其中键的类型为 Keys，值的类型为 Type。
+
+### [typescript中常规的dom元素和event事件类型声明](https://juejin.cn/post/7274626136327110708)
+
+### [TypeScript 导入 JSON Module --resolveJsonModule](https://www.cnblogs.com/wx18638101223/p/16146075.html)
+
+```ts
+// typings.d.ts
+
+declare module '*.json' {
+    const value: any;
+    export default value;
+}
+```
+
+```
+在项目的根目录中找到的tsconfig.json文件，然后添加一个新行："resolveJsonModule"：true，
+
+需要在tsconfig.json文件，然后添加："esModuleInterop": true,就没有问题了。
+```
+
+### [json转ts](https://xietiansheng.github.io/json-to-any-web/)
+
+> json-to-any-web 是一个在线工具，可以将 JSON 数据转换为 TypeScript 类型定义。
+> 它支持将 JSON 数据转换为 TypeScript 接口、类型别名、联合类型、枚举类型等多种类型定义。
+
+### [浏览器禁用端口](https://www.keenformatics.com/ports-that-are-blocked-by-browsers)
+
+### [HTTPS下A标签下载HTTP资源受限](https://www.cnblogs.com/xwdreamer/articles/3619960.html)
+
+### [shell:startup](https://www.jimengity.com)
+
+> 按 Win + R 打开 "运行" 对话框，输入 shell:startup，然后按回车。这将打开 "启动" 文件夹。
+
+### [ChatGPT for Chrome](https://chatgpt4google.com/)
+
+### [Web 终极拦截技巧（全是骚操作）](https://hughfenghen.github.io/posts/2023/12/23/web-spy/)
