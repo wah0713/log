@@ -13,8 +13,10 @@ function broadcast(componentName, eventName, params) {
 }
 export default {
   methods: {
+    // 子组件向上广播
     dispatch(componentName, eventName, params) {
       var parent = this.$parent || this.$root;
+      // componentName 不是name
       var name = parent.$options.componentName;
 
       while (parent && (!name || name !== componentName)) {
@@ -28,6 +30,7 @@ export default {
         parent.$emit.apply(parent, [eventName].concat(params));
       }
     },
+    // 父组件向下广播
     broadcast(componentName, eventName, params) {
       broadcast.call(this, componentName, eventName, params);
     }

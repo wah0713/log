@@ -86,8 +86,8 @@ function handleArr3(arr) {
     console.time('handleArr3')
     let arr2 = []
     arr.forEach(r => {
-        const exist = arr2.find(r2 => (r2.a + r2.b) === (r.a + r.b))
-        if (!exist) {
+        const exist = arr2.find(r2 => (r2.a + r2.b) === (r.a + r.b)) // 查找arr2中是否存在 （a+b）相同的数据
+        if (!exist) { // 如果不存在就 push 到arr2中
             arr2.push(r)
         }
     })

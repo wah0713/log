@@ -172,9 +172,13 @@ var arr2 = ["运营总部", "江西尚迪", "东莞-聚篮子", "唯佳内部测
 
 function processAreaOrgList(areaOrgList, ownOrgList) {
     let pickerInfo = []
+    //循环最外层
     for (let province of areaOrgList) {
+        //循环市级数据
         for (let city of province.children) {
+            //循环区级数据
             for (let org of city.children) {
+                //判断如果区级数据里在数据库数据中不存在后给新数组赋值新数据
                 if (ownOrgList.indexOf(org.orgName) !== -1) {
                     if (!pickerInfo.length) {
                         pickerInfo.push({
