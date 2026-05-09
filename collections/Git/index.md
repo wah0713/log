@@ -2,3 +2,53 @@
 
 ### git提交本地分支到远程分支
 > https://www.cnblogs.com/ydxblog/p/7988317.html
+
+### git 部分指令
+```bash
+git status 查看提交状态
+git log
+git log origin/master
+git reset --mixed commitID
+git reset --soft HEAD^ // 上一个版本
+git reset --soft HEAD~3 // HEAD^^^ 相当
+git push origin dev:personal/you_dev 推送远程分支
+git push origin -d personal/you_dev 删除远程分支
+git branch -r 查看远程
+git branch -a 查看所有分支
+git branch -D 分支名 // 删除本地分支
+git checkout personal/you_dev 切换分支
+git cherry-pick -m commitID
+git revert commitID // 只是一条当前提交，而不是从现在到目标提交之间的所有提交
+git revert --help
+git stash 储存
+git stash pop 储存 出
+```
+
+### git checkout -b
+> git checkout -b '新的分支名'
+
+### git push命令
+> [git push 命令](https://www.runoob.com/git/git-push.html)
+
+### git fetch和git pull的差别
+> [git fetch 和git pull 的差别](https://www.cnblogs.com/windok/p/13291414.html)
+
+### Git优雅地回退代码
+> [Git 如何优雅地回退代码](https://www.cnblogs.com/zhenbianshu/p/12018714.html)
+
+### git log origin/master
+
+### Git更改文件夹名称
+> [使用Git命令更改文件夹名称](https://www.dazhuanlan.com/2020/01/06/5e1299730482c/)
+> git mv oldName newName
+
+### git hook
+
+### git reflog
+> [git reflog](https://blog.csdn.net/yuquan0821/article/details/114670541)
+
+### git rebase -i
+> git rebase -i commitId (合并提交)
+
+### git pull -r
+> git pull -r (git pull -rebase)
