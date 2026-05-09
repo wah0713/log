@@ -1,141 +1,152 @@
 ---
 name: "content-syncer"
-description: "同步年份文件夹内容到collections目录。调用时机：用户要求整理log文件、按类型分类整理到collections时使用。"
+description: "同步年月目录中的日志文件到 collections 目录。调用时机：用户要求整理日志、按类型分类整理到 collections 时使用。"
 ---
 
 # Content Syncer
 
-这个skill用于将年份文件夹（如25/、26/）中的内容整理到collections目录中，按类型分类管理。
+将年月目录（如 `25/01/` 、 `26/03/` ）中的日志文件整理到 `collections` 目录，按类型分类管理。
 
-## 核心功能
+## 目录结构
 
-1. **读取年份文件夹内容**
-   - 读取年份文件夹中的所有markdown文件
-   - 分析文件内容，识别类型（CSS、JS、Git、Software等）
+```
+log-master/
+├── 25/                    # 年份目录（两位年份，如 25 = 2025）
+│   └── 01/                # 月份目录（两位月份，如 01 = 1月）
+│       ├── 01.md          # 日志文件（两位日期，如 01 = 1日）
+│       └── 02.md
+├── 26/
+│   └── 03/
+│       └── 15.md
+└── collections/           # 分类整理目录
+    ├── Css/index.md
+    ├── Js/index.md
+    ├── Git/index.md
+    ├── Software/index.md
+    ├── Idea/index.md
+    ├── Vue/index.md
+    ├── RegExp/index.md
+    ├── Chrome/index.md
+    ├── Markdown/index.md
+    └── Log/todo.md        # 同步记录
+```
 
-2. **非md文件处理**
-   - 将非md文件复制到对应的collections子文件夹
-   - 例如：JS文件复制到 `collections/Js/` 目录
-   - CSS文件复制到 `collections/Css/` 目录
+**命名规则：**
+| 层级 | 格式 | 示例 |
+|-----|------|------|
+| 年份 | 两位数字 | `25` （2025年） |
+| 月份 | 两位数字 | `03` （3月） |
+| 日期 | 两位数字 | `15` （15日） |
 
-3. **md内容整理**
-   - 将markdown内容分类整理到对应的index.md文件中
-   - 按照已有文件的格式添加新内容
-   - 避免重复内容
+## 分类规则
+
+| 内容类型 | 目标文件 |
+|---------|---------|
+| CSS 特性/属性/CSS Tricks | `collections/Css/index.md` |
+| JavaScript API/特性 | `collections/Js/index.md` |
+| Git 命令/技巧 | `collections/Git/index.md` |
+| 开发工具/网站/插件/配置 | `collections/Software/index.md` |
+| 想法/观点/有趣内容 | `collections/Idea/index.md` |
+| Vue 相关 | `collections/Vue/index.md` |
+| 正则表达式 | `collections/RegExp/index.md` |
+| Chrome 浏览器/DevTools | `collections/Chrome/index.md` |
+| Markdown 相关 | `collections/Markdown/index.md` |
+
+**Idea 与 Software 区分：**
+
+| 分类 | 定义 | 示例 |
+|-----|------|------|
+| Software | 可直接使用的工具、网站、插件、配置 | "VSCode 插件推荐"、"这个网站很好用" |
+| Idea | 观点、想法、知识、有趣的事实 | "这篇文章的观点很有趣"、"我对某技术的思考" |
 
 ## 工作流程
 
-### 步骤1：分析年份文件夹结构
-```
-d:/code/log/26/
-├── 01/
-│   ├── 05.md
-│   └── 21.md
-├── 02/
-│   ├── 09.md
-│   └── 19.md
-└── 03/
-    ├── 02.md
-    └── 18.md
-```
+### 步骤1：确定同步范围
 
-### 步骤2：读取并分类内容
-- CSS相关 → `progress()`、`anchor()`、`grid-lanes`等
-- JavaScript相关 → `SoA`、`Promise.withResolvers()`、`Element.moveBefore()`等
-- Git相关 → `git add -p`、`git worktree`、`git bisect`等
-- Software工具 → `AirScan-QR`、`Magic Resume`、`Page Agent`、配置教程等
-- Idea想法 → 有趣的事实、设计原则、算法、观点文章等
+**指定同步**（用户明确指定年月）：
+* "同步26年3月" → 处理 `26/03/` 下所有日志文件
+* "整理25年" → 处理 `25/` 下所有月份目录
 
-### 步骤3：更新collections文件
-使用 `Edit` 工具在对应index.md文件末尾添加新内容：
-```markdown
-### [新特性名称](URL)
+**全量同步**（用户未指定）：
+* 扫描所有年份目录
+* 跳过已在 `Log/todo.md` 记录过的日期
 
-> 特性描述
+### 步骤2：遍历日志文件
 
-```代码示例
-```
-```
+找到目标月份目录下所有 `.md` 日志文件（如 `26/03/15.md` 、 `26/03/16.md` ）。
 
-## 类型分类规则
+### 步骤3：逐条读取内容
 
-| 内容类型 | 目标文件 | 说明 |
-|---------|---------|------|
-| CSS特性/属性 | `collections/Css/index.md` | 样式、布局、动画等 |
-| JavaScript API/特性 | `collections/Js/index.md` | JS新特性、DOM API等 |
-| Git命令/技巧 | `collections/Git/index.md` | Git操作、命令等 |
-| 开发工具/网站 | `collections/Software/index.md` | 工具、资源网站、技术资源等 |
-| 想法/观点/有趣内容 | `collections/Idea/index.md` | 想法、观点、有趣的文章、设计原则、算法等 |
-| Vue相关 | `collections/Vue/index.md` | Vue特性、组件等 |
-| 正则表达式 | `collections/RegExp/index.md` | RegExp技巧等 |
-| Chrome浏览器 | `collections/Chrome/index.md` | 浏览器、DevTools等 |
-| Markdown相关 | `collections/Makedown/index.md` | Markdown技巧、工具等 |
-| 日志/记录 | `collections/Log/index.md` | 日志记录、待办事项等 |
-| 其他内容 | `collections/Other/index.md` | 不适合现有分类的内容 |
+**【核心规则】以 `###` 标题为界，每个 `###` 到下一个 `###` 之前是一个完整条目，不能拆分。**
 
-## Idea与Software的区别
+对于每个日志文件：
+1. 读取全部内容
+2. 按 `###` 分割成独立条目
+3. 跳过空条目（无标题、无内容）
+4. 逐条判断分类
 
-**Software文件夹内容（技术工具和资源）：**
-- 开发工具、编辑器、插件
-- 技术网站、资源网站
-- 配置教程、工具使用
-- 数据库、技术选型讨论
-- 实用命令、脚本
+### 步骤4：去重检查
 
-**Idea文件夹内容（想法和观点）：**
-- 有趣的事实、观点文章
-- 设计原则、编程思想
-- 算法、数据结构
-- 思考类的文章
-- 不是直接的工具，而是知识或想法
+写入前检查目标文件是否已存在相同内容：
+1. **链接去重**：检查 URL 是否已存在
+2. **标题去重**：检查标题文字是否相同（忽略细微差异）
+3. **内容去重**：检查核心代码/关键描述是否重复
 
-## 非md文件复制规则
+如已存在，跳过该条目。
 
-- **.js文件** → 复制到 `collections/Js/` 目录
-- **.css文件** → 复制到 `collections/Css/` 目录
-- **其他代码文件** → 根据扩展名分类到对应目录
+### 步骤5：分类写入
 
-## 使用示例
+根据条目内容归入对应分类，写入 `collections/XXX/index.md` 。
 
-当用户说：
-- "整理25年的内容到collections"
-- "帮我完善collections目录"
-- "同步26年的新特性到collections"
-- "把日期文件夹的内容整理分类"
+### 步骤6：处理非 md 文件
 
-时，调用此skill。
+**直接复制到对应目录，不在 index.md 中添加引用路径。**
+| 文件类型 | 处理方式 |
+|---------|---------|
+| `.js` 文件 | 复制到 `collections/Js/` |
+| `.css` 文件 | 复制到 `collections/Css/` |
+| `.less` 文件 | 复制到 `collections/Css/` |
+| `.json` 文件 | 复制到 `collections/Software/` |
+| 图片/媒体 | 复制到 `collections/Software/assets/` |
+| 其他代码文件 | 根据扩展名分类 |
 
-## 注意事项
+### 步骤7：更新同步记录
 
-1. **避免重复**：添加新内容前检查是否已存在
-2. **保持格式**：遵循目标文件的已有格式
-3. **内容验证**：确保URL和代码示例正确
-4. **类型准确**：正确识别内容类型，避免分类错误
-5. **非md优先**：非md文件应该复制到对应目录，而不是写入md文件
+同步完成后，更新 `collections/Log/todo.md` ：
+* 在最后一行追加本次同步的日期
+* 格式：`YY/MM/DD`（如 `26/03/18`）
+* 多日同步：`26/03/15 - 26/03/18`
+
+## 强制要求
+
+> **【最高优先级】collections 内必须包含全部日志文件内容，不能缺少任何条目。不能自己创建新的非日志文件内容。**
+
+1. **单一分类**：每个条目只能归入一个分类，不能同时出现在多个分类中
+2. **同步完成后必须向用户报告**：
+  + **新增内容**：本次同步新增到 collections 的内容
+  + **已存在**：已在 collections 中无需更新的内容
+  + **无法分类**：无法归入现有分类的内容（需用户确认）
 
 ## 创建新分类
 
-当遇到没有合适分类的内容时，可以创建新的分类文件夹：
+当内容无法归入现有分类时：
+1. 告知用户具体哪些内容无法分类
+2. 等待用户确认分类或创建新分类
+3. 如需创建新分类：
+   - 在 `collections/` 下创建文件夹（如 `NewCat/` ）
+   - 创建 `index.md` 文件
+   - 更新本 skill 的分类规则
 
-**创建新分类的步骤：**
-1. 在 `collections/` 下创建新的文件夹（首字母大写，如：`Chrome/`、`Makedown/`）
-2. 在新文件夹中创建 `index.md` 文件
-3. 将内容添加到新文件夹的 `index.md` 中
-4. 更新本skill文档中的"类型分类规则"表格，添加新分类
+## 注意事项
 
-**现有分类示例：**
-- `Chrome/` - 浏览器相关
-- `Makedown/` - Markdown相关
-- `RegExp/` - 正则表达式相关
-- 可以根据需要创建新分类
+1. **逐条核对**：必须读取原始文件逐条处理，不能仅靠关键词搜索
+2. **完整条目**：每个 `###` 标题到下一个 `###` 前为一个整体，包含链接和代码示例
+3. **避免重复**：写入前检查是否已存在
+4. **跳过空文件**：内容为空的 md 文件直接跳过
+5. **批量优化**：同一月份的文件批量处理，减少 IO 操作
 
-**判断是否需要新分类：**
-- 如果内容属于一个明确的新领域，且现有分类都不合适
-- 如果该领域可能会有更多内容加入
-- 如果内容与现有分类都不相关
+## 触发示例
 
-## 错误处理
-
-- 如果目标文件不存在，先创建目录结构
-- 如果内容已存在，跳过该条目
-- 如果无法识别类型，先考虑是否创建新分类，否则归入Other
+* "整理25年的内容到collections"
+* "同步26年3月"
+* "把26年1月到3月的日志分类"
