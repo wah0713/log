@@ -208,7 +208,7 @@ exportdefault {
 
 ### [前端主题切换方案](https://juejin.cn/post/7134594122391748615)
 
-```### [数学标记语言MathML简介、工具及兼容](https://www.zhangxinxu.com/wordpress/2018/10/mathml-%e5%85%bc%e5%ae%b9-%e5%b7%a5%e5%85%b7/)
+### [数学标记语言MathML简介、工具及兼容](https://www.zhangxinxu.com/wordpress/2018/10/mathml-%e5%85%bc%e5%ae%b9-%e5%b7%a5%e5%85%b7/)
 
 
 ### [VSCode快捷编辑html的方法](https://blog.csdn.net/qq_36507046/article/details/125725826)
@@ -261,5 +261,73 @@ exportdefault {
 
 
 ### [卸载软件](https://uninstalr.com/ )
+
+
+### url -O <URL>
+
+`url -O <URL>` 不是一个标准的命令行命令。它可能是对某些工具（如 `wget` 或 `curl` ）的误解或拼写错误。以下是对可能情况的解释：
+
+---
+
+#### 1. **可能是 `wget -O <URL>` **
+
+`wget` 是一个常用的命令行工具，用于从网络下载文件。 `-O` 选项用于指定下载文件的保存名称。
+
+##### 正确用法：
+
+```bash
+wget -O 文件名 <URL>
+```
+
+##### 示例：
+
+```bash
+wget -O myfile.zip https://example.com/path/to/file.zip
+```
+
+* 这会将 `https://example.com/path/to/file.zip` 下载并保存为 `myfile.zip`。
+
+---
+
+#### 2. **可能是 `curl -O <URL>` **
+
+`curl` 是另一个常用的命令行工具，用于传输数据。 `-O` 选项用于将文件下载到当前目录，并使用远程文件的名称。
+
+##### 正确用法：
+
+```bash
+curl -O <URL>
+```
+
+##### 示例：
+
+```bash
+curl -O https://example.com/path/to/file.zip
+```
+
+* 这会将 `https://example.com/path/to/file.zip` 下载到当前目录，并保留原始文件名（如 `file.zip`）。
+
+---
+
+#### 3. ** `url` 不是一个标准命令**
+
+如果你确实看到了 `url -O <URL>` ，可能是以下情况：
+* 拼写错误，实际想用的是 `wget` 或 `curl`。
+* 某些自定义脚本或工具中定义了 `url` 命令。
+
+---
+
+#### 总结
+
+* 如果你想下载文件，建议使用 `wget` 或 `curl`。
+* 如果 `url` 是某个特定工具或脚本中的命令，请检查相关文档或上下文。
+
+如果你有更多上下文或具体需求，可以告诉我，我会进一步帮你解答！
+
+
+### [功能丰富、技术先进的开源工具网站](https://damngood.tools/tools/chat-pdf)
+
+
+### [【实战】Chrome V3插件开发，只看这一篇文章就够了](https://juejin.cn/post/7229238405406294074)
 
 

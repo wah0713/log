@@ -320,3 +320,8 @@ Patch|修订号|修复上一个版本的少量 BUG
 ### [vue中涉及的字符串模板与dom模板](https://www.jianshu.com/p/8c63c93a346b)
 
 
+### [require.context() ——实现 vue 模块的自动导入](https://blog.csdn.net/weixin_44869002/article/details/109702090)
+
+> require.context
+
+

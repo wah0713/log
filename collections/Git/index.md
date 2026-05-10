@@ -147,3 +147,33 @@ git config/*
 ### [本项目旨在打造一本开源免费、新手友好的数据结构与算法入门教程。](https://github.com/krahets/hello-algo)
 
 
+### [支持 React 项目本地开发时页面上对应元素即可跳转到编辑器对应组件行列。](https://github.com/aaamoon/react1s)
+
+
+### [Web 端实时防挡脸弹幕（基于机器学习）](https://hughfenghen.github.io/posts/2023/06/21/body-mask-danmaku/)
+
+
+### [You-Get](https://github.com/soimort/you-get)
+
+> pthon3 -m pip install you-get
+> 一个命令行工具，用于下载视频、音频、图片、直播等互联网资源。
+> 支持的网站包括 YouTube、Twitter、Facebook、Instagram、Bilibili、Vimeo、Twitch、Youku、AcFun 等。
+
+
+### [桌面按键宠物](https://github.com/ayangweb/BongoCat)
+
+
+### [通过在空闲时间预取或预呈现视口内链接来加快后续页面加载速度](https://github.com/GoogleChromeLabs/quicklink)
+
+> 重点的是实现思路
+
+
+### [眼动追踪](https://github.com/akchro/eyesite)
+
+
+### [git 推荐默认配置](https://blog.gitbutler.com/how-git-core-devs-configure-git/)
+
+
+### [git 工作树](https://opensource.com/article/21/4/git-worktree)
+
+

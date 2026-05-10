@@ -46,3 +46,17 @@ Capture node screenshot
 ### [YouTube中文配音](https://chromewebstore.google.com/detail/youtube%E4%B8%AD%E6%96%87%E9%85%8D%E9%9F%B3/oglffgiaiekgeicdgkdlnlkhliajdlja)
 
 
+### [大道至简，繁在人心：在浏览器控制台安装npm包是什么操作？](https://segmentfault.com/a/1190000040875211)
+
+> $i('npm包名称')
+
+
+### [chrome v3扩展官方文档](https://developer.chrome.google.cn/docs/extensions?hl=zh-cn)
+
+
+### [Chrome Extension v3 开发指南](https://segmentfault.com/a/1190000042851130)
+
+
+### [浏览器禁用端口](https://www.keenformatics.com/ports-that-are-blocked-by-browsers)
+
+

@@ -2451,3 +2451,211 @@ dictionary EventModifierInit: UIEventInit {
 ### [英文单词朗读基于音素预估时长的JS算法](https://www.zhangxinxu.com/wordpress/2024/12/js-word-speach-split-time-calc/)
 
 
+### [iframe大小](https://github.com/davidjbradshaw/iframe-resizer)
+
+> iframe-resizer 库旨在消除使用 iframe 的痛点。它将调整您的 iframe 大小以匹配您的内容大小，然后监控 iframe 以确保它始终是完美的大小。
+
+
+### [x-crawl](https://coder-hxl.github.io/x-crawl/cn/guide/)
+
+>>> x-crawl 是一个灵活的 Node.js AI 辅助爬虫库。灵活的使用方式和强大的 AI 辅助功能，使爬虫工作变得更加高效、智能和便捷。
+
+
+### [JS Array数组新的with方法，你知道作用吗？](https://www.zhangxinxu.com/wordpress/2025/02/js-array-with/)
+
+```js
+const arr = [, '唐探1900', '侠之大者', '蛟龙行动'];
+// 结果是 ['哪吒魔童闹海', '唐探1900', '侠之大者', '蛟龙行动']
+console.log(arr.with(0, '哪吒魔童闹海'));
+```
+
+
+### [JS Set新支持了intersection, union, difference等方法](https://www.zhangxinxu.com/wordpress/2025/02/js-set-intersection-union-difference/)
+
+
+### [Map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+> new Map做遍历
+
+
+### [Vite - 解决TypeScript中的 `import.meta.glob` 问题](https://juejin.cn/post/7176270537436430397)
+
+```js
+const modules: Record < string, {
+        [key: string]: any
+    } > =
+    import.meta.glob('./modules/*.ts', {
+        eager: true
+    });
+// 大伙可以这样写试试，我这里是用的是ts，其他语言的写法可能会有所不同。
+```
+
+
+### [mjs 引入json](https://v8.dev/features/import-attributes)
+
+```js
+// main.mjs
+//
+// New 'with' syntax.
+import json from './foo.json'
+with {
+    type: 'json'
+};
+console.log(json.answer); // 42
+```
+
+
+### ElementUI校验[Violation] Added non-passive event listener to a scroll-blocking ‘touchmove‘ event. 问题解决
+
+```js
+// 修复 ElementUI 的 passive 警告
+const originalAddEventListener = EventTarget.prototype.addEventListener;
+EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (type === 'touchmove' && typeof options === 'object') {
+        options.passive = false; // ElementUI 需要阻止默认行为
+    }
+    return originalAddEventListener.call(this, type, listener, options);
+};
+
+//去除谷歌浏览器的scroll、wheel等事件警告
+;(function () {
+if (typeof EventTarget !== 'undefined') {
+let func = EventTarget.prototype.addEventListener
+EventTarget.prototype.addEventListener = function (type, fn, capture) {
+this.func = func
+if (typeof capture !== 'boolean') {
+capture = capture || {}
+capture.passive = false
+}
+this.func(type, fn, capture)
+}
+}
+})()
+```
+
+
+### [v-for 中的模板引用](https://cn.vuejs.org/guide/essentials/template-refs#refs-inside-v-for)
+
+
+### [Document：caretPositionFromPoint() 方法](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/caretPositionFromPoint)
+
+```js
+function insertBreakAtPoint(e) {
+    let range;
+    let textNode;
+    let offset;
+
+    if (document.caretPositionFromPoint) {
+        range = document.caretPositionFromPoint(e.clientX, e.clientY);
+        textNode = range.offsetNode;
+        offset = range.offset;
+    } else if (document.caretRangeFromPoint) {
+        // 使用 WebKit 专有回退方法
+        range = document.caretRangeFromPoint(e.clientX, e.clientY);
+        textNode = range.startContainer;
+        offset = range.startOffset;
+    } else {
+        // 两个方法都不支持，什么都不做
+        return;
+    }
+    // 只分割 TEXT_NODE
+    if (textNode?.nodeType === 3) {
+        let replacement = textNode.splitText(offset);
+        let br = document.createElement("br");
+        textNode.parentNode.insertBefore(br, replacement);
+    }
+}
+
+let paragraphs = document.getElementsByTagName("p");
+for (const paragraph of paragraphs) {
+    paragraph.addEventListener("click", insertBreakAtPoint, false);
+}
+```
+
+
+### [您的照片透露了很多私人信息](https://theyseeyourphotos.com/)
+
+> 在本实验中，我们使用 Google Vision API 来查看从单张照片中可以推断出多少关于您的信息。
+
+
+### [为什么大写字母的二维码比小写字母的二维码小？](https://shkspr.mobi/blog/2025/02/why-are-qr-codes-with-capital-letters-smaller-than-qr-codes-with-lower-case-letters/)
+
+
+### [最大限度地减少 Node.js 中的堆分配](https://blog.appsignal.com/2022/09/28/minimize-heap-allocations-in-nodejs.html)
+
+
+### [node执行的内存快照](https://nodejs.cn/api/cli/heapsnapshot_signal_signal.html)
+
+```
+$ node --heapsnapshot-signal=SIGUSR2 index.js &
+$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+node         1  5.5  6.1 787252 247004 ?       Ssl  16:43   0:02 node --heapsnapshot-signal=SIGUSR2 index.js
+$ kill -USR2 1
+$ ls
+Heap.20190718.133405.15554.0.001.heapsnapshot
+```
+
+
+### [Volta](https://volta.jikun.dev/guide/understanding.html)
+
+```
+Volta 的工作是管理 JavaScript 命令行工具，如 node、npm、yarn 或作为 JavaScript 包的一部分发布的可执行文件。
+
+与包管理器类似，Volta 会根据当前目录跟踪您正在处理的项目(如果有的话)。Volta 工具链中的工具会自动检测您所处的项目是否使用特定版本的工具，并为您路由到正确的工具版本。
+```
+
+
+### [使用 HTML 标签优化图像<picture>](https://jfhr.me/optimizing-images-with-the-html-picture-tag/)
+
+```html
+<picture>
+    <source srcset="image.webp" type="image/webp">
+    <img src="image.jpg" alt="Image">
+</picture>
+```
+
+
+### [json转ts](https://xietiansheng.github.io/json-to-any-web/)
+
+> json-to-any-web 是一个在线工具，可以将 JSON 数据转换为 TypeScript 类型定义。
+> 它支持将 JSON 数据转换为 TypeScript 接口、类型别名、联合类型、枚举类型等多种类型定义。
+
+
+### [vue-js-cron](https://github.com/abichinger/vue-js-cron)
+
+> 一个基于 Vue.js 的 cron 表达式编辑器。
+> 支持手动输入 cron 表达式，也支持通过可视化的方式来编辑 cron 表达式。
+> 支持多种语言，包括中文、英文、日语、法语、德语、意大利语、西班牙语、葡萄牙语、俄语、韩语、日语、荷兰语、波兰语、瑞典语、土耳其语、乌克兰语    等。
+
+
+### [cron-parser](https://github.com/harrisiirak/cron-parser)
+
+> 一个用于解析 cron 表达式的 JavaScript 库。
+> 支持解析 cron 表达式，并返回一个可迭代的对象，用于遍历所有符合 cron 表达式的日期。
+
+
+### [TypeScript 导入 JSON Module --resolveJsonModule](https://www.cnblogs.com/wx18638101223/p/16146075.html)
+```ts
+// typings.d.ts
+
+declare module '*.json' {
+    const value: any;
+    export default value;
+}
+```
+```
+在项目的根目录中找到的tsconfig.json文件，然后添加一个新行：“resolveJsonModule”：true，
+
+需要在tsconfig.json文件，然后添加：“esModuleInterop”: true,就没有问题了。
+```
+
+
+### [templating](https://kittygiraudel.com/2022/09/30/templating-in-html/)
+```js
+const template = document.querySelector('#id-of-template')
+const content = template.content.cloneNode(true)
+
+container.append(content)
+```
+

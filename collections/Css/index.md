@@ -1875,3 +1875,172 @@ h6 {
 ```
 
 
+### [一个简单实用的在线色轮工具，不同颜色对应的昵称](https://github.com/arantius/web-color-wheel)
+
+chartreuse   #7FFF00
+
+>>> 一个简单的颜色选择器，用于在网页上选择颜色。
+
+
+### [不要搞混了，不是text而是CSS font-size-adjust属性](https://www.zhangxinxu.com/wordpress/2025/02/css-font-size-adjust/)
+
+```css
+/* 关键字值 */
+font-size-adjust: none;
+
+/* 单值：数值或者from-font */
+font-size-adjust: 0.5;
+font-size-adjust: from-font;
+
+/* 两个值 */
+font-size-adjust: ex-height 0.5;
+font-size-adjust: ch-width from-font;
+```
+
+
+### [终于等到了，CSS offset-path全浏览器全支持](https://www.zhangxinxu.com/wordpress/2025/03/css-offset-path/)
+
+> offset-path
+
+
+### [Overflow Clip](https://ishadeed.com/article/overflow-clip/)
+
+> 滚动加动画
+
+```css
+     @supports (animation-timeline: scroll()) and (animation-range: 0% 100%) {
+         ._row_1s1x6_17 svg {
+             animation: _pages-default_1s1x6_1 linear both;
+             animation-timeline: --row-a;
+             animation-range-start: 10%;
+             animation-duration: 1ms;
+             transform: translate(-150px)
+         }
+     }
+
+     ._row_1s1x6_17 circle {
+         fill: #9370db
+     }
+
+     @keyframes _pages-default_1s1x6_1 {
+         to {
+             transform: translate(500px)
+         }
+     }
+```
+
+
+### 1个颜色控制3个颜色
+
+```css
+--styleColor: #465085;
+color: hsl(from var(--styleColor) h s calc((l - 62.8)* -999999));
+border-color: hsl(from var(--styleColor) h s calc(l - 20* clamp(-1, calc(l - 50), 1)));
+}
+```
+
+
+### [focus-within](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within)
+
+> 子控制父 focus-within
+
+
+### [一种更好的文字隐藏的方法-::first-line伪元素](https://www.zhangxinxu.com/wordpress/2025/03/css-first-line-hidden-text/)
+
+> css text 优先级
+
+
+### [【vite项目配置新版scss踩坑指南】](https://blog.csdn.net/weixin_43057892/article/details/145117135)
+
+> additionalData 可以多行引用
+
+```json
+// vite.config.js
+css: {
+    preprocessorOptions: {
+        scss: {
+            additionalData: `
+                  @use '../../../common/scss/variables' as *;
+                  @use '../../../common/scss/mixins/breakpoints' as *;
+              `,
+        },
+    },
+},
+```
+
+
+### [在部分SASS文件中，如何使用父文件中定义的变量？](https://cloud.tencent.com/developer/ask/sof/107716085)
+
+```scss
+@use 'variables'as v;
+// @forward 'variables'; // doesn't work
+@use 'layout';
+```
+
+```scss
+h1 {
+    color: v.$mainHeaderColor;
+}
+```
+
+
+### [告别transform，是时候直接使用scale, rotate属性啦](https://www.zhangxinxu.com/wordpress/2025/04/css-scale-rotate-translate/)
+
+
+### [纯CSS 中的树视图](https://iamkate.com/code/tree-views/)
+
+> 树视图（可折叠列表）可以仅使用 HTML 和 CSS 创建，而无需 JavaScript。辅助功能软件会将树状视图视为嵌套在披露窗口小部件中的列表，并且自动支持标准键盘交互。
+
+
+### 字体推荐
+
+```css
+@import url('https://fonts.bunny.net/css?family=averia-serif-libre|inter|merriweather-sans|noto-serif-tc');
+
+.entry-title {
+    font-family: 'Averia Serif Libre', 'Noto Serif TC', serif;
+}
+```
+
+
+### [纯css实现的小组件](http://youmightnotneedjs.com/)
+
+
+### [CSS animation-composition可以让动画效果累加](https://www.zhangxinxu.com/wordpress/2025/05/css-animation-composition/)
+
+
+### [CSS 实现自动换行、强制换行、强制不换行的属性](https://www.cnblogs.com/yaohe/articles/9947221.html)
+
+> word-wrap word-break white-space overflow-wrap
+> 这几个属性都是用来控制文本的换行行为的。
+> word-wrap 属性用于控制在单词内进行换行。
+> word-break 属性用于控制在单词之间进行换行。
+
+
+### [震惊，有生之年居然看到CSS attr()全属性支持](https://www.zhangxinxu.com/wordpress/2025/05/css-attr-function/)
+
+> 因为image-set()函数是唯一支持字符串作为图片URL的函数。
+
+```html
+<a href="https://image.zhangxinxu.com/image/study/s/hanyun.jpg">图片？</a>
+<style>
+    [href$="jpg"]::before {
+        content: '';
+        display: block;
+        width: 256px;
+        height: 192px;
+        background: image-set(attr(href));
+        background-size: cover;
+    }
+</style>
+```
+
+
+### [text-wrap进化: 支持两子属性和pretty stable新值](https://www.zhangxinxu.com/wordpress/2025/06/text-wrap-pretty-stable-mode-style/)
+
+> text-wrap-style text-wrap
+
+
+### [CSS ::scroll-button ::scroll-marker伪元素又是干嘛用的？](https://www.zhangxinxu.com/wordpress/2025/06/css-scroll-button-marker/)
+
+

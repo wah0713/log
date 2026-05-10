@@ -238,3 +238,69 @@ ECMAScript 2023, the 14th edition, introduced the toSorted, toReversed, with, fi
 ### [磁力](https://anybt.eth.limo/)
 
 
+### [仅限 Firefox 的小地图](https://www.stefanjudis.com/a-firefox-only-minimap/)
+
+> 背景 以某个元素作为图片使用
+
+
+### [在vs code中导入numpy库](https://blog.csdn.net/m0_47037896/article/details/107087785)
+
+> 教程
+
+
+### [为什么我喜欢使用 Map（和 WeakMaps）来处理 DOM 节点](https://macarthur.me/posts/maps-for-dom-nodes/)
+
+
+### [Beautiful Soup 4.12.0 文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/#)
+
+> Python Beautiful Soup 文档
+
+
+### [如何手搓SVG半圆弧，手把手教程](https://www.zhangxinxu.com/wordpress/2025/01/svg-arc-path-circle/)
+
+
+### [ScholarTurbo 使您能够释放 ChatGPT for PDF 的功能。上传任何 PDF 并开始询问有关它的问题。](https://scholarturbo.com/)
+
+
+### [7 分钟了解 flatMap 的使用及实现原理，并实现一个简易版的 flatMap](https://juejin.cn/post/7365698962531745830)
+
+> flatMap= map+filter
+
+
+### [小游戏](https://sugarsugar2.com/zh)
+
+
+### [typescript中常规的dom元素和event事件类型声明](https://juejin.cn/post/7274626136327110708)
+
+
+### [知识库AI问答助手 - 馆长](https://www.ncurator.com/zh)
+
+> crx
+
+
+### [中国 亲戚关系计算器](https://passer-by.com/relationship/)
+
+
+### [关于 ref 为 DOM 元素或子组件实例动态创建引用的总结](https://www.cnblogs.com/smile-fanyin/p/18780695)
+
+
+### [检查所有链接列表，识别损坏的链接](https://link-checker.itea.dev/)
+
+
+### [地铁图](https://subway.cuvii.dev/)
+
+
+### [陪读娃](https://www.readfrog.app/zh)
+
+
+### NotebookLM
+
+> 一个基于大模型的 AI 助手，支持多模态输入输出，基于 Notion 平台。
+
+
+### [用一个奇怪的技巧检测并崩溃 Chromium 机器人（机器人讨厌它！](https://blog.castle.io/detect-and-crash-chromium-bots-with-one-weird-trick-bots-hate-it/)
+
+
+### [在其他设备上打开 PairDrop 来发送文件](https://pairdrop.net/#about)
+
+

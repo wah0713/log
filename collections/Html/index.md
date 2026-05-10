@@ -130,3 +130,16 @@ document.addEventListener("keydown", (event) => {
 ### [Server-Sent Events 教程](https://www.ruanyifeng.com/blog/2017/05/server-sent_events.html)
 
 
+### [研究下attachInternals方法，可让普通元素有表单特性](https://www.zhangxinxu.com/study/202503/html-attachInternals-demo.php)
+
+> attachInternals
+
+
+### [激活win](https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html)
+
+
+### [Record<Keys, Type>](https://typescript.p6p.net/typescript-tutorial/utility.html#record-keys-type)
+
+> Record<Keys, Type> 是一个内置的 TypeScript 类型，用于创建一个对象类型，其中键的类型为 Keys，值的类型为 Type。
+
+
