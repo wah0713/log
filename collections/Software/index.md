@@ -152,4 +152,42 @@ exportdefault {
 ### [node里读取命令行参数](https://blog.csdn.net/weixin_34292402/article/details/93318423)
 &gt; process.env process.argv node 参数
 ### [store.js使用简介 npm](https://gist.github.com/reygreen1/7226325)
-&gt; tore.js 优先选择 localStorage 来进行存储，在 IE6 和 IE7 下降级使用userData来达到目的。 没有使用 flash ，不会减慢你的页面加载速度。也没有使用 cookies ，不会使你的网络请求变得臃肿。store.js 依赖 JSON 来序列化数据进行存储。
+> tore.js 优先选择 localStorage 来进行存储，在 IE6 和 IE7 下降级使用userData来达到目的。 没有使用 flash ，不会减慢你的页面加载速度。也没有使用 cookies ，不会使你的网络请求变得臃肿。store.js 依赖 JSON 来序列化数据进行存储。
+### [Webpack Bundle Analyzer插件的使用](https://segmentfault.com/a/1190000017716736)
+### [webpack配置中的ExtractTextPlugin插件认识](https://www.jianshu.com/p/ed3c98ba5474)
+### [webpack配置别名alias](https://www.cnblogs.com/Jimc/p/10282969.html)
+### [webpack基础](https://www.jianshu.com/p/13bdbefd6189)
+### [webpack-module配置详解](https://blog.csdn.net/qq_44708990/article/details/116758235)
+### [前端小白入门webpack中对于css、less、图片的处理](https://blog.csdn.net/weixin_43916611/article/details/111708384)
+### [webpack：hash、chunkhash、contenthash三者区别](https://www.cnblogs.com/gaoht/p/14005850.html)
+### [基于 webpack 的持久化缓存方案](https://github.com/pigcan/blog/issues/9)
+### [vs code 插件change-case, 修改变量名 驼峰和常量等](https://my.oschina.net/ahaoboy/blog/4715119)
+### [如何在VS code上优雅地刷leetcode](https://blog.csdn.net/engineerxin/article/details/99875113)
+### [webpack devtool](https://doc.codingdict.com/webpack-cn-doc/configuration/devtool/)
+### [webpack的chunkFilename详细说明](https://blog.csdn.net/wu_xianqiang/article/details/113121793)
+### [colorspace](https://mycolor.space/?hex=%23415FFF&sub=1)
+> 配色
+### [五十种最好的开源爬虫](https://www.cnblogs.com/jscs/p/13672785.html)
+### [chrome 动画标签](https://blog.csdn.net/weixin_49012647/article/details/116424935)
+> chrome animations
+### [Visual Studio Code 提高效率的快捷方式](https://juejin.cn/post/7066978065326276644)
+### [修改.gitignore文件不生效](https://www.cnblogs.com/az4215/p/15597942.html)
+> git ignore 文件 改名
+```bash
+清除本地当前的Git缓存
+      git rm -r --cached .
+```
+### [Airbnb CSS / Sass 指南](https://github.com/Zhangjd/css-style-guide)
+### [figma](https://baike.baidu.com/item/figma/60281951)
+### [vue-cli3.0 使用postcss-plugin-px2rem（推荐）和 postcss-pxtorem（postcss-px2rem）自动转换px为rem 的配置方法；](https://www.cnblogs.com/taohuaya/p/10274993.html)
+> px rem
+### [了解页面的生命周期](https://www.zhangxinxu.com/wordpress/2021/11/js-visibilitychange-pagehide-lifecycle/)
+### [小tip: CSS3下的渐变文字效果实现](https://www.zhangxinxu.com/wordpress/2011/04/%e5%b0%8ftipcss3%e4%b8%8b%e7%9a%84%e6%b8%90%e5%8f%98%e6%96%87%e5%ad%97%e6%95%88%e6%9e%9c%e5%ae%9e%e7%8e%b0/)
+### [这几个高级前端常用的API，你用到了吗？](https://juejin.cn/post/7028744289890861063)
+> MutationObserver
+> IntersectionObserver
+> getComputedStyle
+> requestAnimationFrame
+### [利用废弃的html rel import实现页面include功能](https://www.zhangxinxu.com/wordpress/2021/07/html-rel-import-include/)
+
+```

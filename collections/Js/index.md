@@ -426,3 +426,104 @@ document.fonts.ready.then(function() {
 ```js
 event.target.contains(el)
 ```
+### [nodejs路径处理方法和绝对路径 path](https://www.cnblogs.com/mengff/p/9753867.html)
+### [巧用.filter去重](https://blog.csdn.net/weixin_44198018/article/details/87856385)
+```js
+r = arr.filter(function(element, index, self) {
+    return self.indexOf(element) === index;
+});;
+```
+### [如何优雅监听容器高度变化](https://segmentfault.com/a/1190000019877595?utm_source=tag-newest)
+### [ResizeObserver API](https://zhuanlan.zhihu.com/p/41418813)
+### 应答头
+|应答头|说明|
+|:-|:-|
+|Allow|服务器支持哪些请求方法（如GET、POST等）。|
+|Content-Encoding|文档的编码（Encode）方法。只有在解码之后才可以得到Content-Type头指定的内容类型。利用gzip压缩文档能够显著地减少HTML文档的下载时间。Java的GZIPOutputStream可以很方便地进行gzip压缩，但只有Unix上的Netscape和Windows上的IE 4、IE 5才支持它。因此，Servlet应该通过查看Accept-Encoding头（即request.getHeader("Accept-Encoding")）检查浏览器是否支持gzip，为支持gzip的浏览器返回经gzip压缩的HTML页面，为其他浏览器返回普通页面。|
+|Content-Length|表示内容长度。只有当浏览器使用持久HTTP连接时才需要这个数据。如果你想要利用持久连接的优势，可以把输出文档写入 ByteArrayOutputStream，完成后查看其大小，然后把该值放入Content-Length头，最后通过byteArrayStream.writeTo(response.getOutputStream()发送内容。|
+|Content-Type|表示后面的文档属于什么MIME类型。Servlet默认为text/plain，但通常需要显式地指定为text/html。由于经常要设置Content-Type，因此HttpServletResponse提供了一个专用的方法setContentType。|
+|Date|当前的GMT时间。你可以用setDateHeader来设置这个头以避免转换时间格式的麻烦。|
+|Expires|应该在什么时候认为文档已经过期，从而不再缓存它？|
+|Last-Modified|文档的最后改动时间。客户可以通过If-Modified-Since请求头提供一个日期，该请求将被视为一个条件GET，只有改动时间迟于指定时间的文档才会返回，否则返回一个304（Not Modified）状态。Last-Modified也可用setDateHeader方法来设置。|
+|Location|表示客户应当到哪里去提取文档。Location通常不是直接设置的，而是通过HttpServletResponse的sendRedirect方法，该方法同时设置状态代码为302。|
+|Refresh|表示浏览器应该在多少时间之后刷新文档，以秒计。除了刷新当前文档之外，你还可以通过setHeader("Refresh", "5; URL=http://host/path")让浏览器读取指定的页面。|
+|Server|服务器名字。Servlet一般不设置这个值，而是由Web服务器自己设置。|
+|Set-Cookie|设置和页面关联的Cookie。Servlet不应使用response.setHeader("Set-Cookie", ...)，而是应使用HttpServletResponse提供的专用方法addCookie。参见下文有关Cookie设置的讨论。|
+|WWW-Authenticate|客户应该在Authorization头中提供什么类型的授权信息？在包含401（Unauthorized）状态行的应答中这个头是必需的。|
+### [mobile-detect.js 中文网](https://www.mobile-detect.cn/)
+> 该脚本将通过将模式与给定的User-Agent字符串进行比较来检测设备。您可以找到有关渲染网页的设备的信息：
+### [cache 强缓存 协商缓存](https://blog.csdn.net/qianqianstd/article/details/75907082)
+### [node.js文件的复制，创建文件夹等相关操作](https://blog.csdn.net/youngyang_shen/article/details/54287247)
+```js
+function mkdir(dirpath, dirname) {
+    if (dirname !== path.dirname(dirpath)) {
+        mkdir(dirpath);
+        return;
+    }
+    if (fs.existsSync(dirname)) {
+        fs.mkdirSync(dirpath)
+    } else {
+        mkdir(dirname, path.dirname(dirname));
+        fs.mkdirSync(dirpath);
+    }
+}
+```
+### [cheerio实现了核心jQuery的子集。cheerio会从jQuery库中删除所有DOM矛盾和浏览器的尴尬部分, 展示她真正华丽的API。](https://github.com/cheeriojs/cheerio/wiki/Chinese-README)
+### [jsdom 中文文档（纯翻译）](https://segmentfault.com/a/1190000014844043)
+### [NodeJs-crawler](https://github.com/lunlunshiwo/NodeJs-crawler)
+### [node实现防盗链](https://www.cnblogs.com/sqh17/p/12713858.html)
+### [node-crawler](https://node-crawler.readthedocs.io/zh_CN/latest/)
+> node-crawler：一个轻量级爬虫工具 文档
+> 浏览器提供了 5 种 Observer 来监听这些变动：MutationObserver、IntersectionObserver、PerformanceObserver、ResizeObserver、ReportingObserver。
+### [浅谈js的数字格式](https://www.cnblogs.com/amiezhang/p/7940067.html)
+```js
+// 1. 二进制 - 二进制是以0b开头
+0b10; //2
+// 2. 八进制 - 八进制是以0开头
+010； //8
+// 3. 十六进制 - 十六进制是以0x开头
+0x10; //16
+```
+### [Base64笔记](http://www.ruanyifeng.com/blog/2008/06/base64.html)
+### [pointer-event属性详解](https://blog.csdn.net/qq_37600506/article/details/99487744)
+> 鼠标事件屏蔽
+### [深入JS getRandomValues和Math.random方法](https://www.zhangxinxu.com/wordpress/2021/12/js-getrandomvalue-math-random/)
+### [ES标准中的相等比较算法 SameValue SameValueZero](https://blog.csdn.net/QDY5945/article/details/102638372)
+### [HTML inputmode与iOS Android软键盘类型测试](https://www.zhangxinxu.com/wordpress/2022/02/html-inputmode-keyboard/)
+> 呼出键盘
+### [MutationObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)
+> 观察 DOM 变化的 API
+### [IntersectionObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/IntersectionObserver)
+> 观察元素可见性的 API
+### [getComputedStyle](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getComputedStyle)
+> 获取最终计算的样式
+### [requestAnimationFrame](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame)
+> 动画帧请求回调
+### [FormData 原生对象](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData)
+### [JS复制文字到剪切板的极简实现及扩展](https://www.zhangxinxu.com/wordpress/2021/10/js-copy-paste-clipboard/)
+### [HTML slot 插槽元素深入](https://www.zhangxinxu.com/wordpress/2021/09/html-slot-dom/)
+### [不使用file类型input也能触发文件上传](https://www.zhangxinxu.com/wordpress/2021/08/file-system-access-api/)
+### [polyfill、ponyfill、prollyfill傻傻分不清楚](https://www.zhangxinxu.com/wordpress/2021/08/polyfill-ponyfill-prollyfill/)
+> polyfill ponyfill prollyfill
+### [JS判断图像背景颜色单一还是丰富](https://www.zhangxinxu.com/wordpress/2021/06/js-image-colorful-or-pure/)
+### [color thief](https://github.com/lokesh/color-thief)
+> 取多个颜色
+### [m多行匹配](https://www.cnblogs.com/Renyi-Fan/p/9087199.html)
+### [使用 CodeMirror 打造在线代码编辑器](https://blog.csdn.net/qq_37193537/article/details/88426196)
+### [Vue Json Pretty](https://github.com/leezng/vue-json-pretty)
+> json格式化工具
+### [vue-json-viewer](https://github.com/chenfengjw163/vue-json-viewer#readme)
+> json格式化工具
+### [sass @import](https://www.sass.hk/guide/)
+> 当通过@import把sass样式分散到多个文件时，你通常只想生成少数几个css文件。那些专门为@import命令而编写的sass文件，并不需要生成对应的独立css文件，这样的sass文件称为局部文件。对此，sass有一个特殊的约定来命名这些文件。
+> 此约定即，sass局部文件的文件名以下划线开头。这样，sass就不会在编译时单独编译这个文件输出css，而只把这个文件用作导入。当你@import一个局部文件时，还可以不写文件的全名，即省略文件名开头的下划线。举例来说，你想导入themes/_night-sky.scss这个局部文件里的变量，你只需在样式表中写@import "themes/night-sky"; 。
+> 局部文件可以被多个不同的文件引用。当一些样式需要在多个页面甚至多个项目中使用时，这非常有用。在这种情况下，有时需要在你的样式表中对导入的样式稍作修改，sass有一个功能刚好可以解决这个问题，即默认变量值。
+### [无障碍开发](https://www.cnblogs.com/kunmomo/category/1552789.html)
+### [i18n与a11y与l10n](https://www.jianshu.com/p/a1dbc0f2d7de)
+### [WAI-ARIA无障碍网页应用属性完全展示](https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/#ariaAttr)
+### [:focus-visible](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-visible)
+> 当元素匹配:focus伪类并且客户端(UA)的启发式引擎决定焦点应当可见(在这种情况下很多浏览器默认显示"焦点框"。)时，:focus-visible 伪类将生效。
+### [tabindex](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/tabindex)
+> tabindex 全局属性 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用Tab键，因此得名）。
+### [键盘导航的 JavaScript 组件](https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+### [浏览器兼容](https://caniuse.com/)

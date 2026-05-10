@@ -17,4 +17,12 @@
 &gt; Chrome 开发工具具有"暂停捕获异常"，这在有异常抛出时很有用。它暂停执行，您可以检查"范围"以查看所有局部变量。
 sources -&gt;pause on exceptons -&gt;pause on caught exceptons
 ### [Chrome常用URL命令（伪URL）](https://www.cnblogs.com/EasonJim/p/7877704.html)
-&gt; chrome://chrome-urls/
+> chrome://chrome-urls/
+### [浏览器是根据什么决定「from disk cache」与「from memory cache」？](https://www.zhihu.com/question/64201378?sort=created)
+### [聊一聊缓存 [from memory cache 和 from disk cache]](https://blog.csdn.net/weixin_42038290/article/details/110135296)
+### [chrome调试工具（DevTool）的15个使用窍门和秘密](https://juejin.cn/post/6964019305520300063)
+### [利用chrome浏览器实现滚动截屏](https://blog.csdn.net/qq_43699614/article/details/105543215)
+> 截取页面中的某些元素
+```bash
+Capture node screenshot
+```

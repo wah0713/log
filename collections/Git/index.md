@@ -30,3 +30,11 @@ git stash pop 储存 出
 ### [git reflog](https://blog.csdn.net/yuquan0821/article/details/114670541)
 ### git rebase -i  commitId (合并提交)
 ### git pull -r (git pull -rebase)
+### git log --name-only
+> 查询某次提交的文件列表
+### git log --stat
+> 显示每个log的commit 标题，并且显示哪几个文件被修改了，各个文件增加和删除了多少行。
+### [Git 代码管理（代码提交和代码回退）](https://blog.csdn.net/weixin_43790276/article/details/100549799)
+### [git 删除远程分支文件](https://blog.csdn.net/z2536083458/article/details/86622365)
+### [(Git)合并多个commit](https://segmentfault.com/a/1190000007748862)
+### [如何退出git rebase 命令行](https://segmentfault.com/q/1010000023739076)

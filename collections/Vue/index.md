@@ -95,3 +95,18 @@ beforeRouteLeave(to, from, next) {
     next()
 }
 ```
+### [vue.config.js-moment去除多余语言环境](https://www.jianshu.com/p/df9c145d4d71)
+### [vue中如何将按钮设置为间隔一段时间只能点击一次](https://my.oschina.net/iioschina/blog/4669555)
+> 指令
+### [vue-cli中默认webpack配置详解](https://blog.csdn.net/S3328047358/article/details/107021484/)
+### [element-UI ，Table组件实现拖拽效果](https://www.cnblogs.com/jin-zhe/p/10181852.html)
+### vue中fullPath和path的区别
+> 字面意思，即带有参数的完整路径和不带有参数的路径的区别
+> 例如：
+> 一个地址：http://xxx/#/console/orderManage/editOrder?id=111xxx
+> path 是：/console/orderManage/editOrder
+> fullPath 是：/console/orderManage/editOrder?id=111xxx
+### [Vue调试技巧：在Devtool中一键打开组件源码](https://zhuanlan.zhihu.com/p/359927285)
+> https://devtools.vuejs.org/guide/open-in-editor.html
+> open file vue
+### [element-ui的el-table和el-form表单校验嵌套使用](https://blog.csdn.net/xing_zlear/article/details/91127520)
