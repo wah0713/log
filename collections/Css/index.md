@@ -954,3 +954,240 @@ span {
 ```
 
 
+### [fontforge制作自定义字体及在手机上应用举例](https://www.zhangxinxu.com/wordpress/2011/11/fontforge%e8%87%aa%e5%ae%9a%e4%b9%89%e6%89%8b%e6%9c%ba%e5%ad%97%e4%bd%93/)
+
+
+### [翻译 – CSS3 Backgrounds相关介绍](https://www.zhangxinxu.com/wordpress/2011/05/%e7%bf%bb%e8%af%91-css3-backgrounds%e7%9b%b8%e5%85%b3%e4%bb%8b%e7%bb%8d/)
+
+> backgrounds
+
+
+### [CSS/CSS3长度、时间、频率、角度单位大全](https://www.zhangxinxu.com/wordpress/2011/03/css-css3-unit-units/)
+
+
+### [style标签下的CSS代码的显示与实时编辑](https://www.zhangxinxu.com/wordpress/2011/03/style%e6%a0%87%e7%ad%be%e4%b8%8b%e7%9a%84css%e4%bb%a3%e7%a0%81%e7%9a%84%e6%98%be%e7%a4%ba%e4%b8%8e%e5%ae%9e%e6%97%b6%e7%bc%96%e8%be%91/)
+
+```html
+<style contenteditable>
+    .test_image {
+        padding: 3px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+</style>
+```
+
+```css
+style[contenteditable] {
+    ...
+}
+```
+
+
+### [使用CSS3 ::selection伪元素改变文本选中颜色](https://www.zhangxinxu.com/wordpress/2010/10/css-css3-selection-range/)
+
+```css
+::selection {
+    background: #d3d3d3;
+    color: #555;
+}
+```
+
+
+### [无JavaScript纯CSS实现选项卡轮转切换效果](https://www.zhangxinxu.com/wordpress/2010/09/%e6%97%a0javascript%e5%ae%9e%e7%8e%b0%e9%80%89%e9%a1%b9%e5%8d%a1%e8%bd%ae%e8%bd%ac%e5%88%87%e6%8d%a2%e6%95%88%e6%9e%9c/)
+
+
+### [精简高效的CSS命名准则/方法](https://www.zhangxinxu.com/wordpress/2010/09/%e7%b2%be%e7%ae%80%e9%ab%98%e6%95%88%e7%9a%84css%e5%91%bd%e5%90%8d%e5%87%86%e5%88%99%e6%96%b9%e6%b3%95/)
+
+> 此“三无原则”就是：无ID，无层级，无标签
+
+
+### [CSS content内容生成技术以及应用](https://www.zhangxinxu.com/wordpress/2010/04/css-content%e5%86%85%e5%ae%b9%e7%94%9f%e6%88%90%e6%8a%80%e6%9c%af%e4%bb%a5%e5%8f%8a%e5%ba%94%e7%94%a8/)
+
+```css
+/* 为多语言内容插入正确的引号 */
+/* 为不同语言指定引号的表现 */
+:lang(en)>q {
+    quotes: '"''"';
+}
+
+:lang(no)>q {
+    quotes: "«""»";
+}
+
+:lang(ch)>q {
+    quotes: "“""”";
+}
+
+/* 在q标签的前后插入引号 */
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+/* 用图片替换文字 */
+div.logo {
+    content: url(logo.png);
+}
+
+/* 使用属性值作为content内容 */
+a:after {
+    content: "("attr(href) ")";
+}
+```
+
+
+### [CSS渐变之CSS3 gradient在Firefox3.6下的使用](https://www.zhangxinxu.com/wordpress/2010/04/css%e6%b8%90%e5%8f%98%e4%b9%8bcss3-gradient%e5%9c%a8firefox3-6%e4%b8%8b%e7%9a%84%e4%bd%bf%e7%94%a8/)
+
+> gradient 线性渐变
+
+
+### [JS HEX十六进制与RGB, HSL颜色的相互转换](https://www.zhangxinxu.com/wordpress/2010/03/javascript-hex-rgb-hsl-color-convert/)
+
+
+### [还有完没完，怎么又来了个 scrollbar-gutter？](https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/)
+
+```css
+:root {
+    scrollbar-gutter: stable;
+}
+```
+
+
+### [css选择器:nth-child()的用法](https://blog.csdn.net/cdgogo/article/details/109047819)
+
+```css
+/* 选择第n个，n位数字  */
+:nth-child(n)
+/* 选择列表中的偶数标签 */
+:nth-child(2n)
+/*选择列表中的奇数标签 */
+:nth-child(2n-1)
+
+/*选择前几个元素 */
+/*【负方向范围】选择第1个到第6个 */
+:nth-child(-n+6) {}
+
+/*从第几个开始选择*/
+/*【正方向范围】选择从第6个开始的，直到最后  */
+:nth-child(n+6) {}
+
+/*两者结合使用，可以限制选择某一个范围 */
+/*【限制范围】选择第6个到第9个，取两者的交集【感谢小伙伴的纠正~】 */
+:nth-child(n+6):nth-child(-n+9)
+/*选择列表中的倒数第n个标签 n为数字 */
+:nth-last-child(n)
+
+/*选择倒数最后n个 */
+item:nth-last-child(-n+2) {}
+```
+
+
+### [图片旋转效果的一些研究、jQuery插件及实例](https://www.zhangxinxu.com/wordpress/2010/01/%e5%9b%be%e7%89%87%e6%97%8b%e8%bd%ac%e6%95%88%e6%9e%9c%e7%9a%84%e4%b8%80%e4%ba%9b%e7%a0%94%e7%a9%b6%e3%80%81jquery%e6%8f%92%e4%bb%b6%e5%8f%8a%e5%ae%9e%e4%be%8b/)
+
+```html
+<canvas id="cv"></canvas>
+<img id="cvImg" width="128" height="96" src="mm1.jpg" />
+```
+
+```js
+window.onload = function() {
+    var canvas = document.getElementById("cv");
+    var oImg = document.getElementById("cvImg");
+    // 旋转后canvas标签的大小
+    canvas.height = 128;
+    canvas.width = 96;
+    // 绘图开始
+    var context = canvas.getContext("2d");
+    context.save();
+    // 改变中心点
+    context.translate(96, 0);
+    // 旋转90°
+    context.rotate(Math.PI / 2);
+    // 绘制
+    context.drawImage(oImg, 0, 0, 128, 96);
+    context.restore();
+    oImg.style.display = "none";
+};
+```
+
+
+### [CSS3 border-image详解、应用及jQuery插件](https://www.zhangxinxu.com/wordpress/2010/01/css3-border-image/)
+
+> border-image
+
+
+### css zoom 放大
+
+
+### [今天学习SVG滤镜feGaussianBlur和feDropShadow](https://www.zhangxinxu.com/wordpress/2024/04/svg-filter-fegaussianblur-fedropshadow/)
+
+```html
+<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+    <filter id="gaussianBlur1">
+        <feGaussianBlur stdDeviation="1" />
+    </filter>
+    <filter id="gaussianBlur2">
+        <feGaussianBlur stdDeviation="5" />
+    </filter>
+    <filter id="gaussianBlur3" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="10" />
+    </filter>
+
+    <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur1);" />
+    <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur2); transform: translateX(140px);" />
+    <circle cx="100" cy="100" r="50" style="filter: url(#gaussianBlur3); transform: translateX(280px);" />
+</svg>
+```
+
+
+### [SVG滤镜系列之搞懂<feBlend>元素](https://www.zhangxinxu.com/wordpress/2024/04/svg-filter-feblend/)
+
+```css
+mix-blend-mode: normal; //正常
+mix-blend-mode: multiply; //正片叠底
+mix-blend-mode: screen; //滤色
+mix-blend-mode: overlay; //叠加
+mix-blend-mode: darken; //变暗
+mix-blend-mode: lighten; //变亮
+mix-blend-mode: color-dodge; //颜色减淡
+mix-blend-mode: color-burn; //颜色加深
+mix-blend-mode: hard-light; //强光
+mix-blend-mode: soft-light; //柔光
+mix-blend-mode: difference; //差值
+mix-blend-mode: exclusion; //排除
+mix-blend-mode: hue; //色相
+mix-blend-mode: saturation; //饱和度
+mix-blend-mode: color; //颜色
+mix-blend-mode: luminosity; //亮度
+```
+
+
+### [CSS Nesting嵌套与@scope规则也太雷同了吧？](https://www.zhangxinxu.com/wordpress/2024/03/css-nesting-scope-rules/)
+
+> @scope
+
+
+### [CSS initial-letter属性，嗯……也就这样吧](https://www.zhangxinxu.com/wordpress/2024/03/css-initial-letter/)
+
+```css
+initial-letter: normal;
+
+/* 数值 */
+initial-letter: 1.5;
+/* 首字母占据1.5行 */
+initial-letter: 3;
+/* 首字母占据3行 */
+initial-letter: 3 2;
+/* 首字母占据3行，下沉2行 */
+```
+
+
+### [CSS @scope他来了](https://www.zhangxinxu.com/wordpress/2024/01/css-at-scope/)
+
+> @scope
+
+

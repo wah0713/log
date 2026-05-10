@@ -234,3 +234,13 @@ exportdefault {
 > https://squoosh.app/
 
 
+### [浏览器调试工具如何查看placeholder值](https://blog.csdn.net/qq_36485978/article/details/97897798)
+
+> placeholder
+
+
+### [Chrome-查看DOM元素绑定的事件【工具篇】](https://blog.csdn.net/weixin_38080573/article/details/105200212)
+
+> getEventListeners
+
+

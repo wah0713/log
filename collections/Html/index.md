@@ -89,3 +89,11 @@ document.addEventListener("keydown", (event) => {
 ```
 
 
+### [完善：HTML5表单新特征简介与举例](https://www.zhangxinxu.com/wordpress/2011/01/%e5%ae%8c%e5%96%84%ef%bc%9ahtml5%e8%a1%a8%e5%8d%95%e6%96%b0%e7%89%b9%e5%be%81%e7%ae%80%e4%bb%8b%e4%b8%8e%e4%b8%be%e4%be%8b/)
+
+> input type
+
+
+### [input  type](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/button)
+
+

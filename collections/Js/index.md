@@ -1574,3 +1574,231 @@ getRandomColor() // '#4c2fd7'
 ```
 
 
+### [HTML5全屏API在FireFox/Chrome中的显示差异](https://www.zhangxinxu.com/wordpress/2012/10/html5-full-screen-api-firefox-chrome-difference/)
+
+
+### [全屏 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fullscreen_API)
+
+```js
+function toggleFullScreen() {
+    // 元素和document的区别
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+```
+
+> requestFullscreen exitFullscreen
+
+
+### [Page Visibility(页面可见性) API介绍、微拓展](https://www.zhangxinxu.com/wordpress/2012/11/page-visibility-api-introduction-extend/)
+
+```js
+document.addEventListener("visibilitychange", function() {})
+```
+
+> visibilitychange
+
+
+### [纯JS实现图像的人脸识别功能](https://www.zhangxinxu.com/wordpress/2023/12/js-image-video-face-detect/)
+
+
+### [Face-Detection-JavaScript](https://github.com/WebDevSimplified/Face-Detection-JavaScript)
+
+
+### [JS实现图片相似度的判断](https://www.zhangxinxu.com/wordpress/2023/12/js-img-image-similarity/)
+
+
+### [SSIM. JS](https://github.com/obartra/ssim)
+
+
+### [使用JS提取视频中的音频资源](https://www.zhangxinxu.com/wordpress/2023/12/js-fetch-video-audio-mp3-mp4-wav/)
+
+
+### [本地MP3封面图、时长等信息的JS读取](https://www.zhangxinxu.com/wordpress/2023/11/js-mp3-media-tags-metadata/)
+
+
+### [cube格式的LUT滤镜也叫ColorMapFilter在pixi中应用](https://www.zhangxinxu.com/wordpress/2023/11/cube-lut-colormapfilter-pixijs/)
+
+
+### [剪映APP的视频特效如何在Web中JS实现](https://www.zhangxinxu.com/wordpress/2023/11/video-effect-js-filter-pixijs-webgl-3d/)
+
+
+### [mp4box.js加WebCodecs 解码MP4视频帧并渲染](https://www.zhangxinxu.com/wordpress/2023/11/mp4box-js-webcodecs-mp4-canvas/)
+
+
+### [翻译 – 高性能网站需避免的7个错误](https://www.zhangxinxu.com/wordpress/2011/11/seven-mistakes-that-make-websites-slow/)
+
+
+### [翻编-JavaScript有关的10个怪癖和秘密](https://www.zhangxinxu.com/wordpress/2011/06/javascript%e6%9c%89%e5%85%b3%e7%9a%8410%e4%b8%aa%e6%80%aa%e7%99%96%e5%92%8c%e7%a7%98%e5%af%86/)
+
+```js
+alert('10 13 21 48 52'.replace(/\d+/g, function(match) {
+    return parseInt(match) < 30 ? '*' : match;
+}));
+
+var someVar = 0;
+alert(someVar == false); //结果 true – 0属于falsy
+alert(someVar === false); //结果 false – zero是个数值, 不是布尔值
+
+var someVar = []; //空数组
+alert(someVar == false); //结果 true
+if (someVar) alert('hello'); //alert语句执行, 所以someVar当作true
+```
+
+
+### [JS Range HTML文档/文字内容选中、库及应用介绍](https://www.zhangxinxu.com/wordpress/2011/04/js-range-html%e6%96%87%e6%a1%a3%e6%96%87%e5%ad%97%e5%86%85%e5%ae%b9%e9%80%89%e4%b8%ad%e3%80%81%e5%ba%93%e5%8f%8a%e5%ba%94%e7%94%a8%e4%bb%8b%e7%bb%8d/)
+
+> selection
+
+
+### [node环境中使用fluent-ffmpeg每隔一秒视频截图](https://www.zhangxinxu.com/wordpress/2024/04/node-fluent-ffmpeg-screenshot-every-second/)
+
+```js
+const ffmpeg = require("fluent-ffmpeg");
+
+// 每间隔2秒截取缩略图
+const videoPath = './sources/zhangxinxu.mp4';
+console.log('正在获取视频缩略图...');
+const time = Date.now();
+// 下面是核心执行方法
+ffmpeg(videoPath)
+    .fps(0.5)
+    .size('128x?')
+    .save('./temp/thumb-%04d.jpg')
+    .on('error', (err) => {
+        console.log('获取视频缩略图失败', err);
+    })
+    .on('end', () => {
+        console.log('获取视频缩略图成功，耗时：', (Date.now() - time) / 1000 + 's');
+    });
+```
+
+
+### [今天才知道，Web网页也能阻止息屏了](https://www.zhangxinxu.com/wordpress/2024/03/js-screen-wake-lock-api/)
+
+> wakeLock
+
+
+### [不改变音调情况下Audio音频的倍速合成JS实现](https://www.zhangxinxu.com/wordpress/2024/02/js-audioencoder-backplayrate-audiobuffer/)
+
+
+### [使用JS快速获取video视频任意位置的缩略图](https://www.zhangxinxu.com/wordpress/2024/01/js-get-video-thumb-poster/)
+
+
+### [时代变了，该使用原生popover属性模拟下拉了](https://www.zhangxinxu.com/wordpress/2024/01/js-html-popover-dropdown/)
+
+```html
+<button popovertarget="imgBook">点击显示图片</button>
+<img id="imgBook" popover src="/study/202312/book1.jpg" />
+```
+
+
+### [js中 ||=、&&=、??=、?.、?? 运算符的使用](https://blog.csdn.net/tiven_/article/details/134289431)
+
+```js
+let x = 10;
+let y = 0;
+x || = 5; // x仍为10，因为10被视为真值
+y || = 5; // y现在为5，因为0被视为假值
+
+let a = null;
+let b = 15;
+a && = 10; // a仍为null
+b && = 20; // b现在为20
+
+let c = null;
+let d;
+c ?? = 5; // c现在为5
+d ?? = 10; // d现在为10
+```
+
+
+### 1e5
+
+```js
+1e5 // 100000
+```
+
+
+### [告别轮询，SSE 流式传输可太香了！](https://juejin.cn/post/7359347999308644390)
+
+```js
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.use(express.static('public'));
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
+app.get('/events', function(req, res) {
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.setHeader('Connection', 'keep-alive');
+
+    let startTime = Date.now();
+
+    const sendEvent = () => {
+        // 检查是否已经发送了10秒
+        if (Date.now() - startTime >= 10000) {
+            res.write('event: close\ndata: {}\n\n'); // 发送一个特殊事件通知客户端关闭
+            res.end(); // 关闭连接
+            return;
+        }
+
+        const data = {
+            message: 'Hello World',
+            timestamp: new Date()
+        };
+        res.write(`data: ${JSON.stringify(data)}\n\n`);
+
+        // 每隔2秒发送一次消息
+        setTimeout(sendEvent, 2000);
+    };
+
+    sendEvent();
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SSE Example</title>
+</head>
+
+<body>
+    <h1>Server-Sent Events Example</h1>
+    <div id="messages"></div>
+
+    <script>
+        const evtSource = new EventSource('/events');
+        const messages = document.getElementById('messages');
+
+        evtSource.onmessage = function(event) {
+            const newElement = document.createElement("p");
+            const eventObject = JSON.parse(event.data);
+            newElement.textContent = "Message: " + eventObject.message + " at " + eventObject.timestamp;
+            messages.appendChild(newElement);
+        };
+    </script>
+</body>
+
+</html>
+```
+
+

@@ -115,3 +115,53 @@ npm i autocannon -g
 > https://map.seu.edu.cn/#/home
 
 
+### [Linux系统下shell之history 关于清除 -c 和部分删除 .bash_history && history -r 的确切使用](https://blog.csdn.net/jagel_95/article/details/115003040)
+
+> history
+
+
+### [翻译 – 从心理学角度看UX设计](https://www.zhangxinxu.com/wordpress/2010/05/%e7%bf%bb%e8%af%91-%e4%bb%8e%e5%bf%83%e7%90%86%e5%ad%a6%e8%a7%92%e5%ba%a6%e7%9c%8bux%e8%ae%be%e8%ae%a1/)
+
+```
+01. 人们不希望多做额外的工作或思考
+02. 人是有局限性的
+03. 人是会犯错滴
+04. 人类的记忆是复杂的
+05. 人是具有社会性的
+06. 注意力
+07. 人们渴求信息
+08. 无意识加工
+09. 人们创建心理模型
+10. 视觉系统
+
+```
+
+
+### [P-R-E-P原则：工作中有效沟通的4个步骤](https://zhuanlan.zhihu.com/p/69990560)
+
+```
+PREP
+一、先说结论（Point）
+二、引用数据（Reason）
+三、举个栗子（example）
+四、重申结论（Point）
+```
+
+
+### [给我实现一个前端的 Excel 导入和导出功能](https://juejin.cn/post/7135945969425711111)
+
+> xlsx
+
+
+### [rel='noopener noreferrer' 知多少](https://juejin.cn/post/6844904116892745735)
+
+
+### [SU7，启动！尝试还原了 SU7 网页的炫酷特效](https://juejin.cn/post/7352762271003017252)
+
+
+### [【译】3种解决CORS错误的方式与Access-Control-Allow-Origin的作用原理](https://segmentfault.com/a/1190000022506474)
+
+
+### npm view node
+
+

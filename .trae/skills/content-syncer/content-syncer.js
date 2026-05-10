@@ -173,6 +173,11 @@ function main() {
     for (let month = 1; month <= 6; month++) {
       syncYearMonth(year, month, logPath, collectionsPath);
     }
+  } else if (args[0] === '24上半年') {
+    const year = 24;
+    for (let month = 1; month <= 6; month++) {
+      syncYearMonth(year, month, logPath, collectionsPath);
+    }
   } else if (args.length === 2) {
     const year = parseInt(args[0]);
     const month = parseInt(args[1]);

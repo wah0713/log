@@ -155,3 +155,59 @@ System.out.println("Hello to see U!");
 &lt;/details&gt;
 ### buildtime='&lt;%=new Date %&gt;' 记录编译时间
 ### [React Hook 系列(一)：彻底搞懂react-hooks 用法（万字慎点）](https://segmentfault.com/a/1190000021261588)
+### [翻译-你必须知道的28个HTML5特征、窍门和技术](https://www.zhangxinxu.com/wordpress/2010/08/%e7%bf%bb%e8%af%91-%e4%bd%a0%e5%bf%85%e9%a1%bb%e7%9f%a5%e9%81%93%e7%9a%8428%e4%b8%aahtml5%e7%89%b9%e5%be%81%e3%80%81%e7%aa%8d%e9%97%a8%e5%92%8c%e6%8a%80%e6%9c%af/)
+
+```html
+<!-- figcaption -->
+<figure>
+    <img src="path/to/image" alt="About image" />
+    <figcaption>
+        <p>This is an image of something interesting. </p>
+    </figcaption>
+</figure>
+
+<!-- 引号还是不要引号 -->
+<p class=myClass id=someId> Start the reactor.
+
+<!-- 正则表达式 -->
+<form action="" method="get">
+    <label for="username">姓名:</label>
+    <input id="username" name="username" type="text" placeholder="4-10个英文字母" pattern="[A-Za-z]{4,10}" required="required" autofocus />
+    <button type="submit">提交</button>
+</form>
+
+<!-- 属性支持检测 -->
+<script>
+if (!'pattern' in document.createElement('input') ) {
+    // do client/server side validation
+}
+</script>
+
+<!-- mark元素(Mark Element ) -->
+<h3> 搜索结果 </h3>
+<p> 我很喜欢《零秒出手》里面那个拉小提琴的女孩，原来她叫做 <mark>北川景子</mark>。 </p>
+
+<!-- Output元素 -->
+<form action="" method="get">
+    <p>
+        10 + 5 = <output name="sum"></output>
+    </p>
+    <button type="submit">计算</button>
+</form>
+
+(function() {
+    var f = document.forms[0];
+
+    if ( typeof f['sum'] !== 'undefined' ) {
+        f.addEventListener('submit', function(e) {
+            f['sum'].value = 15;
+            e.preventDefault();
+        }, false);
+    } else {
+        alert('你的浏览器尚未准备好！');
+    }
+})();
+
+```
+
+
