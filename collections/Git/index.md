@@ -38,3 +38,34 @@ git stash pop 储存 出
 ### [git 删除远程分支文件](https://blog.csdn.net/z2536083458/article/details/86622365)
 ### [(Git)合并多个commit](https://segmentfault.com/a/1190000007748862)
 ### [如何退出git rebase 命令行](https://segmentfault.com/q/1010000023739076)
+### [Linux 命令](https://github.com/jaywcjlove/linux-command)
+
+> linux-command
+
+
+### 当前分支改名
+
+git branch -m newName
+
+
+### [git stash 命令实用指南 | Linux 中国](https://zhuanlan.zhihu.com/p/364339115)
+
+```bash
+git stash list
+git stash pop stash@{1}
+git stash clear 通过删除所有的暂存库来清空该列表。
+git stash drop <stash_id> 从暂存列表中删除一个特定的暂存。
+```
+
+
+### [git 重命名远程分支名](https://segmentfault.com/a/1190000019539669)
+
+
+### [GitHub CI/CD 基础，前端项目云服务器自动化部署](https://juejin.cn/post/7057776355450028045)
+
+> cicd
+
+
+### [SVG-Morpheus实现SVG图标图形间的补形动画](https://www.zhangxinxu.com/wordpress/2014/12/github-svg-morpheus-shape-path-free-transform/)
+
+

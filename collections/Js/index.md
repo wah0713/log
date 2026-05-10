@@ -831,3 +831,478 @@ num + 0.5 | 0
 // 去整
 num | 0
 ```
+### [JavaScript 数组去重的方法（12 种方法，史上最全）](https://segmentfault.com/a/1190000016418021)
+
+
+### [二次元live2d看板娘效果中的web前端技术](https://www.zhangxinxu.com/wordpress/2018/05/live2d-web-webgl-js/)
+
+
+### [炫酷H5中序列图片视频化播放的高性能实现](https://www.zhangxinxu.com/wordpress/2018/05/image-sequence-html5-video-play/)
+
+> img 替换
+
+
+### [JS检测PNG图片是否有透明背景、抠图等相关处理](https://www.zhangxinxu.com/wordpress/2018/05/canvas-png-transparent-background-detect/)
+
+
+### [前端原生API实现条形码二维码的JS解析识别](https://www.zhangxinxu.com/wordpress/2023/01/js-parse-barcode-qrcode-barcodedetector/)
+
+> BarcodeDetectorBarcodeDetector
+
+
+### [使用JS在客户端判断当前网络状态](http://t.zoukankan.com/libin-1-p-6822746.html)
+
+> navigator.onLine
+
+
+### [拖拽献祭中的黑山羊-DataTransfer对象](https://www.zhangxinxu.com/wordpress/2018/09/drag-drop-datatransfer-js/)
+
+> DataTransfer
+
+
+### [直接剪切板粘贴上传图片的前端JS实现](https://www.zhangxinxu.com/wordpress/2018/09/ajax-upload-image-from-clipboard/)
+
+
+### [Chrome浏览器原生支持的7种后台服务简介](https://www.zhangxinxu.com/wordpress/2023/01/js-background-services/)
+
+```
+Background Fetch
+Background Sync
+Notifications
+Payment Handler
+Periodic Background Sync
+Push Messaging
+Reporting API
+```
+
+
+### [HTML5 video视频播放Picture-in-Picture画中画技术](https://www.zhangxinxu.com/wordpress/2018/12/html5-video-play-picture-in-picture/)
+
+```js
+// 进入画中画
+video.requestPictureInPicture();
+// 退出画中画
+document.exitPictureInPicture();
+```
+
+> 悬浮 视频 弹出
+
+
+### [【JavaScript】遍历数组时注意 Empty Item 的影响](https://segmentfault.com/a/1190000020192631)
+
+```js
+// 在 Chrome 中试验：
+const arr = new Array(3)
+
+console.log(arr)
+// output: [empty × 3]
+
+arr.map((item) => item.prop)
+// output: [empty × 3]
+
+arr.forEach((item) => console.log(item.prop))
+// nothing
+
+arr.reduce((res) => res += 'ha', '')
+// output: ''
+```
+
+
+### [奇了怪了，输入法和JS Enter回车提交冲突](https://www.zhangxinxu.com/wordpress/2023/02/js-enter-submit-compositionupdate/)
+
+> key keyCode isComposing
+
+
+### [JavaScript将首字母转换为大写或小写的简单方法](https://blog.csdn.net/csdn_meng/article/details/85935593)
+
+```js
+var str = 'test string';
+// 只需要一行代码即可
+str = str.replace(str[0], str[0].toUpperCase());
+console.log(str);
+// 输出：Test string
+```
+
+
+### [使用electron构建跨平台Node.js桌面应用经验分享](https://www.zhangxinxu.com/wordpress/2017/05/electron-node-js-desktop-application-experience/)
+
+> electron
+
+
+### [利用HTML5 Web Audio API给网页JS交互增加声音](https://www.zhangxinxu.com/wordpress/2017/06/html5-web-audio-api-js-ux-voice/)
+
+> AudioContext
+
+
+### [可以参考element的实现, 判断文本是否溢出](https://github.com/ElemeFE/element/blob/dev/packages/table/src/table-body.js#L245)
+
+```js
+      if (cell) {
+          const column = getColumnByCell(table, cell);
+          const hoverState = table.hoverState = {
+              cell,
+              column,
+              row
+          };
+          table.$emit('cell-mouse-enter', hoverState.row, hoverState.column, hoverState.cell, event);
+      }
+
+      // 判断是否text-overflow, 如果是就显示tooltip
+      const cellChild = event.target.querySelector('.cell');
+      if (!(hasClass(cellChild, 'el-tooltip') && cellChild.childNodes.length)) {
+          return;
+      }
+      // use range width instead of scrollWidth to determine whether the text is overflowing
+      // to address a potential FireFox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1074543#c3
+      const range = document.createRange();
+      range.setStart(cellChild, 0);
+      range.setEnd(cellChild, cellChild.childNodes.length);
+      const rangeWidth = range.getBoundingClientRect().width;
+      // getStyle Window.getComputedStyle()
+      const padding = (parseInt(getStyle(cellChild, 'paddingLeft'), 10) || 0) +
+          (parseInt(getStyle(cellChild, 'paddingRight'), 10) || 0);
+      if ((rangeWidth + padding > cellChild.offsetWidth || cellChild.scrollWidth > cellChild.offsetWidth) && this.$refs.tooltip) {
+          const tooltip = this.$refs.tooltip;
+          // TODO 会引起整个 Table 的重新渲染，需要优化
+          this.tooltipContent = cell.innerText || cell.textContent;
+          tooltip.referenceElm = cell;
+          tooltip.$refs.popper && (tooltip.$refs.popper.style.display = 'none');
+          tooltip.doDestroy();
+          tooltip.setExpectedState(true);
+          this.activateTooltip(tooltip);
+      }
+```
+
+
+### [HTML5 indexedDB前端本地存储数据库实例教程](https://www.zhangxinxu.com/wordpress/2017/07/html5-indexeddb-js-example/)
+
+> indexedDB
+
+
+### [iframe和HTML5 blob实现JS, CSS, HTML直接当前页预览](https://www.zhangxinxu.com/wordpress/2017/08/iframe-html5-blob-code-view/)
+
+> iframe
+
+
+### [请使用千位分隔符(逗号)表示web网页中的大数字](https://www.zhangxinxu.com/wordpress/2017/09/web-page-comma-number/)
+
+```js
+(123456789).toLocaleString('en-US');
+```
+
+
+### [鼠标无限移动 JS API Pointer Lock简介](https://www.zhangxinxu.com/wordpress/2017/10/js-api-pointer-lock/)
+
+
+### [照片位图转SVG矢量图片JS工具primitive.js等简介](https://www.zhangxinxu.com/wordpress/2017/11/raster-image-vector-svg-canvas-primitive-js/)
+
+> primitive
+
+
+### [使用CSS3 will-change提高页面滚动、动画等渲染性能](https://www.zhangxinxu.com/wordpress/2015/11/css3-will-change-improve-paint/)
+
+```
+/* 关键字值 */
+will-change: auto;
+will-change: scroll-position;
+will-change: contents;
+will-change: transform;
+/* <custom-ident>示例 */
+will-change: opacity;
+/* <custom-ident>示例 */
+will-change: left,top;
+/* 两个<animateable-feature>示例 */
+
+/* 全局值 */
+will-change: inherit;
+will-change: initial;
+will-change: unset;
+```
+
+
+### [小tip: 如何让contenteditable元素只能输入纯文本](https://www.zhangxinxu.com/wordpress/2016/01/contenteditable-plaintext-only/)
+
+```js
+$('[contenteditable]').each(function() {
+    // 干掉IE http之类地址自动加链接
+    try {
+        document.execCommand("AutoUrlDetect", false, false);
+    } catch (e) {}
+
+    $(this).on('paste', function(e) {
+        e.preventDefault();
+        var text = null;
+
+        if (window.clipboardData && clipboardData.setData) {
+            // IE
+            text = window.clipboardData.getData('text');
+        } else {
+            text = (e.originalEvent || e).clipboardData.getData('text/plain') || prompt('在这里输入文本');
+        }
+        if (document.body.createTextRange) {
+            if (document.selection) {
+                textRange = document.selection.createRange();
+            } else if (window.getSelection) {
+                sel = window.getSelection();
+                var range = sel.getRangeAt(0);
+
+                // 创建临时元素，使得TextRange可以移动到正确的位置
+                var tempEl = document.createElement("span");
+                tempEl.innerHTML = "&#FEFF;";
+                range.deleteContents();
+                range.insertNode(tempEl);
+                textRange = document.body.createTextRange();
+                textRange.moveToElementText(tempEl);
+                tempEl.parentNode.removeChild(tempEl);
+            }
+            textRange.text = text;
+            textRange.collapse(false);
+            textRange.select();
+        } else {
+            // Chrome之类浏览器
+            document.execCommand("insertText", false, text);
+        }
+    });
+});
+```
+
+> execCommand range clipboardData
+
+
+### [使用ImageDecoder API让GIF图片暂停播放](https://www.zhangxinxu.com/wordpress/2023/05/js-imagedecoder-api-gif/)
+
+> ImageDecoder
+
+
+### [半深入理解CSS3 object-position/object-fit属性](https://www.zhangxinxu.com/wordpress/2015/03/css3-object-position-object-fit/)
+
+```
+替换元素
+不是所有元素都叫“替换元素”。在CSS中，“替换元素”指的是（引用自这里）：
+
+其内容不受CSS视觉格式化模型（中文释义参见这里）控制的元素，比如image, 嵌入的文档(iframe之类)或者applet。比如，img元素的内容通常会被其src属性指定的图像替换掉。替换元素通常有其固有的尺寸：一个固有的宽度，一个固有的高度和一个固有的比率。比如一幅位图有固有用绝对单位指定的宽度和高度，从而也有固有的宽高比率。另一方面，其他文档也可能没有固有的尺寸，比如一个空白的html文档。
+
+CSS渲染模型不考虑替换元素内容的渲染。这些替换元素的展现独立于CSS。object, video, textarea, input也是替换元素，audio和canvas在某些特定情形下为替换元素。
+
+使用CSS的content属性插入的对象是匿名替换元素。
+```
+
+
+### [怎么使用js下载m3u8视频](https://www.ljhmp.com/article-detail.html?id=25)
+
+
+### [m3u8-downloader](https://gitee.com/jin2014/m3u8-downloader)
+
+```
+直接通过 ajax 的 get 请求 m3u8 文件。得到 m3u8 文件的内容字符串。读取字符串进行解析。
+
+需要注意的是，m3u8 文件不是 json 格式，不能将 dataType 设置为 json。 【队列下载 ts 视频片段】
+
+同样使用 ajax 的 get 请求视频碎片，一个 ajax 请求一个 ts 视频碎片，但关键点在于，下载的是视频文件，属于二进制数据，需要将 responseType 请求头设置为 arraybuffer。xhr.responseType = 'arraybuffer'
+
+使用队列下载，是因为视频碎片太多，不可能一次性请求全部。需要分批下载。
+
+同时由于浏览器同源并发限制，视频同时请求数不能过多。本工具设置为并发下载数为 10。 【组合 ts 视频片段】
+
+看似很难，但其实使用 Blob 对象即可将多个 ts 文件整合成一个文件。new Blob()，传入 ts 文件数组。
+
+这里有个小细节需要注意，需要在 new Blob 的第二个参数中设置文件的 MIME 类型，否则将默认为 txt 文件。 const fileBlob = new Blob(fileDataList, { type: 'video/MP2T' }) 【自动下载】
+
+下载，当然先要获得文件链接，即刚生成的 Blob 文件链接。
+
+使用 URL.createObjectURL，即可得到浏览器内存中，Blob 的文件链接。URL.createObjectURL(fileBlob)
+
+最后，使用 a 标签的 a.download 属性，将 a 标签设置为下载功能。主动调用 click 事件a.click()。完成文件自动下载。
+```
+
+
+### [【前端学习笔记_JS】设计任务队列，控制请求最大并发数](https://juejin.cn/post/7099344493010223134)
+
+```js
+function createTask(i) {
+    return () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(i);
+            }, 2000);
+        });
+    };
+}​
+class TaskQueue {
+    constructor() {
+        this.max = 10; //最大并发数
+        this.taskList = [] //用shift方法实现先进先出
+        setTimeout(() => { //这里初始化队列后自动执行，后续有新任务添加则需要手动执行。
+            this.run()
+        })
+    }
+    addTask(task) {
+        this.taskList.push(task);
+    }​
+    run() {
+        const length = this.taskList.length;​
+        if (!length) {
+            return;
+        }
+        const min = Math.min(length, this.max); // 控制并发数量
+        for (let i = 0; i < min; i++) {
+            this.max--; //开始占用一个任务的空间
+            const task = this.taskList.shift();
+            task().then(res => {
+                console.log(res);
+            }).catch(error => {
+                console.log(error);
+            }).finally(() => {
+                this.max++; //任务完成，释放空间
+                this.run(); //自动进行下一个任务
+            })
+        }
+    }
+}​
+const taskQueue = new TaskQueue();
+for (let i = 0; i < 20; i++) {
+    const task = createTask(i);
+    taskQueue.addTask(task); //当所有任务添加到队列中后自动执行。
+}
+```
+
+
+### [Promise.all的并发控制](https://blog.csdn.net/weixin_46133178/article/details/127142418)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise.all()</title>
+</head>
+
+<body></body>
+<script>
+    // 并发量
+    const limit = 3;
+    // 异步任务的参数数组，一般为url
+    const array = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1,
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 1, 2,
+    ];
+    // 根据参数生成Promise的函数、一般为根据传入的url构造一个Promise，其内部封装一个异步请求
+    const proFn = (item) => {
+        return new Promise((resolve, reject) => {
+            console.log(`开始生成${item}的异步请求          ····`);
+            // 模拟异步请求
+            setTimeout(() => {
+                console.log(item);
+                // 得到结果
+                resolve(item);
+                console.log(`${item}的异步请求执行完毕            √`);
+            }, Math.random() * 1000);
+        });
+    };
+    console.log(promiseAll(array, proFn, limit));
+
+    // proFn返回一个封装了异步任务的promise
+    function promiseAll(arr = [], proFn, limit) {
+
+        // 当前正在遍历的坐标
+        let index = 0;
+        // 存放结果的数组
+        let res = [];
+        // 正在执行的数组
+        let excuting = [];
+
+        // 执行函数
+        function enqueue() {
+            // 当执行完毕之后返回resolve状态的promise
+            if (index === arr.length) {
+                return Promise.resolve();
+            }
+
+            // 依次取出一个元素
+            const item = arr[index++];
+
+            /* 此处then方法会立即返回一个promise,在then回调运行结束
+            （promise生成完毕）之后才会变成resolved状态，且当时的promise与
+            proFn生成的promise保持一致(1、状态一致；2、resolve或者reject的值一致)*/
+            const p = Promise.resolve().then(() => proFn(item, arr));
+            // 将其放到promise数组
+            res.push(p);
+
+            // 将e放入正在执行的数组，并且在p执行完成之后将当前执行的e删除掉
+            const e = p.then(() => {
+                excuting.splice(excuting.indexOf(e), 1);
+            });
+            excuting.push(e);
+
+            // 让r为一个默认resolved状态的promise
+            let r = Promise.resolve();
+            // 如果执行数组满了的话，那就让r通过race等待改变状态
+            if (excuting.length >= limit) {
+                r = Promise.race(excuting);
+            }
+            // 等到r变为resolved状态（执行数组没满或者有一个已经执行完被删除了）再来递归调用enqueue
+            return r.then(() => enqueue());
+        }
+
+        // 执行完成后，通过promise.all返回所有的结果
+        return enqueue().then(() => Promise.all(res));
+    }
+</script>
+
+</html>
+```
+
+
+### 【JavaScript】更改数组中某一个元素在数组中的位置
+
+```js
+let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+//Move(目标数组, 需要移动的元素的位置, 元素移动后的位置)
+function Move(arr, a, b) {
+    let arr_temp = [].concat(arr); //创建一个新的临时数组，用以操作后不变更原数组
+    arr_temp.splice(b, 0, arr_temp.splice(a, 1)[0]); //在b位置插入从a位置截取的元素
+    return arr_temp;
+}
+
+//满足极限条件，某元素移指最后或最前，最后或最前元素移至某位置等
+console.log(Move(arr, 2, 1)); //变更后的数组满足要求：[0, 2, 1, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr); //原数组不变更：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+
+### [图片主色获取脚本rgbaster.js小介绍小使用](https://www.zhangxinxu.com/wordpress/2014/08/image-dominant-color-get-rgbaster-js/)
+
+> [rgbaster.js](https://github.com/briangonzalez/rgbaster.js)
+
+
+### [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+标志|描述
+:-:|:-|
+g|全局搜索。
+i|不区分大小写搜索。
+m|多行搜索。
+s|允许 . 匹配换行符。
+u|使用 unicode 码的模式进行匹配。
+y|执行“粘性 (sticky)”搜索，匹配从目标字符串的当前位置开始。
+
+
+### [文件系统标志](https://nodejs.cn/api/fs.html#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%A0%87%E5%BF%97)
+
+> flags
+
+
+### [clean-css](https://github.com/clean-css/clean-css)
+
+> clean-css是Node.js平台和任何现代浏览器的快速高效的css优化器。
+
+
+### [JavaScript 性能利器 —— Web Worker](https://juejin.cn/post/6844903736238669837)
+
+> Web Worker
+
+

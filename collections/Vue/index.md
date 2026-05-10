@@ -217,3 +217,6 @@ moment().startOf('second'); // same as moment().milliseconds(0);
 > 开发全局组件，你可能需要了解一下Vue.extend
 
 ### [Vue 强制刷新(重新渲染)的方式](https://blog.csdn.net/LonewoIf/article/details/126176039)
+### [快速搭建Vue3+element-Plus+electron桌面应用](https://www.dddhl.cn/blogs/all/2022/electron.html#%E5%89%8D%E8%A8%80)
+
+

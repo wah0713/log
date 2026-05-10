@@ -26,3 +26,12 @@ sources -&gt;pause on exceptons -&gt;pause on caught exceptons
 ```bash
 Capture node screenshot
 ```
+### [万岁，浏览器原生支持ES6 export和import模块啦！](https://www.zhangxinxu.com/wordpress/2018/08/browser-native-es6-export-import-module/)
+
+
+### [近万字新手 chrome 扩展开发简单入门](https://juejin.cn/post/6844904127932137485)
+
+
+### [通过chrome浏览器调试手机页面(IOS和Android)](https://blog.csdn.net/sd19871122/article/details/100243909)
+
+

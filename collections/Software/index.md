@@ -208,4 +208,11 @@ exportdefault {
 
 ### [前端主题切换方案](https://juejin.cn/post/7134594122391748615)
 
-```
+```### [数学标记语言MathML简介、工具及兼容](https://www.zhangxinxu.com/wordpress/2018/10/mathml-%e5%85%bc%e5%ae%b9-%e5%b7%a5%e5%85%b7/)
+
+
+### [VSCode快捷编辑html的方法](https://blog.csdn.net/qq_36507046/article/details/125725826)
+
+> html 快捷
+
+
