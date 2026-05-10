@@ -879,3 +879,74 @@ cookieStore.set()
 ### [功能丰富、技术先进的开源工具网站](https://damngood.tools/tools/chat-pdf)
 
 
+### [size-of-life](https://neal.fun/size-of-life/)
+
+
+### [一键去除图片水印](https://clearcat.lingxiangtools.top/)
+
+
+### [Promise.try()和Promise.withResolvers()作用速览](https://www.zhangxinxu.com/wordpress/2026/01/promise-try-withresolvers/)
+
+
+### [告别insertBefore，使用moveBefore移动DOM元素](https://www.zhangxinxu.com/wordpress/2026/01/insertbefore-movebefore-dom/)
+
+
+### [关于锚元素的 href 你可能不知道的几点](https://blog.jim-nielsen.com/2025/href-value-possibilities/)
+
+
+### [GPT翻译](https://chatgpt.com/zh-Hans-CN/translate/)
+
+
+### [检查不同站点的 HTTP 响应头](https://httpcolon.dev/)
+
+
+### [一个为 AI 代理构建的社交网络](https://www.moltbook.com/)
+
+
+### [机器人需要](https://rentahuman.ai/)
+
+> 机器人需要帮助吗？
+> 为ai干活
+
+
+### [如何将系统从 0 扩展到 1000 万+](https://blog.algomaster.io/p/scaling-a-system-from-0-to-10-million-users)
+
+
+### [Townscaper](https://oskarstalberg.com/Townscaper/#GSB0RARu2_TQX6krngu0J3)
+
+> 儿童
+> 游戏
+
+
+### [最反直觉的事实](https://axisofordinary.substack.com/p/the-most-counterintuitive-facts-in)
+
+
+### [学习英语发音](https://youglish.com/)
+
+> 自然地掌握英语发音！学习如何像本地人一样发出棘手的音，使用 YouGlish 的真实世界片段。不再有字典困惑，只有真实的语境英语。
+
+
+### [行业标准备案](https://hbba.sacinfo.org.cn/)
+
+
+### [停止在 2026 年使用 MySQL，它不是真正的开源](https://optimizedbyotto.com/post/reasons-to-stop-using-mysql/)
+
+> MySQL
+> MariaDB
+
+
+### [40行代码实现自研无服务器OCR](https://christopherkrapu.com/blog/2026/ocr-textbooks-modal-deepseek/)
+
+
+### 自动生成一张图片
+
+```
+https://picsum.photos/800/600
+https://picsum.photos/1024/768
+https://picsum.photos/1920/1080
+```
+
+
+### [World Monitor](https://www.worldmonitor.app/)
+
+

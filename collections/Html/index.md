@@ -143,3 +143,6 @@ document.addEventListener("keydown", (event) => {
 > Record<Keys, Type> 是一个内置的 TypeScript 类型，用于创建一个对象类型，其中键的类型为 Keys，值的类型为 Type。
 
 
+### [HTML 2025 年：你需要知道的一切](https://frontendmasters.com/blog/bone-up-html-2025/)
+
+

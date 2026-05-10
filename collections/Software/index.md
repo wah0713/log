@@ -452,3 +452,6 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
 ### [黑客新闻](https://news.ycombinator.com/)
 
 
+### [VS Code Playground](https://pawelcislo.com/posts/my-vs-code-playground/#vscodedev)
+
+

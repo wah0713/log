@@ -3655,3 +3655,136 @@ cookieStore.set()
 
 ### [黑客新闻](https://news.ycombinator.com/)
 
+### git add -p
+```
+该命令会：
+
+扫描所有已修改的文件
+将每个文件的修改分割成称为 "hunks" 的小块（通常是函数、代码块或连续的几行）
+逐个询问用户是否将每个 hunk 添加到暂存区
+```
+
+
+### [svelte-scroller](https://github.com/sveltejs/svelte-scroller)
+
+> 一个用于 Svelte 应用的滚动组件。
+
+
+### [为什么对象数组（SoA 模式）胜过交错数组：一个 JavaScript 性能的兔子洞](https://www.royalbhati.com/posts/js-array-vs-typedarray)
+
+```
+SoA:{x:[0],y:[0],z:[0]}
+AoS:[{x:0,y:0,z:0}]
+```
+
+```js
+function main() {
+    const ARRAY_SIZE = 50_000_000;
+
+    const aos = [];
+    for (let i = 0; i < ARRAY_SIZE; i++) {
+        aos.push({
+            x: i,
+            y: i * 2,
+            z: i * 3
+        });
+    }
+
+    const soa = {
+        x: new Float64Array(ARRAY_SIZE),
+        y: new Float64Array(ARRAY_SIZE),
+        z: new Float64Array(ARRAY_SIZE)
+    };
+    for (let i = 0; i < ARRAY_SIZE; i++) {
+        soa.x[i] = i;
+        soa.y[i] = i * 2;
+        soa.z[i] = i * 3;
+    }
+
+    const interleaved = new Float64Array(ARRAY_SIZE * 3);
+    for (let i = 0; i < ARRAY_SIZE; i++) {
+        const base = i * 3;
+        interleaved[base] = i;
+        interleaved[base + 1] = i * 2;
+        interleaved[base + 2] = i * 3;
+    }
+
+    let sumAoS = 0;
+    const startAoS = performance.now();
+    for (let iter = 0; iter < 10; iter++) {
+        for (let i = 0; i < ARRAY_SIZE; i++) {
+            sumAoS += aos[i].x + aos[i].y + aos[i].z;
+        }
+    }
+    const timeAoS = performance.now() - startAoS;
+
+    let sumSoA = 0;
+    const startSoA = performance.now();
+    for (let iter = 0; iter < 10; iter++) {
+        for (let i = 0; i < ARRAY_SIZE; i++) {
+            sumSoA += soa.x[i] + soa.y[i] + soa.z[i];
+        }
+    }
+    const timeSoA = performance.now() - startSoA;
+
+    let sumInterleaved = 0;
+    const startInterleaved = performance.now();
+    for (let iter = 0; iter < 10; iter++) {
+        for (let i = 0; i < ARRAY_SIZE; i++) {
+            const base = i * 3;
+            sumInterleaved +=
+                interleaved[base] +
+                interleaved[base + 1] +
+                interleaved[base + 2];
+        }
+    }
+    const timeInterleaved = performance.now() - startInterleaved;
+
+    console.log(`AoS:         ${timeAoS.toFixed(2)}ms`);
+    console.log(`SoA:         ${timeSoA.toFixed(2)}ms`);
+    console.log(`Interleaved: ${timeInterleaved.toFixed(2)}ms`);
+}
+
+main();
+```
+
+
+### [Performance.now()](https://developer.mozilla.org/zh-CN/docs/Web/API/Performance/now)
+
+Performance.now() 方法返回一个高分辨率时间戳，单位为毫秒。它可以用于测量代码执行时间、动画性能等。
+
+
+### [JS正则表达式y标识符之粘性匹配](https://www.zhangxinxu.com/wordpress/2026/02/js-regexp-y-sticky-flags/)
+
+> RegExp.lastIndex
+> 只有正则表达式使用了表示全局检索的 "g" 或者粘性检索的 "y" 标志时，该属性才会起作用。此时应用下
+
+
+### [在 DevTools 中查找 JavaScript 中特定对象的分配位置](https://heikkila.dev/blog/find-where-a-specific-object-was-allocated-in-javascript/)
+
+> 调试技巧
+
+
+### [跨浏览器扩展框架](https://github.com/extension-js/extension.js)
+
+
+### [Temporal API](https://bloomberg.github.io/js-blog/post/temporal/)
+
+
+### 发送控制台通知
+
+```js
+process.stdout.write('\u0007')
+```
+
+
+### [Page Agent](https://github.com/alibaba/page-agent)
+
+> 纯 JS 实现的 GUI agent。使用自然语言操作你的 Web 应用。无须后端、客户端、浏览器插件。
+
+
+### [浅学WebTransport API：下一代Web双向通信技术](https://www.zhangxinxu.com/wordpress/2026/03/webtransport-api/)
+
+> WebTransport
+
+

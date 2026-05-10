@@ -2312,3 +2312,221 @@ h1 {
 ### [CSS ::scroll-button ::scroll-marker伪元素又是干嘛用的？](https://www.zhangxinxu.com/wordpress/2025/06/css-scroll-button-marker/)
 
 
+### [CSS progress()函数简介](https://www.zhangxinxu.com/wordpress/2025/12/css-progress-function/)
+
+```
+progress(300, 0, 1000)的返回值就是0.3；
+progress(50px, 0px, 100px)的返回值就是0.5；
+progress(50%, 30%, 80%)的返回值就是……这个要计算下：(50% - 30%) / 80%，结果是0.25。
+```
+
+
+### [2025 Chrome DevRel CSS](https://chrome.dev/css-wrapped-2025/)
+
+
+### [anchor](https://mdn.org.cn/en-US/docs/Web/CSS/anchor)
+
+> anchor() CSS 函数可用于锚点定位元素的内边距属性值中，返回一个相对于其关联锚点元素边缘位置的长度值。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            width: 250vw;
+            height: 200vh;
+        }
+
+        div {
+            anchor-name: --aa;
+            display: inline-block;
+            /* margin-left: 100vw; */
+            position: relative;
+            top: 100vh;
+            left: 100vw;
+        }
+
+        span {
+            position-anchor: --aa;
+            display: inline-block;
+            position: absolute;
+            margin-right: 1rem;
+            position-area: left center;
+            position-try-fallbacks: flip-inline flip-block;
+            container-type: anchored;
+        }
+
+        /* @container anchored(fallback: flip-inline) {
+      } */
+    </style>
+</head>
+
+<body>
+    <div>Hello World!</div>
+    <span>你好</span>
+</body>
+
+</html>
+```
+
+
+### [scroll-snap-type](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Properties/scroll-snap-type)
+
+
+### [瀑布流布局](https://webkit.org/blog/17660/introducing-css-grid-lanes/)
+
+```css
+.container {
+    display: grid-lanes;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+```
+
+
+### [:nth-child](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Selectors/:nth-child#of_selector_%E8%AF%AD%E6%B3%95)
+
+```css
+:nth-child(-n + 3 of li.important) {}
+```
+
+
+### [DOM 中的 CSSStyleSheet 对象](https://www.zhangxinxu.com/wordpress/2026/01/dom-cssstylesheet/?shrink=1)
+
+
+### [CSS 锚位置连接](https://www.zhangxinxu.com/wordpress/2026/01/css-anchor-position-connect/)
+
+
+### [CSS子元素撑满父元素（height: 100%无效）](https://blog.csdn.net/weixin_43260489/article/details/123383866)
+
+```css
+.parent {
+    position: relative;
+}
+
+.child {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+
+### [CSS 动画数字计数器](https://css-tricks.com/animating-number-counters/)
+
+
+### [交互式未来风格元素周期表 · 沉浸式化学科普 · 中英文双语支持](https://github.com/SeanWong17/Future-Style-Periodic-Table)
+
+> 儿童
+
+
+### [AirScan-QR](https://github.com/topcss/AirScan-QR)
+
+> AirScan-QR 是一款专为物理隔离环境 (Air-gapped) 及 跨端受限网络 设计的高效文件传输方案。它通过动态二维码序列流，利用“屏幕+摄像头”的视觉链路，彻底打破物理与协议的边界。
+
+
+### [点击图片放大查看交互效果的最佳实现](https://www.zhangxinxu.com/wordpress/2026/02/image-preview-best-practice/)
+
+> viewTransitionName
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* img {
+        animate: fadeIn 1s both;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      } */
+        ::view-transition-group(root) {
+            animation-duration: 3s;
+        }
+
+        /* img {
+        view-transition-name: wooo;
+      }
+      ::view-transition-new(wooo) {
+        animation: scaleUp 1s;
+      }
+      @keyframes scaleUp {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      } */
+    </style>
+</head>
+
+<body>
+    <h4 class="fill">使用View Transitions</h4>
+    <button id="b2">添加图片</button>
+    <script>
+        const src = "../../static/1.jpg";
+        //   b1.onclick = function () {
+        //     const img = new Image();
+        //     img.src = src;
+
+        //     this.after(img);
+        //   };
+
+        b2.onclick = function() {
+            const img = new Image();
+            img.src = src;
+            // img.style.viewTransitionName = "wooo";
+
+            img.onclick = (e) => {
+                // img.style.viewTransitionName = "root";
+
+                document.startViewTransition(() => {
+                    img.remove();
+                });
+            };
+            document.startViewTransition(() => {
+                this.after(img);
+                //   setTimeout(() => {
+                //     img.style.viewTransitionName = "";
+                //   }, 1000);
+            });
+        };
+    </script>
+</body>
+
+</html>
+```
+
+
+### [HTML interestfor属性与悬停popover交互效果](https://www.zhangxinxu.com/wordpress/2026/03/css-interestfor-invoker-target-source/)
+
+```html
+<a href interestfor="markTarget">Hover Me！</a>
+<p id="markTarget">鼠标经过链接后我高亮</p>
+<style>
+    p:interest-target {
+        background-color: yellow;
+    }
+</style>
+```
+
+
+### [基础CSS即可满足需求](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need)
+
+

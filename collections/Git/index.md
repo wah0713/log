@@ -177,3 +177,29 @@ git config/*
 ### [git 工作树](https://opensource.com/article/21/4/git-worktree)
 
 
+### [建筑采光模拟工具 · 轻量级楼盘日照分析解决方案](https://github.com/SeanWong17/building-sunlight-simulator/tree/main)
+
+
+### [AI和你玩狼人杀](https://github.com/oil-oil/wolfcha)
+
+
+### [配置专属的Vercel 实例与github-readme-stats](https://kwanwaipang.github.io/%E9%85%8D%E7%BD%AEgithub-readme-stats/)
+
+
+### [Git In The Trenches](https://cbx33.github.io/gitt/intro.html)
+
+> 学习git
+> 故事
+
+
+### [flash数据库](https://flashpointproject.github.io/flashpoint-database/)
+
+
+### [Magic Resume](https://github.com/JOYCEQL/magic-resume?tab=readme-ov-file)
+
+> Magic Resume 是一个现代化的在线简历编辑器，让创建专业简历变得简单有趣。基于 TanStack Start 和 Motion 构建，支持实时预览和自定义主题。
+
+
+### [2026年全国樱花花期预测](https://rogerzhu.github.io/yinghua-map/)
+
+
