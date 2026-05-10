@@ -20,3 +20,13 @@ git revert --help
 git stash 储存
 git stash pop 储存 出
 ```
+### git checkout -b '新的分支名'
+### [git push 命令](https://www.runoob.com/git/git-push.html)
+### [git fetch 和git pull 的差别](https://www.cnblogs.com/windok/p/13291414.html)
+### [Git 如何优雅地回退代码](https://www.cnblogs.com/zhenbianshu/p/12018714.html)
+### [使用Git命令更改文件夹名称](https://www.dazhuanlan.com/2020/01/06/5e1299730482c/)
+&gt; git vm oldName newName
+### git hook
+### [git reflog](https://blog.csdn.net/yuquan0821/article/details/114670541)
+### git rebase -i  commitId (合并提交)
+### git pull -r (git pull -rebase)
