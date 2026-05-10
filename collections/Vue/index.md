@@ -45,3 +45,4 @@ beforeCreate:function(){
     this.#options.compontens.TreeFolderContens=require('./tree-folder-contents.vue').default
 }
 ```
+### [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
