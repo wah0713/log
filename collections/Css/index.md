@@ -1650,7 +1650,7 @@ p {
 ### [混合图片](https://styleof.com/s/remix-yourself)
 
 
-### [CSS 可以制作动画的令人惊讶的事情](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
+### [CSS可以制作动画的令人惊讶的事情](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
 
 
 ### [哇哦，font-palette支持动画和palette-mix()混合函数了](https://www.zhangxinxu.com/wordpress/2024/12/font-palette-animation-palette-mix/)
@@ -1661,6 +1661,274 @@ p {
 ### [超酷！CSS font-palette与彩色字体显示](https://www.zhangxinxu.com/wordpress/2022/07/css-font-palette/)
 
 > 同上
+
+### [部分关键帧](https://www.joshwcomeau.com/animation/partial-keyframes/)
+
+> 缺少关键帧
+
+### 左边超出点点。右边不省略
+
+```css
+.el-checkbox {
+    width: 100%;
+    align-items: center;
+    height: 32px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/deep/ .el-checkbox__label {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.left {
+    flex: 0 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.right {
+    flex: 0 0 auto;
+    opacity: 0.5;
+}
+```
+
+### [100 字节的 CSS，几乎在所有地方看起来都很棒](https://www.swyx.io/css-100-bytes)
+
+```css
+html {
+    max-width: 70ch;
+    padding: 3em 1em;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
+}
+```
+
+### [90 年代的光标效果](https://tholman.com/cursor-effects/)
+
+### [CSS小图标剪裁终极解决方案clip-path shape()函数](https://www.zhangxinxu.com/wordpress/2025/06/css-clip-path-shape/)
+
+> shape
+
+### [aspect-ratio](https://jakearchibald.com/2022/img-aspect-ratio/)
+
+> aspect-ratio 保持比例 object-fit
+
+### [Tailwind CSS 或 Bootstrap 浏览器扩展](https://gimli.app/)
+
+### [使用新的 if() 函数的 CSS 条件语句](https://developer.chrome.com/blog/if-article?hl=zh-cn)
+
+```html
+<div class="container">
+    <div class="card" data-status="pending">
+    </div>
+
+    <div class="card" data-status="complete">
+    </div>
+
+    <div class="card" data-status="pending">
+    </div>
+
+    <div class="card" data-status="complete">
+    </div>
+
+    <div class="card" data-status="inactive">
+    </div>
+
+    <div class="card" data-status="complete">
+    </div>
+</div>
+```
+
+```css
+.card {
+    --status: attr(data-status type(<custom-ident>));
+    border-color: if(style(--status: pending): royalblue;
+            style(--status: complete): seagreen;
+            else: gray);
+    background-color: if(style(--status: pending): #eff7fa;
+            style(--status: complete): #f6fff6;
+            else: #f7f7f7);
+}
+```
+
+### [font-size-adjust 很有用](https://matklad.github.io/2025/07/16/font-size-adjust.html)
+```css
+font-size-adjust: ex-height 0.5,
+```
+
+### [CSS索引和数量匹配函数sibling-index sibling-count简介](https://www.zhangxinxu.com/wordpress/2025/08/css-sibling-index-count/)
+```html
+<div class="loading">
+    <i></i><i></i><i></i><i></i>
+</div>
+```
+```css
+.loading i {
+  display: inline-block;
+  border-left: 2px solid deepskyblue;
+  height: 2px;
+  animation: scaleUp 1s linear infinite alternate;
+  margin: 0 1px;
+  animation-delay: calc(-0.25s * sibling-index());
+}
+
+@keyframes scaleUp {
+    to { transform: scaleY(10); }
+}
+```
+
+### [这个有点屌CSS @container scroll-state容器滚动查询](https://www.zhangxinxu.com/wordpress/2025/08/css-container-scroll-state/)
+
+```css
+.container {
+    height: 300px;
+    border: 1px solid;
+    container-type: scroll-state;
+    overflow: auto;
+
+    /* 底部粘性定位 */
+    footer {
+        background: #f6f6f6;
+        position: sticky;
+        bottom: 0;
+        text-align: center;
+    }
+
+    button {
+        width: 100px;
+        height: 32px;
+        border-radius: 12px;
+        background-color: crimson;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@container scroll-state(scrollable: bottom) {
+
+    /* 如果容器可以滚动，则按钮样式禁用 */
+    button {
+        filter: grayscale(1);
+        opacity: .35;
+    }
+}
+```
+
+### [容器类型](https://developer.mozilla.org/en-US/docs/Web/CSS/container-type)
+
+```css
+/* Keyword values */
+container-type: normal;
+container-type: size;
+container-type: inline-size;
+container-type: scroll-state;
+
+/* Two values */
+container-type: size scroll-state;
+
+/* Global Values */
+container-type: inherit;
+container-type: initial;
+container-type: revert;
+container-type: revert-layer;
+container-type: unset;
+```
+
+### [你能被 CSS 攻击吗？](https://scotthelme.co.uk/can-you-get-pwned-with-css/)
+
+### [抢先学习大开眼界的CSS corner-shape属性](https://www.zhangxinxu.com/wordpress/2025/08/css-corner-shape/)
+
+> corner-shape
+
+### [@function自定义函数让CSS支持编程啦](https://www.zhangxinxu.com/wordpress/2025/09/css-function-at-rules/)
+
+```css
+/* 返回当前值的负值 */
+@function --negate(--value) {
+    result: calc(-1 * var(--value));
+}
+
+aside {
+    --size: 999em;
+    padding-bottom: var(--size);
+    margin-bottom: --negate(var(--size));
+}
+```
+
+### [使用CSS linear()函数实现更逼真的物理动画效果](https://www.zhangxinxu.com/wordpress/2025/09/css-animation-liner-function/)
+
+```css
+:root {
+    --bounce-ease-out-easing: linear(0, 0.004, 0.016, 0.035, 0.062, 0.098, 0.141, 0.191, 0.25 24.2%, 0.39, 0.562, 0.765, 1 48.5%, 0.943, 0.893, 0.851, 0.816, 0.788, 0.768, 0.755, 0.75, 0.753, 0.763, 0.782, 0.809, 0.844, 0.888, 0.94, 1, 0.972);
+}
+```
+
+### [CSS scroll-target-group加:target-current滚动菜单自动高亮](https://www.zhangxinxu.com/wordpress/2025/09/css-scroll-target-group/)
+
+```html
+<menu>
+    <li><a href="#intro">前言</a></li>
+    <li><a href="#ch1">第1章</a></li>
+    <li><a href="#ch2">第2章</a></li>
+</menu>
+
+<article>
+    <h1>欢迎来到我的博客</h1>
+    <section id="intro">...</section>
+    <section id="ch1">...</section>
+    <section id="ch2">...</section>
+</article>
+```
+
+```css
+menu {
+    position: fixed;
+    scroll-target-group: auto;
+}
+
+a:target-current {
+    color: red;
+}
+```
+
+### [CSS random()](https://webkit.org/blog/17285/rolling-the-dice-with-css-random/)
+
+### [浏览器中的液态玻璃：使用 CSS 和 SVG 实现折射](https://kube.io/blog/liquid-glass-css-svg/)
+
+### ["最令人讨厌"的 CSS 特性：cos()和 sin()](https://css-tricks.com/the-most-hated-css-feature-cos-and-sin/)
+
+### [CSS field-sizing属性简介](https://www.zhangxinxu.com/wordpress/2025/10/css-field-sizing/)
+
+```css
+/* 无论是单行输入框，还是多行文本域，其宽度在内容输入的时候，都是固定的，如果希望尺寸跟着内容的宽度走 */
+input {
+    field-sizing: content
+}
+```
+
+### [写给自己看的display: grid布局教程](https://www.zhangxinxu.com/wordpress/2018/11/display-grid-css-css3/?shrink=1)
+
+> 1fr
+
+### [CSS reading-flow和reading-order属性简介](https://www.zhangxinxu.com/wordpress/2025/10/css-reading-flow-order/)
+
+> reading-flow reading-order
+
+### [一个学习 CSS 相对颜色的交互式指南。](https://ishadeed.com/article/css-relative-colors/)
+
+> 这个交互式指南展示了如何使用 CSS 相对颜色。它还包括了一些示例，帮助你理解相对颜色的工作原理。
+
+### [CSS锚点定位实战-鼠标跟随交互效果](https://www.zhangxinxu.com/wordpress/2025/11/css-anchor-position-mouse-follow/)
+
+> anchor-name position-anchor anchor
+
+### [CSS 详情目标内容打开](https://www.zhangxinxu.com/wordpress/2025/11/css-details-target-content-open/)
+
+> 这个简单的 CSS 技巧允许你在点击详情元素时打开其关联的内容。它利用了 details 元素的默认行为，无需 JavaScript 即可实现。
 
 
 ### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown)

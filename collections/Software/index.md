@@ -330,4 +330,125 @@ curl -O https://example.com/path/to/file.zip
 
 ### [【实战】Chrome V3插件开发，只看这一篇文章就够了](https://juejin.cn/post/7229238405406294074)
 
+### [PicHoro](https://github.com/Kuingsmile/PicHoro)
+> PicHoro 是一款基于 Flutter 的手机端云存储平台/图床管理和文件上传/下载工具，最新版本 V3.0.1。
+
+### [本地 Office 网页版](https://github.com/ranuts/document)
+> 本地 Office 网页版，支持 Office 文档在线预览、编辑、下载、分享等功能。
+
+### [简单的 Chromium AI](https://github.com/kstonekuan/simple-chromium-ai)
+> 简单的 Chromium AI，支持 Chromium 浏览器的 AI 助手功能。
+
+### [pixpin](https://pixpin.cn/docs/start/what-is-pixpin)
+> pixpin 是一个基于 AI 的图片编辑工具。取字
+
+### [Lumma](https://github.com/geosmart/lumma)
+> 写日记
+
+### [🚀 WebCurl - 极简网页版API调试神器](https://github.com/o8oo8o/WebCurl)
+
+### [Kite](https://kite.kagi.com/ccc74663-a271-43a3-b54d-afd23fb936cb/business?data_lang=zh-Hans)
+> 看新闻
+
+### [nesbox](https://nesbox.xianqiao.wang/)
+> 游戏
+
+### [Pip-Helper - 画中画助手](https://github.com/yaolifeng0629/Pip-Helper/blob/main/README.zh.md)
+
+### [速查表](https://wangchujiang.com/reference/index.html)
+
+### [emoji混合](https://tikolu.net/emojimix)
+
+### [emoji厨房](https://emojikitchen.dev/)
+
+### [emoji供应商](https://emoji.supply/kitchen/)
+
+### [一个 GitHub Action，用于创建存储库的 SVG 图。在文章中阅读更多内容。](https://github.com/githubocto/repo-visualizer)
+
+### [json转ts](https://xietiansheng.github.io/json-to-any-web/)
+> json-to-any-web 是一个在线工具，可以将 JSON 数据转换为 TypeScript 类型定义。
+
+### [vue-js-cron](https://github.com/abichinger/vue-js-cron)
+> 一个基于 Vue.js 的 cron 表达式编辑器。
+
+### [cron-parser](https://github.com/harrisiirak/cron-parser)
+> 一个用于解析 cron 表达式的 JavaScript 库。
+
+### [pkg](https://github.com/vercel/pkg)
+> 这个命令行界面使您能够将您的 Node.js 项目打包成一个可执行文件，即使在没有安装 Node.js 的设备上也能运行。
+
+### [地图edia](https://mapedia.cc/view/5d12cb947706814e12ba5e3b449910b1)
+> 孔子周游列国
+
+### [你想了解哪个仓库？](https://deepwiki.com/)
+
+### [VideoAdGuard - B站视频植入广告检测器](https://github.com/Warma10032/VideoAdGuard)
+
+### [卫星图](https://rammb-slider.cira.colostate.edu/?sat=himawari&sec=full_disk&x=11136&y=11296&z=0&angle=0&im=60&ts=3&st=0&et=0&speed=130&motion=loop&p%5B0%5D=geocolor&opacity%5B0%5D=1&pause=20250923020000&slider=-1&hide_controls=0&mouse_draw=0&follow_feature=0&follow_hide=0&s=rammb-slider&draw_color=FFD700&draw_width=6&map=1&lat=0)
+
+### [Tesseract-OCR Windows 64-bit 5.5.0 安装与使用指南](https://blog.csdn.net/gs80140/article/details/148138997)
+
+### [paddleOCR理解及识别手写体，手写公式，表格](https://blog.csdn.net/m0_68926749/article/details/134843387)
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddlepaddle
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
+```
+
+### [通用OCR产线使用教程](https://www.paddleocr.ai/latest/version3.x/pipeline-usage/OCR.html#422)
+
+### [浏览器指纹检测器](https://fingerprint.goldenowl.ai/)
+> 该工具旨在揭示您在浏览互联网时共享的数据，并通过自定义您授予的权限来帮助您加强隐私保护。它不使用 cookies，也不收集、存储或传输任何个人信息。
+
+### [本项目基于 Bilibili 的 index-tts，提供 LoRA 单说话人 / 多说话人 的微调方案，用于提升精品说话人合成音频的 韵律和自然度。](https://github.com/asr-pub/index-tts-lora/blob/main/README_zh.md)
+
+### [开始音乐创作之旅](https://learningmusic.ableton.com/zh-Hans/)
+
+### [酷炫开源游戏](https://github.com/michelpereira/awesome-open-source-games)
+
+### [ThreeJs 制作的魔方游戏，支持自定义魔方阶级（目前界面上只开放 2-10 阶魔方）。](https://pengfeiw.github.io/rubiks-cube/)
+
+### [正则表达式可视化工具](https://regex-vis.com/)
+
+### [Python项目管理神器 PDM，用它管理项目爽到飞起！](https://juejin.cn/post/7503596255122161690)
+
+### [泄露记录](https://databreach.com/)
+
+### [Magentic-UI](https://github.com/microsoft/magentic-ui)
+> Magentic-UI 是一个以人为中心的 AI 代理研究原型，可解决复杂的网络和编码任务，这些任务可能需要监控。
+
+### playwright
+> Playwright 是一个用于自动化浏览器操作的强大工具，支持多种浏览器（如 Chrome、Firefox、Safari）和平台（如 Windows、macOS、Linux）。
+
+### [umy-ui 一套为开发者准备的基于 Vue 2.0 的桌面端组件库，完美解决表格万级数据渲染卡顿，编辑表格卡顿问题](https://github.com/popo-fishes/umy-ui)
+
+### [SingleFile](https://github.com/gildas-lormeau/SingleFile)
+> SingleFile 是一个兼容 Chrome、Firefox（桌面版和移动版）、Microsoft Edge、Safari、Vivaldi、Brave、Waterfox、Yandex 浏览器和 Opera 的网络扩展（以及一个命令行工具）。
+
+### [矩阵乘法](http://matrixmultiplication.xyz/)
+
+### [全球儿歌乐园](https://beddysongs.com/zh)
+
+### [Alabaster 配色方案](https://github.com/tonsky/sublime-scheme-alabaster#variations-1)
+
+### [纯前端 LaTeX 公式识别工具](https://github.com/alephpi/Texo)
+
+### [中国节假日](https://github.com/vsme/chinese-days)
+
+### [完整的多说话人语音生成 Web 应用](https://github.com/zhao-kun/VibeVoiceFusion/blob/main/README_zh.md)
+> VibeVoiceFusion 是一个Web 应用，用于生成高质量、多说话人的合成语音，具备声音克隆功能。基于微软的 VibeVoice 模型（AR + 扩散架构），本项目提供完整的全栈解决方案，包含直观的用户界面、项目管理和先进的显存优化功能。
+
+### [WeFinance](https://github.com/JasonRobertDestiny/WeFinance/blob/main/README_zh-CN.md#%E7%AE%97%E6%B3%95%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9C%AF%E6%9C%9A)
+> AI驱动的个人财务助理 - 基于Vision LLM技术，将账单图片转化为可执行的财务洞察
+
+### [OCR Arena](https://www.ocrarena.ai/battle)
+> OCR Arena 是一个基于 Vision LLM 技术的在线 OCR 服务，它可以将图片中的文本转化为可编辑的文本。
+
+### [HumanLayer](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
+> HumanLayer 是一个基于 Claude 技术的在线写作助手，它可以帮助用户提高写作效率和质量。
+
+### [Code996](https://github.com/hellodigua/code996)
+> Code996 是一个开源项目，它提供了一个平台，让开发人员可以在其中编写和运行代码。
+
+### [黑客新闻](https://news.ycombinator.com/)
+
 
