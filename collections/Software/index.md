@@ -215,4 +215,22 @@ exportdefault {
 
 > html 快捷
 
+### [Node卸载超详细步骤](https://blog.csdn.net/m0_51945510/article/details/127710792)
+
+> node
+
+### [nvm安装、node安装及node版本切换管理](https://juejin.cn/post/7249585135800336444)
+
+> nvm node
+
+### [bpmn-js](https://bpmn.io/toolkit/bpmn-js/)
+
+> bpmn
+
+### [squoosh](https://github.com/googlechromelabs/squoosh)
+
+> Squoosh是一款图像压缩网络应用程序，可通过多种格式缩小图像大小。
+
+> https://squoosh.app/
+
 

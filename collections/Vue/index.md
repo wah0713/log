@@ -219,4 +219,36 @@ moment().startOf('second'); // same as moment().milliseconds(0);
 ### [Vue 强制刷新(重新渲染)的方式](https://blog.csdn.net/LonewoIf/article/details/126176039)
 ### [快速搭建Vue3+element-Plus+electron桌面应用](https://www.dddhl.cn/blogs/all/2022/electron.html#%E5%89%8D%E8%A8%80)
 
+### [前端工程化：基于 Vue.js 3.0 的设计与实践](https://vue3.chengpeiquan.com/)
+
+> vue3
+
+### [el-select关于@blur失去焦点的坑](https://blog.csdn.net/weixin_58528200/article/details/121671550)
+
+```js
+focusSelectValue() {
+    console.log(this.$refs.fuzzySearch);
+    this.$refs.fuzzySearch.$refs.input.blur = () => {
+        console.log(this.$refs.fuzzySearch.$refs.input.value);
+    };
+},
+```
+
+### [ElementUI disabled禁用整个form表单，设置单个不禁用](https://blog.csdn.net/weixin_43953518/article/details/124731351)
+
+```html
+<el-form label-width="100px" :model="form" :disabled="true">
+    <el-form-item label="禁用:">
+        <el-button @click="doSomething()" size="mini">禁用 </el-button>
+    </el-form-item>
+
+    <el-form label-width="100px" :model="form">
+        <el-form-item label="不禁用:">
+            <el-button @click="doSomething()" size="mini">不禁用 </el-button>
+        </el-form-item>
+    </el-form>
+
+</el-form>
+```
+
 

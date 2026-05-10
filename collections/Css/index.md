@@ -222,6 +222,228 @@ scroll-snap-align: start/end/center;
 
 > transform   position: fixed;
 
+### [CSS sin()/cos()等数学三角函数简介与应用](https://www.zhangxinxu.com/wordpress/2023/06/css-sin-cos-tan-function/)
+
+> hypot
+
+### [巧用:is()或:where()伪类让scoped的style依然全局匹配](https://www.zhangxinxu.com/wordpress/2022/09/css-is-where-scoped-style/)
+
+> is where
+
+### [伪元素表单控件默认样式重置与自定义大全](https://www.zhangxinxu.com/wordpress/2013/06/%e4%bc%aa%e5%85%83%e7%b4%a0-%e8%a1%a8%e5%8d%95%e6%a0%b7%e5%bc%8f-pseudo-elements-style-form-controls/)
+
+### [折腾：2颗星星+纯CSS实现星星评分交互效果](https://www.zhangxinxu.com/wordpress/2013/08/%e7%ba%afcss%e6%98%9f%e6%98%9f%e8%af%84%e5%88%86%e4%ba%a4%e4%ba%92-%e5%85%84%e5%bc%9f%e9%80%89%e6%8b%a9%e5%99%a8/)
+
+```css
+.star_bg {
+    width: 120px;
+    height: 20px;
+    background: url(star.png) repeat-x;
+    position: relative;
+    overflow: hidden;
+}
+
+.star {
+    height: 100%;
+    width: 24px;
+    line-height: 6em;
+    position: absolute;
+    z-index: 3;
+}
+
+.star:hover {
+    background: url(star.png) repeat-x 0 -20px !important;
+    left: 0;
+    z-index: 2;
+}
+
+.star_1 {
+    left: 0;
+}
+
+.star_2 {
+    left: 24px;
+}
+
+.star_3 {
+    left: 48px;
+}
+
+.star_4 {
+    left: 72px;
+}
+
+.star_5 {
+    left: 96px;
+}
+
+.star_1:hover {
+    width: 24px;
+}
+
+.star_2:hover {
+    width: 48px;
+}
+
+.star_3:hover {
+    width: 72px;
+}
+
+.star_4:hover {
+    width: 96px;
+}
+
+.star_5:hover {
+    width: 120px;
+}
+
+label {
+    display: block;
+    _display: inline;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* 幕后的英雄，单选按钮 */
+.score {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.score:checked+.star {
+    background: url(star.png) repeat-x 0 -20px;
+    left: 0;
+    z-index: 1;
+}
+
+.score_1:checked~.star_1 {
+    width: 24px;
+}
+
+.score_2:checked~.star_2 {
+    width: 48px;
+}
+
+.score_3:checked~.star_3 {
+    width: 72px;
+}
+
+.score_4:checked~.star_4 {
+    width: 96px;
+}
+
+.score_5:checked~.star_5 {
+    width: 120px;
+}
+
+.star_bg:hover .star {
+    background-image: none;
+}
+
+/* for IE6-IE8 JS 交互 */
+.star_checked {
+    background: url(star.png) repeat-x 0 -20px;
+    left: 0;
+    z-index: 1;
+}
+```
+
+```html
+<div id="starBg" class="star_bg">
+    <input type="radio" id="starScore1" class="score score_1" value="1" name="score">
+    <a href="#starScore1" class="star star_1" title="差"><label for="starScore1">差</label></a>
+    <input type="radio" id="starScore2" class="score score_2" value="2" name="score">
+    <a href="#starScore2" class="star star_2" title="较差"><label for="starScore2">较差</label></a>
+    <input type="radio" id="starScore3" class="score score_3" value="3" name="score">
+    <a href="#starScore3" class="star star_3" title="普通"><label for="starScore3">普通</label></a>
+    <input type="radio" id="starScore4" class="score score_4" value="4" name="score">
+    <a href="#starScore4" class="star star_4" title="较好"><label for="starScore4">较好</label></a>
+    <input type="radio" id="starScore5" class="score score_5" value="5" name="score">
+    <a href="#5" class="star star_5" title="好"><label for="starScore5">好</label></a>
+</div>
+```
+
+### [CSS属性选择器驱动的过滤搜索技术](https://www.zhangxinxu.com/wordpress/2013/09/css-attr-selector-search/)
+
+```css
+.list:not([data-index*="sh"]) {
+    display: none;
+}
+```
+
+### [小tip: margin:auto实现绝对定位元素的水平垂直居中](https://www.zhangxinxu.com/wordpress/2013/11/margin-auto-absolute-%e7%bb%9d%e5%af%b9%e5%ae%9a%e4%bd%8d-%e6%b0%b4%e5%b9%b3%e5%9e%82%e7%9b%b4%e5%b1%85%e4%b8%ad/)
+
+```css
+.element {
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* 有了这个就自动居中了 */
+}
+```
+
+### [5分钟快速了解text-wrap:balance的作用](https://www.zhangxinxu.com/wordpress/2023/07/css-text-wrap-balance/)
+
+```css
+text-wrap: wrap;
+text-wrap: nowrap;
+text-wrap: balance;
+```
+
+### [CSS高宽不等图片固定比例布局的三重进化](https://www.zhangxinxu.com/wordpress/2023/07/css-image-aspect-ratio-layout/)
+
+### [小tip: 使用CSS(Unicode字符)让inline水平元素换行](https://www.zhangxinxu.com/wordpress/2012/03/tip-css-multiline-display/)
+
+```css
+dd:after {
+    content: '\A';
+    white-space: pre;
+}
+```
+
+### [SVG图标颜色文字般继承与填充](https://www.zhangxinxu.com/wordpress/2014/07/svg-sprites-fill-color-currentcolor/)
+
+> svg fill
+
+```css
+li {
+    color: #369;
+}
+
+svg {
+    fill: currentColor;
+}
+```
+
+### [伪类+js实现CSS3 media queries跨界准确判断](https://www.zhangxinxu.com/wordpress/2012/05/after-js-content-css3-media-queries/)
+
+> media 替换图片地址
+
+### [小tip: 使用CSS将图片转换成黑白(灰色、置灰)](https://www.zhangxinxu.com/wordpress/2012/08/css-svg-filter-image-grayscale/)
+
+```css
+:not(:has(img)):not(img) {
+    filter: grayscale(1);
+}
+
+.gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+
+    filter: grayscale(100%);
+
+    filter: gray;
+}
+```
+
 
 ### [CSS蛋疼应用之：数据上报和HTML验证](https://www.zhangxinxu.com/wordpress/2018/12/css-data-report-html-validate/)
 

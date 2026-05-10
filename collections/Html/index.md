@@ -50,4 +50,42 @@
 
 ### [HTML5响应式图片技术中文图解](https://www.zhangxinxu.com/wordpress/2015/11/anatomy-of-responsive-images/)
 
+### [Emmet语法 和 lorem](https://juejin.cn/post/7083155683515826183)
+
+> lorem
+
+### [URL锚点HTML定位技术机制、应用与问题](https://www.zhangxinxu.com/wordpress/2013/08/url-anchor-html-%E9%94%9A%E7%82%B9%E5%AE%9A%E4%BD%8D-%e6%9c%ba%e5%88%b6-%e5%ba%94%e7%94%A8-%e9%97%AE%e9%A2%98/#two)
+
+> :target
+
+### [查漏补缺，我仍未知道的HTML nonce和popover属性](https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/)
+
+### [HTML kbd、var、samp元素你使用过没？](https://www.zhangxinxu.com/wordpress/2023/07/html-samp-element/)
+
+### [HTML elementtiming属性初体验记录](https://www.zhangxinxu.com/wordpress/2023/09/html-elementtiming-attribute/)
+
+```html
+<p elementtiming="text">我是一段内容。</p>
+```
+
+### [Web referrer策略详解与防盗链图片的显示](https://www.zhangxinxu.com/wordpress/2023/08/web-referer-image-policy/)
+
+### [Popover](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API/Using)
+
+```js
+document.addEventListener("keydown", (event) => {
+    if (event.key === "h") {
+        if (popover.matches(":popover-open")) {
+            popover.hidePopover();
+        }
+    }
+
+    if (event.key === "s") {
+        if (!popover.matches(":popover-open")) {
+            popover.showPopover();
+        }
+    }
+});
+```
+
 

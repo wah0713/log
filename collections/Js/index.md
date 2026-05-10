@@ -1305,4 +1305,272 @@ y|执行“粘性 (sticky)”搜索，匹配从目标字符串的当前位置开
 
 > Web Worker
 
+### [狙杀页面卡顿 —— Performance 指北](https://juejin.cn/post/6844903651262070791)
+
+> Performance chrome
+
+### [梳理：提高前端性能方面的处理以及不足](https://www.zhangxinxu.com/wordpress/2013/04/%e5%89%8c%e7%ab%af%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96%e7%bb%8f%e9%aa%8c%e5%88%86%e4%ba%ab/)
+
+> 性能 优化
+
+### [jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%e5%8e%9f%e7%90%86-%e6%9c%ba%e5%88%b6/)
+
+> 原型链 prototype
+
+### [node.js - 有没有办法删除最后一行输出？](https://www.coder.work/article/1372167)
+
+```js
+process.stdout.write("000");
+process.stdout.write("\n111");
+process.stdout.write("\n222");
+process.stdout.write("\r\x1b[K")
+process.stdout.write("333");
+```
+
+使用 process.stdout.write 打印没有 EOL 字符的行。
+使用回车符(\r)返回行首。
+使用\e[K清除从光标位置到行尾的所有字符。
+
+### [ANSI转义序列详解](https://juejin.cn/post/7086720921158811662)
+
+### [关于async / await的异常捕获](https://blog.csdn.net/qq_42543244/article/details/123423894)
+
+```js
+		async getList1() {
+		    let resp = await this.httpTest().catch(err => console.log(err));
+		    console.log(resp);
+		}
+
+		async getList2() {
+		    try {
+		        let resp = await this.httpTest();
+		        console.log(resp);
+		    } catch (err) {
+		        console.log(err);
+		    }
+		},
+```
+
+### [强大的JS位运算](https://juejin.cn/post/7176635614777851941)
+
+> 位运算
+
+### [理解DOMString、Document、FormData、Blob、File、ArrayBuffer数据类型](https://www.zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/)
+
+### [XMLHttpRequest实现HTTP协议下文件上传断点续传](https://www.zhangxinxu.com/wordpress/2013/11/xmlhttprequest-ajax-localstorage-%e6%96%87%e4%bb%b6%e6%96%ad%e7%82%b9%e7%bb%ad%e4%bc%a0/)
+
+> slice(0, 20); slice(20, 40); slice(40, 60); slice(60)
+
+### [小折腾：JavaScript与元素间的抛物线轨迹运动](https://www.zhangxinxu.com/wordpress/2013/12/javascript-js-%e5%85%83%e7%b4%a0-%e6%8a%9b%e7%89%a9%e7%ba%bf-%e8%bf%90%e5%8a%a8-%e5%8a%a8%e7%94%bb/)
+
+### [btoa(crypto.randomUUID())](https://www.zhangxinxu.com/wordpress/2023/08/html-attribute-nonce-translate/)
+
+```js
+// randomuuid
+btoa(crypto.randomUUID())
+// NDhkODkxMzYtNGUxZS00N2NjLTk1YTItNWMyOTM4YzdhZGJj
+```
+
+### [聊聊Web网页中资源加载的优先级](https://www.zhangxinxu.com/wordpress/2023/10/img-js-preload-fetch-priority/)
+
+> prefetch preload fetchPriority
+
+### [纯JS实现多个音频的拼接或者合并](https://www.zhangxinxu.com/wordpress/2023/10/js-audio-audiobuffer-concat-merge/)
+
+> new AudioContext()
+
+### [JS改变AudioBuffer音量并下载为新audio音频](https://www.zhangxinxu.com/wordpress/2023/10/js-web-audio-audiobuffer-volume/)
+
+### json stringify 排序问题
+
+> JSON.stringify 的排序，不是按字母顺序
+
+### [又get到了，JS复制图片到剪切板](https://www.zhangxinxu.com/wordpress/2023/09/js-copy-image-clipboard/)
+
+> b64toBlob ClipboardItem
+
+### [Base64、Blob、File 三种类型的相互转换 最详细](https://blog.csdn.net/BaymaxCSDN/article/details/108077233)
+
+> base64、blob、file
+
+### [Tips：form元素reset后input不触发change事件处理](https://www.zhangxinxu.com/wordpress/2023/09/form-reset-input-change/)
+
+```js
+    // 观察页面所有的form元素，绑定reset事件
+    document.addEventListener('reset', function(event) {
+        // 事件对象e中的target属性，指向触发事件的元素
+        var target = event.target;
+        // 如果触发事件的元素是form元素
+        if (target.tagName.toLowerCase() === 'form') {
+            // 遍历form元素中的所有input元素
+            var inputs = [].slice.call(target.elements);
+            // 只有当前后值变化的时候才会触发 change 事件
+            inputs.forEach(function(input) {
+                input.tempValue = input.value;
+            });
+
+            setTimeout(function() {
+                inputs.forEach(function(input) {
+                    if (input.tempValue !== input.value) {
+                        input.dispatchEvent(new Event('change'));
+                    }
+                });
+            }, 1);
+        }
+    }, false);
+```
+
+### [逻辑空赋值（??=）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+
+> ??=
+
+### [空值合并运算符（??）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+
+> ??
+
+### [可选链运算符（?.）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+
+> ?.
+
+### [JavaScript实现监听路由变化](https://blog.csdn.net/qq_42367749/article/details/119653295)
+
+### [怎样监听history.pushState、history.replaceState事件](https://blog.csdn.net/swc1997/article/details/118242920)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自定义对pushState、replaceState的监听</title>
+</head>
+
+<body>
+    <button onclick="push()">点击切换路由</button>
+    <button onclick="replace()">点击替换路由</button>
+    <script>
+        function push() {
+            window.history.pushState({
+                data: "from test1"
+            }, "", "/test1");
+        }
+
+        function replace() {
+            window.history.replaceState({
+                data: "from test2"
+            }, "", "/test2");
+        }
+
+        /**
+         * 重写history的pushState和replaceState
+         * @param action pushState|replaceState
+         * @return {function(): *}
+         */
+        function wrapState(action) {
+            // 获取原始定义
+            let raw = history[action];
+            return function() {
+
+                // 经过包装的pushState或replaceState
+                let wrapper = raw.apply(this, arguments);
+
+                // 定义名为action的事件
+                let e = new Event(action);
+
+                // 将调用pushState或replaceState时的参数作为stateInfo属性放到事件参数event上
+                e.stateInfo = {
+                    ...arguments
+                };
+                // 调用pushState或replaceState时触发该事件
+                window.dispatchEvent(e);
+                return wrapper;
+            }
+        }
+
+        //修改原始定义
+        history.pushState = wrapState("pushState");
+        history.replaceState = wrapState("replaceState");
+
+        // 监听自定义的事件
+        window.addEventListener("pushState", function(e) {
+            console.info("pushState", e.stateInfo);
+        })
+        window.addEventListener("replaceState", function(e) {
+            console.info("replaceState", e.stateInfo);
+        })
+    </script>
+</body>
+
+</html>
+```
+
+### [获取元素CSS值之getComputedStyle方法熟悉](https://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/)
+
+### [alova.js]( https://alova.js.org/zh-CN/)
+
+> 以声明的方式完成各种复杂场景的网络请求，这意味着使用非常少量的代码就可以实现更高的流畅性和可用性的网络请求，让你的应用如智者一般具备卓越的策略思维
+
+### [js的.map() 里使用异步方法](https://blog.csdn.net/hannah1116/article/details/86541680)
+
+```js
+// 使用async await 处理异步操作
+let results = await Promise.all(arr.map(async (item) => {
+    // 等待异步操作完成，返回执行结果
+    return await asyncWorker(item);
+}));
+```
+
+### [当你需要将cookie转换成对象](https://www.kancloud.cn/hanxuming/codesnippet/3204012)
+
+```js
+const getCookie = () => document.cookie
+    .split(';')
+    .map((item) => item.split('='))
+    .reduce((acc, [k, v]) => (acc[k.trim().replace('"', '')] = v) && acc, {})
+getCookie()
+```
+
+### [Web：从给定文本中剥离html](https://www.kancloud.cn/hanxuming/codesnippet/3204018)
+
+```js
+const stripHtml = (html) => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
+stripHtml('<div>test</div>') // 'test'
+```
+
+### [数组：找到最接近的数值](https://www.kancloud.cn/hanxuming/codesnippet/3203983)
+
+```js
+const closest = (arr, n) => arr.reduce((prev, curr) => (Math.abs(curr - n) < Math.abs(prev - n) ? curr : prev))
+closest([29, 87, 8, 78, 97, 20, 75, 33, 24, 17], 50) // 33
+```
+
+### [数组：生成数组](https://www.kancloud.cn/hanxuming/codesnippet/3203976)
+
+```js
+const createArr = (n) => Array.from(new Array(n), (v, i) => i)
+const arr = createArr(100) // 0 - 99 数组
+
+const createArr = (n) => new Array(n).fill(0).map((v, i) => i)
+createArr(100) // 0 - 99数组
+```
+
+### [进制转换](https://www.kancloud.cn/hanxuming/codesnippet/3203985)
+
+```js
+const toDecimal = (num, n = 10) => num.toString(n)
+// 假设数字10要转换成2进制
+toDecimal(10, 2) // '1010'
+
+// 10的2进制为1010
+const toDecimalism = (num, n = 10) => parseInt(num, n)
+toDecimalism(1010, 2)
+```
+
+### [当你需要获取一个随机颜色](https://www.kancloud.cn/hanxuming/codesnippet/3204008)
+
+```js
+const getRandomColor = () => `#${Math.floor(Math.random() * 0xffffff).toString(16)}`
+getRandomColor() // '#4c2fd7'
+```
+
 

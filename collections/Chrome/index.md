@@ -34,4 +34,12 @@ Capture node screenshot
 
 ### [通过chrome浏览器调试手机页面(IOS和Android)](https://blog.csdn.net/sd19871122/article/details/100243909)
 
+### [通过调试技术，我理清了 b 站视频播放很快的原理](https://juejin.cn/post/7255110638154072120)
+
+> SourceBuffer
+
+### [找找](https://searchplayground.google/)
+
+> 儿童
+
 
