@@ -527,3 +527,307 @@ function mkdir(dirpath, dirname) {
 > tabindex 全局属性 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用Tab键，因此得名）。
 ### [键盘导航的 JavaScript 组件](https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 ### [浏览器兼容](https://caniuse.com/)
+
+### [CanvasRenderingContext2D.drawImage()](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage)
+
+> drawImage
+
+### [输入框value属性赋值触发js change事件的实现](https://www.zhangxinxu.com/wordpress/2021/05/js-value-change-event/)
+
+### [Promise.all、race和any方法都是什么意思？](https://www.zhangxinxu.com/wordpress/2021/05/promise-all-race-any/)
+
+### [在有滚动条的容器中指定（显示）滚动到某一子元素位置](https://blog.csdn.net/weixin_44807526/article/details/118576067)
+
+> scrollIntoView
+
+### [2020的今天，[\u4e00-\u9fa5]还能匹配到所有中文吗？](https://juejin.cn/post/6844904116842430471)
+
+### [深入理解Shadow DOM v1](https://segmentfault.com/a/1190000019115050)
+
+> shadow 虚拟dom
+
+### [盘点HTML字符串转DOM的各种方法及细节](https://www.zhangxinxu.com/wordpress/2021/02/html-string-dom/)
+
+> innerHTML insertAdjacentHTML DOMParser Range
+
+### [DOMPurify 简单使用](https://www.jianshu.com/p/d88cd47a124d)
+
+> DOMPurify
+
+### [判断DOM元素是否出现再浏览器窗口中](https://segmentfault.com/a/1190000017303509)
+
+### [聊一聊前端图片懒加载背后的故事](https://qinyuanpei.blog.csdn.net/article/details/126170750)
+
+### [如何使用JS检测用户是否缩放了页面？](https://www.zhangxinxu.com/wordpress/2021/02/js-if-page-zoom/)
+
+### [巧用DOM API实现HTML字符的转义和反转义](https://www.zhangxinxu.com/wordpress/2021/01/dom-api-html-encode-decode/)
+
+### [告别JS keyCode](https://www.zhangxinxu.com/wordpress/2021/01/js-keycode-deprecated/)
+
+> event.key event.code
+
+### [HTML5 file API加canvas实现图片前端JS压缩并上传](https://www.zhangxinxu.com/wordpress/2017/07/html5-canvas-image-compress-upload/)
+
+> base64 canvas canvas.getContext
+
+### [前端JS获取字符串字节大小](https://tydev.blog.csdn.net/article/details/107357640)
+
+### [JS 计算字符串所占字节数](http://www.alloyteam.com/2013/12/js-calculate-the-number-of-bytes-occupied-by-a-string/)
+
+### [window.parent、window.top、window.self](https://www.cnblogs.com/zxf100/articles/14182831.html)
+
+> iframe
+
+### [使用document.scrollingElement控制窗体滚动高度](https://www.zhangxinxu.com/wordpress/2019/02/document-scrollingelement/)
+
+> scrollingElement
+
+### [前端监控之接口统计](https://juejin.cn/post/6958700362660315149)
+
+> 监听响应 拦截请求
+
+### [为什么通常在发送数据埋点请求的时候使用的是 1x1 像素的透明 gif 图片？](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/87)
+
+### [深入Node.compareDocumentPosition API](https://www.zhangxinxu.com/wordpress/2019/03/node-comparedocumentposition-api/)
+
+> compareDocumentPosition
+
+### [怎么判断获取到的url是否能访问](https://segmentfault.com/q/1010000011062244)
+
+> get太重，改用HEAD请求吧
+> 本地启动的接口head请求不能判断
+
+### [使用HEAD请求判断文件是否存在](https://juejin.cn/post/7098233182843043848)
+
+### [navigator.sendBeacon](https://zhuanlan.zhihu.com/p/381796039)
+
+> 关闭页面时，发送请求
+
+```js
+const sendBeacon = (url, data = {}) => {
+    const blob = new Blob([JSON.stringify(data)], {
+        type: 'application/json; charset=UTF-8',
+    });
+    return navigator.sendBeacon(url, blob);
+};
+```
+
+### [2022前端应该掌握的10个 JS 小技巧](https://juejin.cn/post/7072274726940311588)
+
+### [如何disabled禁用所有表单input输入框元素](https://www.zhangxinxu.com/wordpress/2019/04/disabled-all-form-elements/)
+
+### [解决canvas图片getImageData, toDataURL跨域问题](https://www.zhangxinxu.com/wordpress/2018/02/crossorigin-canvas-getimagedata-cors/)
+
+### [What’s New With Forms in 2022?](https://css-tricks.com/whats-new-with-forms-in-2022/)
+
+### [面试官为啥总是让我们手撕call、apply、bind?](https://juejin.cn/post/7128233572380442660)
+
+### [请问：怎么实现大文件快速上传？](https://juejin.cn/post/7074534222748188685)
+
+### [聊聊JS DOM变化的监听检测与应用](https://www.zhangxinxu.com/wordpress/2019/08/js-dom-mutation-observer/)
+
+> MutationObserver Mutation events Object.defineProperty
+
+### [JS URL()和URLSearchParams() API接口详细介绍](https://www.zhangxinxu.com/wordpress/2019/08/js-url-urlsearchparams/)
+
+> URLSearchParams URL
+
+### [用头👴解决！前端必知必会的几个实用响应头](https://juejin.cn/post/7124847588070653983)
+
+### [js 模拟鼠标双击](https://blog.csdn.net/nongcunqq/article/details/115358202)
+
+```js
+// 第一种
+var targLink = document.getElementById("something");
+var clickEvent = document.createEvent('MouseEvents');
+clickEvent.initEvent('dblclick', true, true);
+targLink.dispatchEvent(clickEvent);
+
+// 第二种
+var targLink = document.getElementById("something");
+targLink.dispatchEvent(new CustomEvent('dblclick'))
+```
+
+### [小tips: 元素focus页面不滚动不定位的JS处理](https://www.zhangxinxu.com/wordpress/2019/09/js-focus-preventscroll/)
+
+> preventScroll
+
+### [JS Intl对象完整简介及在中文中的应用](https://www.zhangxinxu.com/wordpress/2019/09/js-intl-zh/)
+
+```js
+{
+    Collator: ƒ Collator()
+    DateTimeFormat: ƒ DateTimeFormat()
+    ListFormat: ƒ ListFormat()
+    NumberFormat: ƒ NumberFormat()
+    PluralRules: ƒ PluralRules()
+    RelativeTimeFormat: ƒ RelativeTimeFormat()
+    getCanonicalLocales: ƒ getCanonicalLocales()
+    v8BreakIterator: ƒ v8BreakIterator()
+}
+```
+
+> 数字格式化
+
+### [小tips: JS DOM innerText和textContent的区别](https://www.zhangxinxu.com/wordpress/2019/09/js-dom-innertext-textcontent/)
+
+> innerText textContent
+
+### [RegExp.$1-$9](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)
+
+```js
+RegExp.$1
+```
+
+### [JS检测CSS属性浏览器是否支持的多种方法](https://www.zhangxinxu.com/wordpress/2019/11/js-css-supports-detect/)
+
+### [js模拟键盘点击esc键](https://blog.csdn.net/qq_41228055/article/details/124712858)
+
+```js
+function fireKeyEvent(el, evtType, keyCode) {
+    var doc = el.ownerDocument,
+        win = doc.defaultView || doc.parentWindow,
+        evtObj;
+    if (doc.createEvent) {
+        if (win.KeyEvent) {
+            evtObj = doc.createEvent('KeyEvents');
+            evtObj.initKeyEvent(evtType, true, true, win, false, false, false, false, keyCode, 0);
+        } else {
+            evtObj = doc.createEvent('UIEvents');
+            Object.defineProperty(evtObj, 'keyCode', {
+                get: function() {
+                    return this.keyCodeVal;
+                }
+            });
+            Object.defineProperty(evtObj, 'which', {
+                get: function() {
+                    return this.keyCodeVal;
+                }
+            });
+            evtObj.initUIEvent(evtType, true, true, win, 1);
+            evtObj.keyCodeVal = keyCode;
+            if (evtObj.keyCode !== keyCode) {
+                console.log("keyCode " + evtObj.keyCode + " 和 (" + evtObj.which + ") 不匹配");
+            }
+        }
+        el.dispatchEvent(evtObj);
+    } else if (doc.createEventObject) {
+        evtObj = doc.createEventObject();
+        evtObj.keyCode = keyCode;
+        el.fireEvent('on' + evtType, evtObj);
+    }
+}
+
+fireKeyEvent(arr[0], 'keydown', 27) // dom元素，事件名，keycode
+```
+
+### [JavaScript 中几个优雅的运算符使用技巧](https://mp.weixin.qq.com/s/M6BnuFVku0sYoug016un8g)
+
+```js
+object?.property
+console.log(undefined ?? 'codercao'); // codercao
+expr1 ?? = expr2
+x || = y
+x && = y
+```
+
+### [了解woff2字体及转换](https://www.zhangxinxu.com/wordpress/2018/07/known-woff2-mime-convert/)
+
+### [小tips: 使用JS检测用户是否安装某font-family字体](https://www.zhangxinxu.com/wordpress/2018/02/js-detect-suppot-font-family/)
+
+```js
+var isSupportFontFamily = function(f) {
+    if (typeof f != "string") {
+        return false
+    }
+    var h = "Arial";
+    if (f.toLowerCase() == h.toLowerCase()) {
+        return true
+    }
+    var e = "a";
+    var font = 100;
+    var _width = 100,
+        _height = 100;
+    var _canvas = document.createElement("canvas");
+    var context = _canvas.getContext("2d");
+    _canvas.width = _width;
+    _canvas.height = _height;
+    context.textAlign = "center";
+    context.fillStyle = "black";
+    context.textBaseline = "middle";
+    var g = function(j) {
+        context.clearRect(0, 0, _width, _height);
+        context.font = font + "px " + j + ", " + h;
+        context.fillText(e, _width / 2, _height / 2);
+        var k = context.getImageData(0, 0, _width, _height).data;
+        return [].slice.call(k).filter(function(l) {
+            return l != 0
+        })
+    };
+    return g(h).join("") !== g(f).join("")
+};
+```
+
+### [小tips: 滚动容器尺寸变化子元素视觉上位置不变JS实现](https://www.zhangxinxu.com/wordpress/2018/02/container-scroll-position-hold/)
+
+```js
+var elements = document.elementsFromPoint(x, y);
+```
+
+### [小tips: 纯前端JS读取与解析本地文本类文件](https://www.zhangxinxu.com/wordpress/2018/03/js-parse-text-file/)
+
+```js
+var reader = new FileReader();
+reader.onload = function(event) {
+    // event.target.result就是文件文本内容
+    // 然后你就可以为所欲为了
+    // 例如如果是JSON数据可以解析
+    // 如果是HTML数据，可以直接插入到页面中
+    // 甚至字幕文件，各种滤镜，自定义文件格式，都可以玩弄于鼓掌之间……
+};
+reader.readAsText(file);
+```
+
+### [借助Web Animations API实现JS keyframes动画](https://www.zhangxinxu.com/wordpress/2018/03/web-animations-api-dynamic-feature-animation/)
+
+> var myAnimation = element.animate(keyframes, options);
+
+### [JavaScript 正则表达式匹配汉字](https://zhuanlan.zhihu.com/p/33335629)
+
+`/[\u4e00-\u9fa5]/` 是错的，不要用二十年前的正则表达式了
+`/\p{Unified_Ideograph}/u` 是正确的，不需要维护，匹配所有汉字。这里 `\p` 是 Unicode 属性转义正则表达式。
+`/\p{Ideographic}/u` 和 `/\p{Script=Han}/u` 匹配了除了汉字以外的其他一些字符，在「汉字匹配正则表达式」这个需求下，是错的。
+目前 Chrome 和 Safari 支持 Unicode 属性转义正则表达式。对其他环境，使用 7.7 版本的 `@babel/env` 就可以自动根据浏览器规定打开支持。
+
+### [Service Worker实现浏览器端页面渲染或CSS, JS编译](https://www.zhangxinxu.com/wordpress/2018/04/service-worker-client-online-html-css-complie/)
+
+> serviceWorker
+
+### [explorer.exe命令行](https://www.cnblogs.com/zzr-stdio/articles/13140775.html)
+
+> explorer.exe
+
+### [node使用exec方法开启子进程](https://blog.csdn.net/xuelian3015/article/details/125923099)
+
+> exec( command , [options] , [callback] )
+
+### [Object转字符串可以包含function](https://blog.csdn.net/LanChongQiChuang/article/details/103683642)
+
+### [从今天开始，请叫我Node文本节点处理大师](https://www.zhangxinxu.com/wordpress/2022/11/js-text-node-master/)
+
+### [nodejs之支持async func的并行forEach](https://blog.csdn.net/windroid/article/details/10542653)
+
+```
+https://wah0713.github.io/getWeiboImage/image/1.03.png
+https://cdn.jsdelivr.net/gh/wah0713/getWeiboImage@master/image/1.03.png
+https://raw.githubusercontent.com/wah0713/getWeiboImage/master/image/1.03.png
+```
+
+### 位运算
+
+```js
+// 四色五人
+num + 0.5 | 0
+// 去整
+num | 0
+```

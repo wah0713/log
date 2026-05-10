@@ -110,3 +110,110 @@ beforeRouteLeave(to, from, next) {
 > https://devtools.vuejs.org/guide/open-in-editor.html
 > open file vue
 ### [element-ui的el-table和el-form表单校验嵌套使用](https://blog.csdn.net/xing_zlear/article/details/91127520)
+
+### [vue生产环境报错 ChunkLoadError](https://www.impl.fun/2022/03/27/cue-load-chunk-failed/)
+
+> main.js
+
+```js
+// 在window.onerror获取失败的src
+window.addEventListener('error', (event) => {
+    if (!(event instanceof ErrorEvent)) {
+        // 获取router加载失败的js地址（hase值）
+        window.hasScriptJs = event.target.src
+    }
+}, true);
+```
+
+> router.js
+
+```js
+// 然后在router.onError中创建script请求
+// onload中replace
+// onerror中reload
+router.onError((error) => {
+    const pattern = /Loading chunk (\d)+ failed/g;
+    const isChunkLoadFailed = error.message.match(pattern);
+    if (isChunkLoadFailed) {
+        if (window.hasScriptJs) {
+            let setScript = document.createElement("script");
+            setScript.setAttribute("src", window.hasScriptJs);
+            head.appendChild(script);
+            setScript.onload = () => {
+                const targetPath = $router.history.pending.fullPath;
+                $router.replace(targetPath);
+            };
+            setScript.onerror = () => {
+                location.reload();
+            };
+        }
+
+    }
+
+});
+export default router;
+```
+
+> 以上伪代码不一定可以执行
+
+### [Vue 使用 lodash Debounce 进行防抖，控制高耗任务的频率](https://juejin.cn/post/7041067567422636063)
+
+> lodash Debounce
+
+### [揭秘 Vue.js 九个性能优化技巧](https://juejin.cn/post/6922641008106668045)
+
+> Local variables
+
+### [25个 Vue 技巧, 学了这么久才知道还能这么用](https://juejin.cn/post/7098688018663342111)
+
+> v-for 中的解构
+
+### [Element-UI使用及遇到的问题](https://www.jianshu.com/p/52ca9a00851a)
+
+```css
+  .el-tooltip__popper {
+      top: -100px; // 解决 tooltip与非tooltip来回切换，左上角会闪现tooltip弹框
+  }
+```
+
+### [前端面试常见的浏览器缓存（强缓存、协商缓存），代码实操](https://juejin.cn/post/7083178636852854792)
+
+### [Moment.js](https://www.momentjs.com.cn/docs.html#/manipulating/add/)
+
+```js
+moment().add(Number, String);
+moment().add(Duration);
+moment().add(Object);
+
+moment().startOf('year'); // set to January 1st, 12:00 am this year
+moment().startOf('month'); // set to the first of this month, 12:00 am
+moment().startOf('quarter'); // set to the beginning of the current quarter, 1st day of months, 12:00 am
+moment().startOf('week'); // set to the first day of this week, 12:00 am
+moment().startOf('isoWeek'); // set to the first day of this week according to ISO 8601, 12:00 am
+moment().startOf('day'); // set to 12:00 am today
+moment().startOf('date'); // set to 12:00 am today
+moment().startOf('hour'); // set to now, but with 0 mins, 0 secs, and 0 ms
+moment().startOf('minute'); // set to now, but with 0 seconds and 0 milliseconds
+moment().startOf('second'); // same as moment().milliseconds(0);
+```
+
+### [实战技巧，Vue原来还可以这样写](https://juejin.cn/post/6844904196626448391)
+
+```js
+    // 监听窗口发生变化，resize组件
+    window.addEventListener('resize', this.$_handleResizeChart)
+    // 通过hook监听组件销毁钩子函数，并取消监听事件
+    this.$once('hook:beforeDestroy', () => {
+        window.removeEventListener('resize', this.$_handleResizeChart)
+    })
+```
+
+```html
+  <!--通过@hook:updated监听组件的updated生命钩子函数-->
+  <!--组件的所有生命周期钩子都可以通过@hook:钩子函数名 来监听触发-->
+  <custom-select @hook:updated="$_handleSelectUpdated" />
+```
+
+> 开发全局组件，你可能需要了解一下Vue.extend
+
+### [Vue 强制刷新(重新渲染)的方式](https://blog.csdn.net/LonewoIf/article/details/126176039)

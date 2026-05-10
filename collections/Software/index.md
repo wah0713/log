@@ -190,4 +190,22 @@ exportdefault {
 > requestAnimationFrame
 ### [利用废弃的html rel import实现页面include功能](https://www.zhangxinxu.com/wordpress/2021/07/html-rel-import-include/)
 
+### [tampermonkey官网文档](https://www.tampermonkey.net/documentation.php)
+
+### [Tampermonkey中文文档](https://www.cnblogs.com/grubber/p/12560522.html)
+
+### [斗鱼开放平台 接口文档](https://open.douyu.com/)
+
+### [纯前端JS zip打包文件并下载](https://www.zhangxinxu.com/wordpress/2019/08/js-zip-download/)
+
+> jszip FileSaver js-xlsx
+
+### [webpack-bundle-analyzer 优化实战](https://juejin.cn/post/7035951233907032077)
+
+> webpack-bundle-analyzer webpack bundle analyzer
+
+### [开源项目 CDN 加速服务站合集：除了BootCDN，你还知道其他免费的前端开源项目 CDN 加速服务吗](https://blog.csdn.net/Yi2008yi/article/details/122882237)
+
+### [前端主题切换方案](https://juejin.cn/post/7134594122391748615)
+
 ```
