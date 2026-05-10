@@ -80,3 +80,70 @@ git stash drop <stash_id> 从暂存列表中删除一个特定的暂存。
 > hosts
 
 
+### [本地持久存储](https://github.com/prazdevs/pinia-plugin-persistedstate)
+
+
+### [宝宝字帖](https://github.com/jaywcjlove/copybook-generator)
+
+
+### [git add 多个文件和文件夹的方法](https://blog.csdn.net/sphinx1122/article/details/89789929)
+
+```bash
+git config/*
+```
+
+
+### [科学 PDF 文档翻译及双语对照工具](https://github.com/Byaidu/PDFMathTranslate/blob/main/README_zh-CN.md)
+
+> python 实现的科学文档翻译及双语对照工具
+
+
+### [DashPlayer](https://github.com/solidSpoon/DashPlayer)
+
+> 一款专为英语学习打造的视频播放器
+
+
+### [DOOM Captcha](https://github.com/vivirenremoto/doomcaptcha)
+
+> DOOM 风格的验证码
+
+
+### [github收藏展示图](https://star-history.com/)
+
+
+### [代码对比库](https://github.com/MrWangJustToDo/git-diff-view)
+
+> Git Diff Component vue react
+
+
+### [Web 终极拦截技巧（全是骚操作）](https://hughfenghen.github.io/posts/2023/12/23/web-spy/)
+
+
+### [汇聚多个GPT](https://github.com/lencx/Noi)
+
+
+### [cloudflare-ai-web](https://github.com/Jazee6/cloudflare-ai-web)
+
+> 基于 Cloudflare Workers 的 AI 聊天机器人，支持上下文对话
+
+
+### [前端模糊搜索](https://github.com/m31coding/fuzzy-search)
+
+
+### [BabelDuck](https://github.com/Orenoid/BabelDuck)
+
+> BabelDuck 是一个面向各水平层次语言学习者的高度可定制化 AI 口语对话练习应用，并对初学者更友好，旨在将口语表达练习的门槛与心智负担降至最低。
+> 口语练习
+
+
+### [30 天学 Python](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/Chinese/04_strings.md)
+
+
+### [监控chrome扩展是否被自己调接口](https://github.com/dnakov/little-rat)
+
+> 🐀 小型 chrome 扩展，用于监控（并选择性地阻止）其他扩展的网络调用
+
+
+### [本项目旨在打造一本开源免费、新手友好的数据结构与算法入门教程。](https://github.com/krahets/hello-algo)
+
+

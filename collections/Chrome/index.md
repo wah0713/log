@@ -43,3 +43,6 @@ Capture node screenshot
 > 儿童
 
 
+### [YouTube中文配音](https://chromewebstore.google.com/detail/youtube%E4%B8%AD%E6%96%87%E9%85%8D%E9%9F%B3/oglffgiaiekgeicdgkdlnlkhliajdlja)
+
+

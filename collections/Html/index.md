@@ -97,3 +97,36 @@ document.addEventListener("keydown", (event) => {
 ### [input  type](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/button)
 
 
+### [聊聊Top Layer顶层特性的隐患与实践](https://www.zhangxinxu.com/wordpress/2024/06/web-top-layer/)
+
+```html
+<button onclick="dialog.showModal();">点击我显示模态对话框</button>
+
+<dialog id="dialog">
+    <blockquote>
+        <button onclick="toast.showPopover();">显示toast提示</button>
+        <button onclick="dialog.close();">关闭</button>
+    </blockquote>
+</dialog>
+
+<div id="toast" class="toast" popover>我是提示内容</div>
+```
+
+
+### 多选
+
+```html
+<select multiple>
+```
+
+
+### [原生slot](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot)
+
+```html
+<slot>：Web 组件插槽元素
+```
+
+
+### [Server-Sent Events 教程](https://www.ruanyifeng.com/blog/2017/05/server-sent_events.html)
+
+

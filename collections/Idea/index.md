@@ -165,3 +165,76 @@ PREP
 ### npm view node
 
 
+### [一手es新增特性](https://tc39.es/ecma262/2023/#sec-intro)
+
+```
+ECMAScript 2016
+ECMAScript 2017
+ECMAScript 2018
+ECMAScript 2019
+ECMAScript 2020
+ECMAScript 2021
+ECMAScript 2022
+ECMAScript 2023, the 14th edition, introduced the toSorted, toReversed, with, findLast, and findLastIndex methods on Array.prototype and TypedArray.prototype, as well as the toSpliced method on Array.prototype; added support for #! comments at the beginning of files to better facilitate executable ECMAScript files; and allowed the use of most Symbols as keys in weak collections.
+```
+
+
+### 克隆
+
+```diff
+- return numbers.reverse()
++ return [...numbers].reverse()
+```
+
+
+### [echarts动态添加数据](https://blog.csdn.net/moon125w/article/details/81053661)
+
+> charts setOption appendData
+
+
+### [Canvas Confetti](https://www.kirilv.com/canvas-confetti/)
+
+> 烟花动画
+
+
+### ?. 和?? 一起使用
+
+
+### [GSAP的基本使用](https://gsap.framer.wiki/)
+
+> npm gsap
+
+
+### [天地图-免费地图](https://vgimap.tianditu.gov.cn/)
+
+
+### [还在用轮询、websocket查询大屏数据？sse用起来](https://juejin.cn/post/7424908830902042658)
+
+
+### [好的重构与坏的重构](https://www.builder.io/blog/good-vs-bad-refactoring)
+
+
+### [手机电脑互传](https://localsend.org/zh-CN)
+
+
+### [chatgpt在线](http://chatgpt.com/)
+
+
+### [免费共享的GPT4镜像](https://www.opkfc.com/list)
+
+
+### [以图搜图](https://picfind.top/)
+
+
+### [𦮙](https://www.hanyuguoxue.com/zidian/zi-158617)
+
+
+### [GPT生成图关键词](https://artiversehub.ai/prompt-marketplace/1783666543199424513)
+
+
+### [中国古代历史人物可视化，可以生成 52 万位中国古代历史名人的的社会关系、亲戚关系和生平足迹图，数据来源：CBDB](https://tools.buyixiao.xyz/historical-figure-query)
+
+
+### [磁力](https://anybt.eth.limo/)
+
+

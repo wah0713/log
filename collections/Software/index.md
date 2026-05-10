@@ -244,3 +244,22 @@ exportdefault {
 > getEventListeners
 
 
+### [2024 最新最全 VS Code 插件推荐！](https://juejin.cn/post/7384765023343394827)
+
+
+### [VS Code配置使用 Python，超详细配置指南，看这一篇就够了](https://blog.csdn.net/weixin_49895216/article/details/131696960)
+
+> python环境配置
+
+
+### [Python 的许多命令行实用程序](https://www.pythonmorsels.com/cli-tools/)
+
+> python 命令行工具
+
+
+### [字幕工具箱](https://zm.i8k.tv/)
+
+
+### [卸载软件](https://uninstalr.com/ )
+
+

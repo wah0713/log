@@ -1191,3 +1191,687 @@ initial-letter: 3 2;
 > @scope
 
 
+### [不使用font-weight等CSS实现文字变瘦或变胖效果](https://www.zhangxinxu.com/wordpress/2024/05/svg-femorphology-font-weight-thin-stretch/)
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    <filter id="erode">
+        <feMorphology operator="erode" radius="1" />
+    </filter>
+    <filter id="dilate">
+        <feMorphology operator="dilate" radius="1" />
+    </filter>
+</svg>
+
+<h4>苗条</h4>
+<data class="erode">《CSS新世界》</data>
+<h4>体胖</h4>
+<data class="dilate">《CSS新世界》</data>
+```
+
+```css
+data {
+    font-size: 2.5rem;
+}
+
+.erode {
+    filter: url(#erode);
+}
+
+.dilate {
+    filter: url(#dilate);
+}
+```
+
+
+### [justify-self](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-self)
+
+
+### [justify-items](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-items)
+
+
+### [justify-content](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content)
+
+
+### [告别JS浮层，全新的CSS Anchor Positioning锚点定位API](https://www.zhangxinxu.com/wordpress/2024/06/css-anchor-positioning-api/)
+
+> @position-try inset-area anchor position-visibility
+
+
+### [CSS transition-behavior让display none也有动画效果](https://www.zhangxinxu.com/wordpress/2024/06/css-transition-behavior/)
+
+```css
+transition-behavior: allow-discrete;
+transition-behavior: normal;
+```
+
+
+### [使用 v-bind 动态修改 style](https://vue3.chengpeiquan.com/component.html#%E4%BD%BF%E7%94%A8-v-bind-%E5%8A%A8%E6%80%81%E4%BF%AE%E6%94%B9-style-new)
+
+```vue
+<template>
+  <p class="msg">Hello World!</p>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const fontColor = ref<string>('#ff0000')
+
+    return {
+      fontColor,
+    }
+  },
+})
+</script>
+
+<style scoped>
+.msg {
+  color: v-bind(fontColor);
+}
+</style>
+```
+
+
+### [useCssModule](https://vue3.chengpeiquan.com/component.html#style-module-new)
+
+```vue
+<template>
+  <p :class="classes.msg">Hello World!</p>
+</template>
+
+<style module="classes">
+.msg {
+  color: #ff0000;
+}
+</style>
+```
+
+```
+在 const style = useCssModule() 的时候，命名是随意的，跟在 <style module="classes"> 这里指定的命名没有关系。
+```
+
+
+### :deep()
+
+```css
+.a {
+    :deep(.b) {
+        /* ... */
+    }
+}
+```
+
+
+### [今日学习CSS文本自定义高亮API](https://www.zhangxinxu.com/wordpress/2024/07/css-custom-highlight-api/)
+
+```css
+::highlight(tel-highlight) {
+    background-color: currentColor;
+}
+```
+
+```html
+<p id="p">如有疑问可以WX加13208033621或者15812345678咨询。</p>
+```
+
+```js
+// 文本字符内容
+const str = p.textContent;
+// 手机号起始索引值
+const arrIndex = str.match(/1\d{10}/g).map(tel => str.indexOf(tel));
+// 创建range数组
+const arrRange = arrIndex.map(start => {
+    const range = new Range();
+    range.setStart(p.firstChild, start + 3);
+    range.setEnd(p.firstChild, start + 7);
+
+    return range;
+});
+
+// 定义高亮
+const highlight = new Highlight(...arrRange.flat());
+// 注册高亮
+CSS.highlights.set("tel-highlight", highlight);
+```
+
+
+### [rgb()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value/rgb)
+
+```css
+:root {
+    --base-color: orange;
+    /* 等价于 rgb(255 165 0) */
+}
+
+#one {
+    background-color: var(--base-color);
+}
+
+#two {
+    background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
+    /* 76.5 是 255 的 30%  */
+}
+
+#three {
+    background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
+    /* 153 是 255 的 60% */
+}
+
+/*  使用 @supports 添加对旧语法的支持，该语法要求在计算中将 r g b 值指定为百分比（带单位）。
+    这对于 Safari 16.4+ 是必需的。 */
+@supports (color: rgb(from red r g calc(b + 30%))) {
+    #two {
+        background-color: rgb(from var(--base-color) calc(r - 30%) g calc(b + 30%));
+    }
+
+    #three {
+        background-color: rgb(from var(--base-color) calc(r - 60%) g calc(b + 60%));
+    }
+}
+```
+
+
+### [页面级可视动画View Transitions API初体验](https://www.zhangxinxu.com/wordpress/2024/08/view-transitions-api/)
+
+```
+::view-transition
+├─ ::view-transition-group(root)
+│  └─ ::view-transition-image-pair(root)
+│     ├─ ::view-transition-old(root)
+│     └─ ::view-transition-new(root)
+│ /* 等等... */
+```
+
+```css
+img {
+    view-transition-name: wooo;
+}
+
+::view-transition-new(wooo) {
+    animation: scaleUp 1s;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+```
+
+```js
+document.startViewTransition(() => {
+    dom.remove();
+});
+```
+
+
+### css-loader 不检查行内式
+
+### [:nth-child()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-child#%E9%80%89%E6%8B%A9%E5%99%A8%E7%A4%BA%E4%BE%8B)
+
+
+### [@container](https://developer.mozilla.org/en-US/docs/Web/CSS/@container)
+
+```css
+@container (width > 400px) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* with an optional <container-name> */
+@container tall (height > 30rem) {
+    h2 {
+        line-height: 1.6;
+    }
+}
+
+/* multiple queries in a single condition */
+@container (width > 400px) and style(--responsive: true) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* condition list */
+@container card (width > 400px),
+style(--responsive: true) {
+    h2 {
+        font-size: 1.5em;
+    }
+}
+```
+
+
+### [不能落后，好好缕缕CSS滚动动画](https://www.zhangxinxu.com/wordpress/2024/08/css-scroll-timeline/)
+
+```css
+section {
+    --flag: false;
+    animation: setFlag 1ms;
+    scroll-timeline: --detectScroll;
+    animation-timeline: --detectScroll;
+}
+
+@keyframes setFlag {
+
+    from,
+    to {
+        --flag: true;
+    }
+}
+
+@container style(--flag: true) {
+
+    /* 容器溢出 */
+    button {
+        display: block;
+    }
+}
+```
+
+
+### [好消息，align-content垂直居中也适用普通元素啦](https://www.zhangxinxu.com/wordpress/2024/09/css-align-content/)
+
+```html
+<ul>
+    <li>《HTML并不简单》这本书不错</li>
+    <li>感谢正版支持《CSS新世界》</li>
+</ul>
+```
+
+```css
+ul {
+    height: 150px;
+    border: solid;
+    align-content: center;
+}
+```
+
+
+### [时隔两年，Chrome也支持round等CSS数学函数了](https://www.zhangxinxu.com/wordpress/2024/09/css-math-round-function/)
+
+> mod()函数 rem()函数
+
+
+### 左边开始点点点
+
+```css
+/* 左边开始点点点 */
+div {
+    display: block;
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: rtl
+}
+```
+
+
+### [Nice! Safari也支持CSS @property规则了](https://www.zhangxinxu.com/wordpress/2024/10/css-at-perporty-rule/)
+
+```css
+@property --seed {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@keyframes seed {
+    from {
+        --seed: 0;
+    }
+
+    to {
+        --seed: 100;
+    }
+}
+```
+
+
+### sass遍历创建class
+
+```scss
+@function distance-width($idx) {
+
+    @return $idx * 5px;
+
+}
+
+@for $i from 1 through 20 {
+
+    .mt-#{$i * 5} { margin-top: distance-width($i) };
+    .mb-#{$i * 5} { margin-bottom: distance-width($i) };
+    .ml-#{$i * 5} { margin-left: distance-width($i) };
+    .mr-#{$i * 5} { margin-right: distance-width($i) };
+    .mar-#{$i * 5} { margin: distance-width($i) };
+    .pt-#{$i * 5} { padding-top: distance-width($i) };
+    .pb-#{$i * 5} { padding-bottom: distance-width($i) };
+    .pl-#{$i * 5} { padding-left: distance-width($i) };
+    .pr-#{$i * 5} { padding-right: distance-width($i) };
+
+}
+```
+
+
+### [用纯 CSS 实现网格背景](https://spacexcode.com/blog/pure-css-grid-line/)
+
+```css
+{
+    background-size: 20px 20px;
+    background-position: center center;
+    background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent), linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);
+    mask-image: linear-gradient(to bottom, transparent, #fff 50px calc(100% - 50px), transparent), linear-gradient(to right, transparent, #fff 50px calc(100% - 50px), transparent);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in, xor;
+}
+```
+
+
+### [这啥? CSS calc-size和interpolate-size, 真学不动了](https://www.zhangxinxu.com/wordpress/2024/11/css-calc-interpolate-size/)
+
+> calc-size() interpolate-size
+
+
+### [插槽选择器](https://cn.vuejs.org/api/sfc-css-features#slotted-selectors)
+
+```vue
+<style scoped>
+:slotted(div) {
+    color: red;
+}
+
+</style>
+```
+
+
+### [全局选择器](https://cn.vuejs.org/api/sfc-css-features#global-selectors)
+
+```vue
+<style scoped>
+:global(.red) {
+  color: red;
+}
+</style>
+```
+
+
+### [CSS 中的 v-bind()](https://cn.vuejs.org/api/sfc-css-features#v-bind-in-css)
+
+```vue
+<template>
+  <div class="text">hello</div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      color: 'red'
+    }
+  }
+}
+</script>
+
+<style>
+.text {
+  color: v-bind(color);
+}
+</style>
+
+<script setup>
+import { ref } from 'vue'
+const theme = ref({
+    color: 'red',
+})
+</script>
+
+<template>
+  <p>hello</p>
+</template>
+
+<style scoped>
+p {
+  color: v-bind('theme.color');
+}
+</style>
+```
+
+
+### [混合图片](https://styleof.com/s/remix-yourself)
+
+
+### [CSS 可以制作动画的令人惊讶的事情](https://codersblock.com/blog/the-surprising-things-that-css-can-animate/)
+
+
+### [哇哦，font-palette支持动画和palette-mix()混合函数了](https://www.zhangxinxu.com/wordpress/2024/12/font-palette-animation-palette-mix/)
+
+> 字体调色板是一个 CSS 函数，用于在文本上应用调色板效果。它可以将文本的颜色转换为调色板中的颜色，从而使文本更加生动和吸引人。
+
+
+### [超酷！CSS font-palette与彩色字体显示](https://www.zhangxinxu.com/wordpress/2022/07/css-font-palette/)
+
+> 同上
+
+
+### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown)
+
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
+
+```CSS
+Some text in green ! 123
+```
+
+```P4
+Some text in blue! 123
+```
+
+```Mint
+Some text in blue with additional keyword highlighting! 123
+```
+
+```robots.txt
+some text in light blue! 123
+
+```
+```EBNF
+Some text in purple! 123
+```
+
+```mupad
+Some text in purple with additional keyword highlighting! 123
+```
+
+```Mathematica
+Some text in orange! 123
+```
+
+```REXX
+Some text in orange with additional keyword highlighting! 123
+```
+
+```Nix
+Some text in orange with additional keyword highlighting! 123
+```
+
+```POV-Ray SDL
+some text in red!
+
+```
+```RobotFramework
+Some text in light red! 123
+```
+
+```JSON
+Some text highlighted in red! 123
+```
+
+<samp>Monospaced text</samp>
+<ins>Underlined text</ins>
+<table><tr><td>Boxed text</td></tr></table>
+<details>
+
+<summary>Item summary with dropdown</summary>
+
+Dropdown content (supports **markdown** ~~yay!~~)
+
+```json
+{
+  awesome: "true"
+}
+```
+
+</details>
+
+__*Italic-bold*__
+
+Superscript<sup>TM</sup>
+
+Superscript-italic<sup>*tm*</sup>
+
+Subscript<sub>x</sub>
+
+Subscript-bold<sub>**min**</sub>
+
+~~__*Italic-bold-strikethrough*__~~
+
+> markdown的一些进阶用法
+
+
+### [CSS文字和背景color自动配色技术简介](https://www.zhangxinxu.com/wordpress/2018/11/css-background-color-font-auto-match/)
+
+```css
+:root {
+    /* 定义RGB变量 */
+    --red: 44;
+    --green: 135;
+    --blue: 255;
+    /* 文字颜色变色的临界值，建议0.5~0.6 */
+    --threshold: 0.5;
+    /* 深色边框出现的临界值，范围0~1，推荐0.8+*/
+    --border-threshold: 0.8;
+}
+
+.btn {
+    /* 按钮背景色就是基本背景色 */
+    background: rgb(var(--red), var(--green), var(--blue));
+
+    /**
+   * 使用sRGB Luma方法计算灰度（可以看成亮度）
+   * 算法为：
+   * lightness = (red * 0.2126 + green * 0.7152 + blue * 0.0722) / 255
+  */
+    --r: calc(var(--red) * 0.2126);
+    --g: calc(var(--green) * 0.7152);
+    --b: calc(var(--blue) * 0.0722);
+    --sum: calc(var(--r) + var(--g) + var(--b));
+    --lightness: calc(var(--sum) / 255);
+
+    /* 设置颜色 */
+    color: hsl(0, 0%, calc((var(--lightness) - var(--threshold)) * -999999%));
+
+    /* 确定边框透明度 */
+    --border-alpha: calc((var(--lightness) - var(--border-threshold)) * 100);
+    /* 设置边框相关样式 */
+    border: .2em solid;
+    border-color: rgba(calc(var(--red) - 50), calc(var(--green) - 50), calc(var(--blue) - 50), var(--border-alpha));
+}
+```
+
+
+### [全新的CSS相对颜色语法-使用from和calc()](https://www.zhangxinxu.com/wordpress/2024/12/css-relative-color-from-calc/)
+
+> 相对颜色语法是一种新的CSS颜色语法，它允许您使用from关键字来指定一个颜色作为基准，然后使用calc()函数来计算相对于基准颜色的新颜色。
+> 颜色相对
+
+
+### [跳转链接时，关键字颜色改变](https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html)
+
+>
+
+```
+https://example.com/page.html#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
+```
+
+
+### [现代 CSS 重置](https://www.joshwcomeau.com/css/custom-css-reset/)
+
+```css
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+```
+
+

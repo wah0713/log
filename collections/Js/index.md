@@ -1802,3 +1802,652 @@ app.listen(PORT, () => {
 ```
 
 
+### [前端跨页面通信：Broadcast Channel](https://www.jianshu.com/p/12bb9acd9165)
+
+```js
+const setChannel = new BroadcastChannel('demos');
+setChannel.postMessage('要发送消息啦啦啦啦啦啦啦');
+setChannel.onmessage = function(e) {
+
+    console.log('接收到消息:', e.data);
+
+    //一大波你要要的操作
+
+};
+setChannel..close();
+```
+
+
+### [JavaScript 判断是否为数字的几种方式](https://segmentfault.com/a/1190000044729061)
+
+```js
+!isNaN(parseFloat(value)) && isFinite(value);
+```
+
+
+### [重学JS | Proxy与Object.defineProperty的用法与区别](https://juejin.cn/post/6973636618515120165)
+
+陷阱函数|覆写的特性
+:-:|:-
+get|读取一个值
+set|写入一个值
+has|in操作符
+deleteProperty|Object.getPrototypeOf()
+getPrototypeOf|Object.getPrototypeOf()
+setPrototypeOf|Object.setPrototypeOf()
+isExtensible|Object.isExtensible()
+preventExtensions|Object.preventExtensions()
+getOwnPropertyDescriptor|Object.getOwnPropertyDescriptor()
+defineProperty|Object.defineProperty
+ownKeys|Object.keys() Object.getOwnPropertyNames()和Object.getOwnPropertySymbols()
+apply|调用一个函数
+construct|用new调用一个函数
+
+
+### [获取多级对象的值](https://vue3.chengpeiquan.com/component.html#%E8%8E%B7%E5%8F%96%E5%A4%9A%E7%BA%A7%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%80%BC)
+
+```js
+// 例子比较极端，但在 Vuex 这种大型数据树上，也不是完全不可能存在
+const foo = computed(() => {
+    // 正常情况下返回需要的数据
+    try {
+        return store.state.foo3.foo2.foo1.foo
+    } catch (e) {
+        // 处理失败则返回一个默认值
+        return ''
+    }
+})
+```
+
+
+### [structuredClone](https://developer.mozilla.org/zh-CN/docs/Web/API/structuredClone)
+
+> 深拷贝 原生
+
+
+### [我敢打赌你不知道的十个JavaScript技巧](https://juejin.cn/post/7296755101622878248)
+
+
+### [localeCompare](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)
+
+> 字符排序
+
+
+### [Git 代码提交规范，feat、fix、chore 都是什么意思?](https://juejin.cn/post/7374295163625521161)
+
+名字|描述|例子
+:-|:-|:-
+feat: 新功能（feature）|用于提交新功能。|feat: 增加用户注册功能
+fix: 修复 bug|用于提交 bug 修复。|fix: 修复登录页面崩溃的问题
+docs: 文档变更|用于提交仅文档相关的修改。|docs: 更新README文件
+style: 代码风格变动（不影响代码逻辑）|用于提交仅格式化、标点符号、空白等不影响代码运行的变更。|style: 删除多余的空行
+refactor: 代码重构（既不是新增功能也不是修复bug的代码更改）|用于提交代码重构。|refactor: 重构用户验证逻辑
+perf: 性能优化|用于提交提升性能的代码修改。|perf: 优化图片加载速度
+test: 添加或修改测试|用于提交测试相关的内容。|test: 增加用户模块的单元测试
+chore: 杂项（构建过程或辅助工具的变动）|用于提交构建过程、辅助工具等相关的内容修改。|chore: 更新依赖库
+build: 构建系统或外部依赖项的变更|用于提交影响构建系统的更改。|build: 升级webpack到版本5
+ci: 持续集成配置的变更|用于提交CI配置文件和脚本的修改。|ci: 修改GitHub Actions配置文件
+revert: 回滚|用于提交回滚之前的提交。|revert: 回滚feat: 增加用户注册功能
+
+
+### [异步侦听器问题](https://cn.vuejs.org/guide/essentials/watchers.html#stopping-a-watcher)
+
+```
+如果用异步回调创建一个侦听器，那么它不会绑定到当前组件上，你必须手动停止它，以防内存泄漏。
+```
+
+```vue
+<script setup>
+import { watchEffect } from 'vue'
+
+// 它会自动停止
+watchEffect(() => {})
+
+// ...这个则不会！
+setTimeout(() => {
+  watchEffect(() => {})
+}, 100)
+</script>
+```
+
+
+### [使用一个对象绑定多个 prop](https://cn.vuejs.org/guide/components/props.html#binding-multiple-properties-using-an-object)
+
+```jsx
+const post = {
+  id: 1,
+  title: 'My Journey with Vue'
+}
+<BlogPost v-bind="post" />
+```
+
+
+### [Boolean 类型转换](https://cn.vuejs.org/guide/components/props.html#boolean-casting)
+
+```jsx
+<!-- 等同于传入 :disabled="true" -->
+<MyComponent disabled />
+
+<!-- 等同于传入 :disabled="false" -->
+<MyComponent />
+
+defineProps({
+  disabled: Boolean
+})
+```
+
+
+### [v-model 的参数](https://cn.vuejs.org/guide/components/v-model.html#v-model-arguments)
+
+```jsx
+<MyComponent v-model:title="bookTitle" />
+```
+
+
+### [动态插槽名](https://cn.vuejs.org/guide/components/slots.html#dynamic-slot-names)
+
+```vue
+<base-layout>
+  <template v-slot:[dynamicSlotName]>
+    ...
+  </template>
+
+  <!-- 缩写为 -->
+  <template #[dynamicSlotName]>
+    ...
+  </template>
+</base-layout>
+```
+
+
+### [作用域插槽](https://cn.vuejs.org/guide/components/slots.html#scoped-slots)
+
+```jsx
+<!-- <MyComponent> 的模板 -->
+<div>
+  <slot :text="greetingMessage" :count="1"></slot>
+</div>
+
+<MyComponent v-slot="slotProps">
+  {{ slotProps.text }} {{ slotProps.count }}
+</MyComponent>
+```
+
+
+### [和响应式数据配合使用](https://cn.vuejs.org/guide/components/provide-inject.html#working-with-reactivity)
+
+```jsx
+<!-- 在供给方组件内 -->
+<script setup>
+import { provide, ref } from 'vue'
+
+const location = ref('North Pole')
+
+function updateLocation() {
+  location.value = 'South Pole'
+}
+
+provide('location', {
+  location,
+  updateLocation
+})
+</script>
+
+<!-- 在注入方组件 -->
+<script setup>
+import { inject } from 'vue'
+
+const { location, updateLocation } = inject('location')
+</script>
+
+<template>
+  <button @click="updateLocation">{{ location }}</button>
+</template>
+```
+
+
+### [使用 Symbol 作注入名](https://cn.vuejs.org/guide/components/provide-inject.html#working-with-symbol-keys)
+
+```js
+// keys.js
+export const myInjectionKey = Symbol()
+
+// 在供给方组件中
+import {
+    provide
+} from 'vue'
+import {
+    myInjectionKey
+} from './keys.js'
+
+provide(myInjectionKey, {
+    /*
+  要提供的数据
+*/
+});
+
+// 注入方组件
+import {
+    inject
+} from 'vue'
+import {
+    myInjectionKey
+} from './keys.js'
+
+const injected = inject(myInjectionKey)
+```
+
+
+### [鼠标跟踪器示例](https://cn.vuejs.org/guide/reusability/composables.html#mouse-tracker-example)
+
+```html
+<script setup>
+    import {
+        ref,
+        onMounted,
+        onUnmounted
+    } from 'vue'
+
+    const x = ref(0)
+    const y = ref(0)
+
+    function update(event) {
+        x.value = event.pageX
+        y.value = event.pageY
+    }
+
+    onMounted(() => window.addEventListener('mousemove', update))
+    onUnmounted(() => window.removeEventListener('mousemove', update))
+</script>
+
+<template>Mouse position is at: {{ x }}, {{ y }}</template>
+```
+
+```js
+// mouse.js
+import {
+    ref,
+    onMounted,
+    onUnmounted
+} from 'vue'
+
+// 按照惯例，组合式函数名以“use”开头
+export function useMouse() {
+    // 被组合式函数封装和管理的状态
+    const x = ref(0)
+    const y = ref(0)
+
+    // 组合式函数可以随时更改其状态。
+    function update(event) {
+        x.value = event.pageX
+        y.value = event.pageY
+    }
+
+    // 一个组合式函数也可以挂靠在所属组件的生命周期上
+    // 来启动和卸载副作用
+    onMounted(() => window.addEventListener('mousemove', update))
+    onUnmounted(() => window.removeEventListener('mousemove', update))
+
+    // 通过返回值暴露所管理的状态
+    return {
+        x,
+        y
+    }
+}
+```
+
+```html
+<script setup>
+    import {
+        useMouse
+    } from './mouse.js'
+
+    const {
+        x,
+        y
+    } = useMouse()
+</script>
+
+<template>Mouse position is at: {{ x }}, {{ y }}</template>
+```
+
+
+### [缓存实例的生命周期](https://cn.vuejs.org/guide/built-ins/keep-alive.html#lifecycle-of-cached-instance)
+
+```html
+<script setup>
+    import {
+        onActivated,
+        onDeactivated
+    } from 'vue'
+
+    onActivated(() => {
+        // 调用时机为首次挂载
+        // 以及每次从缓存中被重新插入时
+    })
+
+    onDeactivated(() => {
+        // 在从 DOM 上移除、进入缓存
+        // 以及组件卸载时调用
+    })
+</script>
+```
+
+
+### [Teleport 基本用法](https://cn.vuejs.org/guide/built-ins/teleport.html#basic-usage)
+
+> 有时我们可能会遇到这样的场景：一个组件模板的一部分在逻辑上从属于该组件，但从整个应用视图的角度来看，它在 DOM 中应该被渲染在整个 Vue 应用外部的其他地方。
+
+```html
+<button @click="open = true">Open Modal</button>
+
+<Teleport to="body">
+    <div v-if="open" class="modal">
+        <p>Hello from the modal!</p>
+        <button @click="open = false">Close</button>
+    </div>
+</Teleport>
+```
+
+
+### [浏览器内模板编译注意事项](https://cn.vuejs.org/guide/scaling-up/tooling.html#note-on-in-browser-template-compilation)
+
+
+### [从头开始实现一个简单的路由](https://cn.vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch)
+
+```html
+<script setup>
+    import {
+        ref,
+        computed
+    } from 'vue'
+    import Home from './Home.vue'
+    import About from './About.vue'
+    import NotFound from './NotFound.vue'
+    const routes = {
+        '/': Home,
+        '/about': About
+    }
+    const currentPath = ref(window.location.hash)
+    window.addEventListener('hashchange', () => {
+        currentPath.value = window.location.hash
+    })
+    const currentView = computed(() => {
+        return routes[currentPath.value.slice(1) || '/'] || NotFound
+    })
+</script>
+<template>
+    <a href="#/">Home</a> |
+    <a href="#/about">About</a> |
+    <a href="#/non-existent-path">Broken Link</a>
+    <component :is="currentView" />
+</template>
+```
+
+
+### [SSR vs. SSG](https://cn.vuejs.org/guide/scaling-up/ssr.html#ssr-vs-ssg)
+
+
+### [Props 稳定性](https://cn.vuejs.org/guide/best-practices/performance.html#props-stability)
+
+> 一个子组件只会在其至少一个 props 改变时才会更新
+
+
+### [语义化表单](https://cn.vuejs.org/guide/best-practices/accessibility.html#semantic-forms)
+
+> autocomplete='on' 自动填充
+
+
+### [URL 注入](https://cn.vuejs.org/guide/best-practices/security.html#url-injection)
+
+> sanitize-url
+
+
+### [动画6方格](https://www.jq22.com/js/a1.html)
+
+
+### [响应性调试](https://cn.vuejs.org/guide/extras/reactivity-in-depth.html#reactivity-debugging)
+
+> onTrack onTrigger
+
+
+### [创建 Vnodes](https://cn.vuejs.org/guide/extras/render-function.html#creating-vnodes)
+
+
+### [传递插槽](https://cn.vuejs.org/guide/extras/render-function.html#passing-slots)
+
+
+### [Array.prototype.at()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/at)
+
+> array[array.length - 1]。at() 方法允许使用相对索引，因此上面的示例可以简化为 array.at(-1)。
+
+
+### [什么，你连一个Node.js脚本都不会写！！！](https://juejin.cn/post/7361687968519700514)
+
+```package.json
+type module
+```
+
+
+### [来了来了，scrollend滚动停止事件也支持了](https://www.zhangxinxu.com/wordpress/2024/09/js-scrollend-event/)
+
+```js
+window.addEventListener("scrollend", (event) => {
+    // 滚动结束
+});
+
+element.addEventListener("scrollend", (event) => {
+    // 滚动结束
+});
+```
+
+
+### [实用的JS对象分组静态方法Object.groupBy()](https://www.zhangxinxu.com/wordpress/2024/09/js-object-groupby/)
+
+```js
+const data = [{
+    id: 1,
+    name: '张三'
+}, {
+    id: 3,
+    name: '李四'
+}, {
+    id: 4,
+    name: '王二'
+}, {
+    id: 2,
+    name: '张三'
+}];
+
+const result = Object.groupBy(data, ({
+    name
+}) => name);
+
+console.log(result);
+```
+
+
+### [app.config.globalProperties](https://cn.vuejs.org/api/application#app-config-globalproperties)
+
+```js
+app.config.globalProperties.msg = 'hello'
+
+export default {
+    mounted() {
+        console.log(this.msg) // 'hello'
+    }
+}
+```
+
+
+### [21 个 HTML 必备的小技巧](https://juejin.cn/post/7410955755942723624)
+
+```html
+<!-- 改进视频展示 -->
+<video controls poster="image.png" width="500">
+    <source src="video.mp4" type="video/mp4" />
+</video>
+
+<!-- 支持多选 -->
+<input type=" file" multiple />
+<select multiple>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+    <option value="typescript">TypeScript</option>
+    <option value="rust">Rust</option>
+</select>
+
+<!-- 将文本显示为下标和上标 -->
+<input type="file" multiple />
+<select multiple>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+    <option value="typescript">TypeScript</option>
+    <option value="rust">Rust</option>
+</select>
+
+<!-- 设置最大输入长度 -->
+<input type="text" maxlength="4">
+
+<!-- 设置最小输入长度 -->
+<input type="text" minlength="3">
+
+<!-- 控制拼写检查 -->
+<input type="text" spellcheck="true" />
+
+<!-- 优化视频加载 -->
+<video src="video.mp4" preload="auto">
+    你的浏览器不支持 video 标签。
+</video>
+```
+
+
+### [Setup 上下文](https://cn.vuejs.org/api/composition-api-setup#setup-context)
+
+```
+attrs 和 slots 都是有状态的对象，它们总是会随着组件自身的更新而更新。这意味着你应当避免解构它们，并始终通过 attrs.x 或 slots.x 的形式使用其中的属性。此外还需注意，和 props 不同，attrs 和 slots 的属性都不是响应式的。如果你想要基于 attrs 或 slots 的改变来执行副作用，那么你应该在 onBeforeUpdate 生命周期钩子中编写相关逻辑。
+```
+
+
+### [app.runWithContext()](https://cn.vuejs.org/api/application#app-runwithcontext)
+
+
+### [useTemplateRef() ](https://cn.vuejs.org/api/composition-api-helpers#usetemplateref)
+
+
+### [useId() ](https://cn.vuejs.org/api/composition-api-helpers#useid)
+
+> 用于为无障碍属性或表单元素生成每个应用内唯一的 ID。
+
+
+### [优化 Javascript 以获得乐趣和利润](https://romgrk.com/posts/optimizing-javascript)
+
+
+### [这13个前端库，帮我在工作中赢得了不少摸鱼时间](https://juejin.cn/post/7373136303180136459#heading-5)
+
+```js
+import xss from "xss";
+const userInput = '<script>alert("恶意代码");</script><p>这是用户输入的文本内容</p>';
+const output = xss(userInput);
+console.log(output); // &lt;script&gt;alert("恶意代码");&lt;/script&gt;<p>这是用户输入的文本内容</p>
+
+import copy from 'copy-text-to-clipboard';
+
+button.addEventListener('click', () => {
+    copy('复制一些东西');
+});
+```
+
+```
+localforage
+支持自动数据类型转换，可以将对象、数组等复杂数据结构转换成适合存储的格式，并在取出数据时自动转换回原始格式。
+```
+
+```
+vconsole
+可以在手机浏览器中实时查看日志、错误信息、网络请求等调试信息，帮助我们快速定位和解决问题。
+```
+
+
+### [watch](https://cn.vuejs.org/api/options-state#watch)
+
+> 这种用法不支持复杂表达式——仅支持由点分隔的路径。如果你需要侦听复杂的数据源，可以使用命令式的 $watch() API。
+
+
+### [v-bind](https://cn.vuejs.org/api/built-in-directives#v-bind)
+
+
+### [v-pre](https://cn.vuejs.org/api/built-in-directives#v-pre)
+
+> 跳过该元素及其所有子元素的编译。
+
+
+### [命名空间组件](https://cn.vuejs.org/api/sfc-script-setup#namespaced-components)
+
+```vue
+<script setup>
+import * as Form from './form-components'
+</script>
+
+<template>
+  <Form.Input>
+    <Form.Label>label</Form.Label>
+  </Form.Input>
+</template>
+```
+
+
+### [qs.js库的使用](https://juejin.cn/post/7431999633071030283)
+
+> 用于url参数转化：parse和stringify的js库
+
+
+### [检测用户是否打开了键盘的大写锁定](https://davidwalsh.name/detect-caps-lock)
+
+```js
+document.querySelector('input[type=password]').addEventListener('keyup', function(keyboardEvent) {
+    const capsLockOn = keyboardEvent.getModifierState('CapsLock');
+    if (capsLockOn) {
+        // Warn the user that their caps lock is on?
+    }
+});
+```
+
+
+### [w3c的getModifierState](https://w3c.github.io/uievents/#event-modifier-initializers)
+
+```js
+dictionary EventModifierInit: UIEventInit {
+    boolean ctrlKey = false;
+    boolean shiftKey = false;
+    boolean altKey = false;
+    boolean metaKey = false;
+
+    boolean modifierAltGraph = false;
+    boolean modifierCapsLock = false;
+    boolean modifierFn = false;
+    boolean modifierFnLock = false;
+    boolean modifierHyper = false;
+    boolean modifierNumLock = false;
+    boolean modifierScrollLock = false;
+    boolean modifierSuper = false;
+    boolean modifierSymbol = false;
+    boolean modifierSymbolLock = false;
+};
+```
+
+
+### [Date.prototype.toLocaleString()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString)
+
+> 以特定于地区的格式显示日期字符串。
+> 转化时间的第二种方法
+
+
+### [Nostalgist](https://github.com/arianrhodsandlot/nostalgist)
+
+> Nostalgist.js 是一个 JavaScript 库，允许您在 Web 浏览器中运行复古游戏机的模拟器，例如 NES 和 Sega Genesis。
+
+
+### [英文单词朗读基于音素预估时长的JS算法](https://www.zhangxinxu.com/wordpress/2024/12/js-word-speach-split-time-calc/)
+
+
