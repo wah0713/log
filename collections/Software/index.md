@@ -455,3 +455,24 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
 ### [VS Code Playground](https://pawelcislo.com/posts/my-vs-code-playground/#vscodedev)
 
 
+
+
+### [Tree 树形目录可视化生成器](https://devtool.tech/tree)
+
+&gt; Markdown 列表与 ASCII 树形结构双向转换工具，支持 Tab 键缩进
+
+### [MCP Advisor - MCP服务器智能发现服务](https://mcp.so/zh/server/mcpadvisor/istarwyh)
+
+&gt; 通过自然语言查询发现和推荐 Model Context Protocol 服务器，帮助 AI 助手找到合适的 MCP 服务
+
+### [女娲 Nuwa - 蒸馏牛人思维方式的AI工具](https://github.com/alchaincyf/nuwa-skill)
+
+&gt; 将乔布斯、马斯克、芒格、费曼等名人的认知框架蒸馏成可运行的 Skill，在 Claude Code 中直接调用
+
+### [MCP.so - MCP服务器目录](https://mcp.so/zh)
+
+&gt; 发现和探索各种 Model Context Protocol 服务器的平台
+
+### [ModelScope 魔搭 - AI模型社区](https://modelscope.cn/home)
+
+&gt; 汇聚优质 AI 模型、数据集和创空间的中文 AI 模型平台

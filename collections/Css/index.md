@@ -2530,3 +2530,32 @@ progress(50%, 30%, 80%)的返回值就是……这个要计算下：(50% - 30%) 
 ### [基础CSS即可满足需求](https://www.zolkos.com/2025/12/03/vanilla-css-is-all-you-need)
 
 
+
+
+### [CSS Doodle clip-path 多边形形状与数学函数](https://yuanchuan.dev/polygon-shapes)
+
+&gt; 通过 CSS Doodle 的 @shape() 函数和 clip-path 属性，使用三角函数创建各种多边形、面具、动物等有趣形状
+
+### [Polishing typography with line height units](https://webkit.org/blog/16831/line-height-units/)
+
+&gt; 介绍 WebKit 新增的 `lh` 和 `rlh` CSS 单位，让文字间距与排版节奏完美对齐
+
+### 隐藏-spin-button样式
+
+```css
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+```
+
+### [如何让文字作为CSS背景图片显示](https://www.zhangxinxu.com/wordpress/2020/10/text-as-css-background-image/)
+
+&gt; 利用 SVG 内联技术将文字转换为背景图，可用于水印、输入框占位符提示等场景
+
+### [CSS corner-shape与背景底纹技术](https://www.zhangxinxu.com/wordpress/2026/03/css-corner-shape-background-pattern/)
+
+&gt; 结合 CSS corner-shape 属性与 SVG foreignObject 实现网格、星星等背景纹理图案
+
+### [CSS六边形头像的实现与蜂巢布局](https://www.zhangxinxu.com/wordpress/2026/04/css-pyramidal-grid/)
+
+&gt; 使用 CSS corner-shape、Grid 布局和三角函数实现六边形头像与全自动蜂巢布局
