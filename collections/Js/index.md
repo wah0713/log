@@ -3787,4 +3787,8 @@ process.stdout.write('\u0007')
 
 > WebTransport
 
+### [Using the Browser's canvas for Data Compression](https://jstrieb.github.io/posts/canvas-compress/)
+
+> 通过浏览器 Canvas API 将数据编码为 PNG 图片实现无损压缩，兼容不支持 Compression Streams API 的旧浏览器
+
 

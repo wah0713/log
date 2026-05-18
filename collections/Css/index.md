@@ -1933,6 +1933,10 @@ input {
 
 ### [Kickass markdown 🤩](https://github.com/Olwiba/Kickass-markdown)
 
+### [pretext与文字四面环绕效果的实现](https://www.zhangxinxu.com/wordpress/2026/05/pretext-text-around/)
+
+> 使用 Pretext JavaScript 库实现文字完整环绕浮动元素的布局效果，支持矩形环绕和非透明像素轮廓环绕
+
 ```diff
 + this text is highlighted in green
 - this text is highlighted in red

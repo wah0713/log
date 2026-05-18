@@ -476,3 +476,27 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple paddleocr
 ### [ModelScope 魔搭 - AI模型社区](https://modelscope.cn/home)
 
 &gt; 汇聚优质 AI 模型、数据集和创空间的中文 AI 模型平台
+
+### [Can I Run AI locally?](https://www.canirun.ai/)
+
+&gt; 检测你的机器可以运行哪些AI模型，基于浏览器API估算GPU、VRAM等硬件参数适配情况
+
+### [离线应用搜索](https://lixian.online)
+
+&gt; Edge Add-ons 插件搜索工具，支持按名称搜索或粘贴ID、ProductId、商店链接
+
+### [rename.tools - 文件批量重命名工具](https://rename.tools/zh/app)
+
+&gt; 可视化规则链编辑器，支持导入文件或文件夹进行批量重命名操作
+
+### [Learn Claude Code](https://claude.nagdy.me/)
+
+&gt; 12个交互式模块学习 Claude Code，包含终端模拟器、配置构建器和测验，无需安装即可练习
+
+### [CC Unpacked - Claude Code 源代码探索](https://ccunpacked.dev/#agent-loop)
+
+&gt; 深入探索 Claude Code 的代理循环、工具系统、命令目录和隐藏功能，直接从源码映射
+
+### 简约翻译
+
+&gt; 简洁高效的翻译工具或服务，提供轻量化的文本翻译功能
